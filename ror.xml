@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
+<channel>
+  <title>ROR Sitemap for http://weboreviews.com/</title>
+  <link>http://weboreviews.com/</link>
+
+<item>
+     <link>http://weboreviews.com/</link>
+     <title>Web-o-Reviews</title>
+     <description>Pune based custom website design services starting from as low as Rs.12000</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>0</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://weboreviews.com/index.html</link>
+     <title>Web-o-Reviews</title>
+     <description>Pune based custom website design services starting from as low as Rs.12000</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://weboreviews.com/freelance-web-designer.html</link>
+     <title>Web Design</title>
+     <description>Packages offered by Web-o-Reviews for custom website design.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://weboreviews.com/portfolio.html</link>
+     <title>Portfolio</title>
+     <description>All Projects that Web-o-Reviews has worked on along with customer reviews.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://weboreviews.com/contact.html</link>
+     <title>Web-o-Reviews</title>
+     <description>Pune based custom website design services starting from as low as Rs.12000</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://weboreviews.com/gallery.html</link>
+     <title>Gallery</title>
+     <description>Gallery of Premade designs, wallpapers, forum signatures.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://weboreviews.com/rom.html</link>
+     <title>Android</title>
+     <description>NExtGen - Custom ROM for HTC Explorer.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://weboreviews.com/license.html</link>
+     <title>License</title>
+     <description>Pune based custom website design services starting from as low as Rs.12000</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://weboreviews.com/about.html</link>
+     <title>About Me</title>
+     <description>Information about Akshay Ghate, author of this website. You can get in touch with him easily using the contact page.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://weboreviews.com/gallery-2.html</link>
+     <title>Gallery</title>
+     <description>Gallery of Premade designs, wallpapers, forum signatures.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+</channel>
+</rss>
+  
