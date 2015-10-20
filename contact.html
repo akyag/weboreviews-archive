@@ -113,12 +113,12 @@ I will contact you immediately to discuss your requirements.</p>
 <form id="contactform" method="POST">
 <input type="hidden" name="_subject" value="New Web-o-Reviews submission!" />
 <span>Name:</span>
-<input type="text" name="_name" />
+<input type="text" name="_name" required />
 <span>Email:</span>
-<input type="email" name="_replyto" size="39" />
+<input type="email" name="_replyto" size="39" required />
 <input type="text" name="_gotcha" style="display:none" />
 <span>Message:</span>
-<textarea name="Message" cols="30" rows="10"></textarea>
+<textarea name="Message" cols="30" rows="10" required></textarea>
 <input style="margin-top:20px;" class="radius button" type="submit" value="Send It!">
 <input type="hidden" name="_next" value="//weboreviews.com/thanks.html" />
 </form>
