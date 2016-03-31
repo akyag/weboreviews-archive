@@ -15,9 +15,15 @@
 <body>
   <header>
     <div class="row">
-      <div class="medium-6 medium-centered columns">
+      <div class="contact-top right">
+        <i class="fi-mail contact-color"></i>  : blah@email.com | <i class="fi-telephone contact-color"></i>  : +91 99999 99999
+      </div></div>
+      <div class="row">
+
+      <div class="text-center">
         <a href="index.html"><img class="logo" src="images/logo.png" width="319" alt="Clubelire" /></a>
       </div>
+
     </div>
 
 
@@ -34,16 +40,16 @@
       <section class="top-bar-section">
         <!-- Right Nav Section -->
         <ul class="right">
-          <li class="active"><a href="#" data-reveal-id="myModal">Login</a></li>
-          <li><a href="#">Join Us</a></li>
+          <li class="active"><a href="#" data-reveal-id="myModal"><i class="fi-key mgr"></i>Login</a></li>
+          <li><a href="#"><i class="fi-like mgr"></i>Join Us</a></li>
         </ul>
 
         <!-- Left Nav Section -->
         <ul class="left">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
+          <li><a href="#"><i class="fi-home mgr"></i>Home</a></li>
+          <li><a href="#"><i class="fi-info mgr"></i>About Us</a></li>
           <li class="has-dropdown">
-            <a href="#">Services</a>
+            <a href="#"><i class="fi-clipboard-notes mgr"></i>Services</a>
             <ul class="dropdown">
               <li>
                 <a href="#">Other Booking</a>
@@ -53,10 +59,10 @@
               </li>
             </ul>
           </li>
-          <li><a href="#">Flight Schedule</a></li>
-          <li><a href="#">Membership</a></li>
-          <li><a href="#">Testimonials</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="#"><i class="fi-calendar mgr"></i>Flight Schedule</a></li>
+          <li><a href="#"><i class="fi-torsos mgr"></i>Membership</a></li>
+          <!-- <li><a href="#">Testimonials</a></li> -->
+          <li><a href="#"><i class="fi-mail mgr"></i>Contact Us</a></li>
         </ul>
       </section>
     </nav>
@@ -80,7 +86,7 @@
 
 <div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
   <h2 id="modalTitle" class="text-center">Login</h2>
-  <p class="lead"></p>
+  <!-- <p class="lead"></p>
   <form>
   <div class="row">
     <div class="medium-10 columns">
@@ -97,7 +103,28 @@
     <a href="#" class="button">Login</a>
   </div>
   <span>Not a member yet? <a href="#" class="button loginbutton">Join Us</a></span>
+  <a class="close-reveal-modal" aria-label="Close">&#215;</a> -->
+  <div class="row">
+  <div class="medium-12 medium-centered columns">
+
+    <form>
+      <div class="row log-in-form">
+        <label>Email
+          <input type="text" placeholder="Your Email">
+        </label>
+        <label>Password
+          <input type="text" placeholder="Your Password">
+        </label>
+        <p><a type="submit" class="button"><i class="fi-key mgr"></i>Log In</a></p>
+        <p class="text-center"><a href="#">Forgot your password?</a></p>
+        <span>Not a member yet? <a href="#" class="button"><i class="fi-like mgr"></i>Join Us</a></span>
+      </div>
+    </form>
+
+  </div>
   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+
+</div>
 </div>
 
 
@@ -190,9 +217,28 @@
 
     <footer>
       <div class="row">
-        <p class="text-center">
-          © ClubElire 2016
-        </p>
+
+
+      <div class="row">
+          <ul class="inline-list">
+            <li>© ClubElire 2016</li>
+            <li><a href="#">Contract of Carriage</a></li>
+            <li><a href="#">Membership Agreement</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+          </ul>
+        </div>
+        <div class="medium-7 columns">
+          <a href="index.html"><img class="logo footereff" src="images/logow.png" width="319" alt="Clubelire" /></a>
+        </div>
+        <div class="medium-5 columns">
+          <div class="social-wrapper right">
+            <a href="#" class="icon-button twitter"><i class="fi-social-twitter"></i><span></span></a>
+            <a href="#" class="icon-button facebook"><i class="fi-social-facebook"></i><span></span></a>
+            <a href="#" class="icon-button google-plus"><i class="fi-social-google-plus"></i><span></span></a>
+          </div>
+        </div>
+
       </div>
     </footer>
 
