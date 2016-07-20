@@ -1,11 +1,11 @@
 /* CSS Document */
-/*  
+/*
 Author: Akshay Ghate
 Date: 10/11/2015
 */
 
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,700italic|Lato);
-body { font-family: 'Source Sans Pro', sans-serif; -ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%; font-size:0.9375em; padding:0; margin:0; line-height: 1; font-weight:400; color:#333; -webkit-font-smoothing: antialiased;}
+body { font-family: 'redacted-script', sans-serif; -ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%; font-size:1.2em; padding:0; margin:0; line-height: 1; font-weight:400; color:#333; -webkit-font-smoothing: antialiased;}
 header { background: top left repeat-x #f38268; height: 106px; }
 
 nav { float: right;}
@@ -88,7 +88,7 @@ nav > a, nav > li { -webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
 
 /* Global CSS that are applied for all screen sizes */
 
-.nav ul { width: 600px; margin: 0; padding: 0; list-style: none; font-size: 1em; font-weight: 400;} 
+.nav ul { width: 600px; margin: 0; padding: 0; list-style: none; font-size: 1em; font-weight: 400;}
 .nav li span { display: block;}
 .nav a { display: block; color: rgba(249, 249, 249, .9); text-decoration: none; -webkit-transition: color .5s, background .5s, height .5s; -moz-transition: color .5s, background .5s, height .5s; -o-transition: color .5s, background .5s, height .5s; -ms-transition: color .5s, background .5s, height .5s; transition: color .5s, background .5s, height .5s;}
 .nav i{ /* Make the font smoother for Chrome */ -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0);}
@@ -126,28 +126,28 @@ nav > a, nav > button { -webkit-tap-highlight-color: rgba(0,0,0,0);}
 	.no-touch .nav li:nth-child(6n+5) a:hover, .no-touch .nav li:nth-child(6n+5) a:active,	.no-touch .nav li:nth-child(6n+5) a:focus {border-bottom: 4px solid rgb(170, 91, 72);}
 	.no-touch .nav li:nth-child(6n+6) a:hover, .no-touch .nav li:nth-child(6n+6) a:active, .no-touch .nav li:nth-child(6n+6) a:focus {border-bottom: 4px solid rgb(170, 91, 72);}
 
-	/* Placing the icon */	
+	/* Placing the icon */
 	.icon { padding-top: 1.2em;}
 	.icon + span { margin-top: 1em; -webkit-transition: margin .5s; -moz-transition: margin .5s; -o-transition: margin .5s; -ms-transition: margin .5s; transition: margin .5s;}
 
 	/* Animating the height of the element*/
 	.nav a { height: 6.65em;}
-	.no-touch .nav a:hover , .nav a:active , .nav a:focus { height: 7.5em;}	
+	.no-touch .nav a:hover , .nav a:active , .nav a:focus { height: 7.5em;}
 
 	/* Making the text follow the height animation */
 	.no-touch .nav a:hover .icon + span { margin-top: 1.5em; -webkit-transition: margin .5s; -moz-transition: margin .5s; -o-transition: margin .5s; -ms-transition: margin .5s; transition: margin .5s;}
 
 	/* Positioning the icons and preparing for the animation*/
-	.nav i { position: relative; display: inline-block; margin: 0 auto; padding: 0.2em; border-radius: 50%; font-size: 1.8em; box-shadow: 0 0 0 30px transparent; background: rgba(255,255,255,0.1); -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -webkit-transition: box-shadow .6s ease-in-out; -moz-transition: box-shadow .6s ease-in-out; -o-transition: box-shadow .6s ease-in-out; -ms-transition: box-shadow .6s ease-in-out; transition: box-shadow .6s ease-in-out;}	
-	
+	.nav i { position: relative; display: inline-block; margin: 0 auto; padding: 0.2em; border-radius: 50%; font-size: 1.8em; box-shadow: 0 0 0 30px transparent; background: rgba(255,255,255,0.1); -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -webkit-transition: box-shadow .6s ease-in-out; -moz-transition: box-shadow .6s ease-in-out; -o-transition: box-shadow .6s ease-in-out; -ms-transition: box-shadow .6s ease-in-out; transition: box-shadow .6s ease-in-out;}
+
 	/* Animate the box-shadow to create the effect */
 	.no-touch .nav a:hover i, .no-touch .nav a:active i, .no-touch .nav a:focus i { box-shadow: 0 0 0 0 rgba(255,255,255,0.2); -webkit-transition: box-shadow .4s ease-in-out; -moz-transition: box-shadow .4s ease-in-out; -o-transition: box-shadow .4s ease-in-out; -ms-transition: box-shadow .4s ease-in-out; transition: box-shadow .4s ease-in-out;}
 		}
 
 
 /* The "tablet" and "mobile" version */
-@media (max-width: 60em) {		
-	
+@media (max-width: 60em) {
+
 	/* Instead of adding a border, we transition the background color */
 	.no-touch .nav ul li:nth-child(6n+1) a:hover, .no-touch .nav ul li:nth-child(6n+1) a:active, .no-touch .nav ul li:nth-child(6n+1) a:focus { background: rgb(247, 180, 164);}
 	.no-touch .nav li:nth-child(6n+2) a:hover, .no-touch .nav li:nth-child(6n+2) a:active, .no-touch .nav li:nth-child(6n+2) a:focus { background: rgb(247, 180, 164);}
@@ -156,14 +156,14 @@ nav > a, nav > button { -webkit-tap-highlight-color: rgba(0,0,0,0);}
 	.no-touch .nav li:nth-child(6n+5) a:hover, .no-touch .nav li:nth-child(6n+5) a:active, .no-touch .nav li:nth-child(6n+5) a:focus { background: rgb(247, 180, 164);}
 	.no-touch .nav li:nth-child(6n+6) a:hover, .no-touch .nav li:nth-child(6n+6) a:active, .no-touch .nav li:nth-child(6n+6) a:focus { background: rgb(247, 180, 164);}
 
-	.nav ul li { -webkit-transition: background 0.5s; -moz-transition: background 0.5s; -o-transition: background 0.5s; -ms-transition: background 0.5s; transition: background 0.5s;}	
+	.nav ul li { -webkit-transition: background 0.5s; -moz-transition: background 0.5s; -o-transition: background 0.5s; -ms-transition: background 0.5s; transition: background 0.5s;}
 	.nav ul { max-width: 600px; font-size: 0.9em;}
 
 }
 
 @media (max-width: 50em) {
 	.nav ul { max-width: 500px; font-size: 0.9em;}
-}		
+}
 
 @media (max-width: 40em) {
 	.nav ul { max-width: 500px; font-size: 0.8em;}
@@ -173,7 +173,7 @@ nav > a, nav > button { -webkit-tap-highlight-color: rgba(0,0,0,0);}
 
 	/*Creating the 2 column layout using floating elements once again*/
 	.nav li { display: block; float: left; width: 15%;}
-	
+
 	/* Adding some padding to make the elements look nicer*/
 	.nav a { padding: 0.8em;}
 
@@ -188,7 +188,7 @@ nav > a, nav > button { -webkit-tap-highlight-color: rgba(0,0,0,0);}
 
 	/* Transition effect on the border color */
 	.no-touch .nav li:hover i, .no-touch .nav li:active i, .no-touch .nav li:focus i { border: 4px solid rgba(255,255,255,0.1);}
-	
+
 }
 
 /*Adapting the font size and width for smaller screns*/
@@ -209,24 +209,24 @@ header { height: 190px;}
 
 	/* Unhiding the styled menu link */
 	.nav .navtoogle{ margin: 0; display: block;}
-	
+
 	/* Animating the height of the navigation when the button is clicked */
-	
+
 	/* When JavaScript is disabled, we hide the menu */
 	.no-js .nav ul { max-height: 30em; overflow: hidden;}
-	
+
 	/* When JavaScript is enabled, we hide the menu */
 	.js .nav ul { max-height: 0em; overflow: hidden;}
-	
+
 	/* Displaying the menu when the user has clicked on the button*/
 	.js .nav .active + ul { max-height: 30em; overflow: hidden;	-webkit-transition: max-height .4s;	-moz-transition: max-height .4s;	-o-transition: max-height .4s;-ms-transition: max-height .4s; transition: max-height .4s;}
 
 	/* Adapting the layout of the menu for smaller screens : icon on the left and text on the right*/
-	
+
 	.nav li span { display: inline-block; height: 100%;}
 	.nav a { padding: 0.5em;}
 	.icon + span { margin-left: 1em; font-size: 0.8em;}
-	
+
 	/* Adding a left border of 8 px with a different color for each menu item*/
 	.nav li:nth-child(6n+1) { border-left: 8px solid rgb(170, 91, 72);}
 	.nav li:nth-child(6n+2) { border-left: 8px solid rgb(170, 91, 72);}
@@ -241,4 +241,3 @@ header { height: 190px;}
 	.nav ul { max-width: 300px; font-size: 1.3em;}
 }
 /*-------------------------------------------------------------------------*/
-
