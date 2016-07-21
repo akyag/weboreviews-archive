@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -12,97 +12,61 @@
     <link rel="apple-touch-icon" href="faviconbg.png">
     <meta name="msapplication-TileImage" content="faviconbg.png">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link href="css/app.css" rel="stylesheet">
-    <link href="css/normalize.min.css" rel="stylesheet">
-    <script src="js/vendor/modernizr.js"></script>
+    <link rel="stylesheet" href="css/style.css">
     <title>Android</title>
 </head>
 
 <body>
     <header>
-        <div class="medium-3 columns">
-            <a href="index.html">
-                <img class="op" src="images/logo.svg" width="300" alt="Web-o-Reviews">
-            </a>
-        </div>
-        <div class="medium-9 columns">
-            <nav class="right">
-                <ul>
-                    <li>
-                        <a href="index.html">
-                            <span class="icon">
-                <i aria-hidden="true" class="icon-home"></i>
-              </span>
-                            <span>Home</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="freelance-web-designer.html">
-                            <span class="icon">
-                <i aria-hidden="true" class="icon-design"></i>
-              </span>
-                            <span>Web Design</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="portfolio.html">
-                            <span class="icon">
-                <i aria-hidden="true" class="icon-portfolio"></i>
-              </span>
-                            <span>Portfolio</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="contact.html">
-                            <span class="icon">
-                <i aria-hidden="true" class="icon-contact"></i>
-              </span>
-                            <span>Contact</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="gallery.html">
-                            <span class="icon">
-                <i aria-hidden="true" class="icon-gallery"></i>
-              </span>
-                            <span>Gallery</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="rom.html" class="active">
-                            <span class="icon">
-                <i aria-hidden="true" class="icon-android"></i>
-              </span>
-                            <span>Android</span>
-                        </a>
-                    </li>
-                </ul>
-                <div class="handle">
-                    <p class="menu">Menu</p>
-                    <div class="menu_icon">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </div>
-            </nav>
+        <div class="row md">
+            <div class="col-3">
+                <a href="index.html">
+                    <img class="op" src="img/logo.svg" width="300" alt="Web-o-Reviews">
+                </a>
+            </div>
+            <div class="col-9">
+                <nav class="right">
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="design.html">Design</a>
+                        </li>
+                        <li>
+                            <a href="work.html">Work</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
-
-    <section class="main">
-        <div class="panel callout content2">
-            <div class="large-6 columns text-center">
-                <img src="images/android.svg" class="headerimg ani fadeInLeft" width="280" alt="Portfolio">
-            </div>
-            <div class="large-6 columns">
-                <p class="headline">NExtGen</p>
-                <p class="tagline">A Custom ROM based on Android Gingerbread 2.3.x for HTC Explorer (Pico)</p>
+    <main>
+        <div class="header-panel">
+            <div class="container">
+                <div class="row md">
+                    <div class="col-6">
+                        <p class="center">
+                            <img src="img/android.svg" class="headerimg ani fadeInLeft" width="280" alt="Portfolio">
+                        </p>
+                    </div>
+                    <div class="col-6">
+                        <p class="headline">NExtGen</p>
+                        <p class="tagline">A Custom ROM based on Android Gingerbread 2.3.x for HTC Explorer (Pico)</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="content">
-                <div class="small-6 small-centered columns">
-                    <img src="https://dl.dropboxusercontent.com/u/59653648/NExtGen/splash_title.png" alt="logo">
+        <div class="container">
+            <div class="row">
+                <div class="col-1 center">
+                    <img src="https://dl.dropboxusercontent.com/u/59653648/NExtGen/splash_title.png" alt="logo" width="600px">
                 </div>
                 <div>
                     <h3>NExtGen 1.6, a ROM for the HTC Pico (Explorer)</h3>
@@ -186,9 +150,9 @@
                 <h4>Download:</h4>
                 <h5>Current Version: 1.6</h5>
                 <div>
-                    <a href="http://www.androidfilehost.com/?fid=22979706399756575" target="_blank" class="radius button">
+                    <a href="https://www.androidfilehost.com/?fid=22979706399756575" target="_blank" class="button primary">
                         <span class="icon-download"></span> Android File Host</a>
-                    <a href="http://www.mediafire.com/download/cutm548tcc65uf7/NExtGen_v1_6.zip" target="_blank" class="radius button secondary">
+                    <a href="http://www.mediafire.com/download/cutm548tcc65uf7/NExtGen_v1_6.zip" target="_blank" class="button secondary">
                         <span class="icon-download"></span> Mediafire</a>
                 </div>
 
@@ -200,10 +164,10 @@
                 <p>This script will erase and format your /data, /system, /cache and /sd-ext (in ext2) partitions and also traces of OS from sdcard.</p>
                 <p>A log will be created at /sdcard/superwipe.log. Your SD card will remain untouched.</p>
                 <div>
-                    <a href="http://www.mediafire.com/download.php?lim1od8qrjdbblp" target="_blank" class="radius button">
+                    <a href="https://www.androidfilehost.com/?fid=24591000424948128" target="_blank" class="button primary">
+                        <span class="icon-download"></span> Android File Host</a>
+                    <a href="http://www.mediafire.com/download.php?lim1od8qrjdbblp" target="_blank" class="button secondary">
                         <span class="icon-download"></span> Mediafire</a>
-                    <a href="http://goo.im/devs/akya/NExtGen/super_wipe.zip" target="_blank" class="radius button secondary">
-                        <span class="icon-download"></span> Goo.im</a>
                 </div>
                 <p>
                     <strong>MD5:</strong> 3f312ef3e582252fb6bef2936bda42cd</p>
@@ -315,7 +279,7 @@
                         <li>Download ROM and super_wipe zip and place them on your SD Card</li>
                         <li>A full wipe is needed before installing this ROM. Follow the steps below.</li>
                         <li>Boot into recovery by reinserting the battery and holding down volume down and then power buttons together.</li>
-                        <li>Select install zip from SD card >> choose zip from sdcard and select super_wipe.zip</li>
+                        <li>Select install zip from SD card &gt;&gt; choose zip from sdcard and select super_wipe.zip</li>
                         <li>Everything will be wiped automatically. Please note your SD card fat32 partition
                             <strong>won't be touched</strong>. After the script finishes it will boot you back into recovery</li>
                         <li>Now select the ROM's zip and flash. After installation finishes, reboot.</li>
@@ -340,8 +304,8 @@
                     <p>Default kernel details:</p>
                     <ul>
                         <li>
-                            <strong>akya's kernel</strong> - Default kernel of NExtGen <a href="http://goo.im/devs/akya/NExtGen/NG_kernel.zip" target="_blank" class="label">Download</a></li>
-                        <li>Source: <a href="http://dl4.htc.com/RomCode/Source_and_Binaries/pico-gb-crc-2.6.38-71ff0f2.tar.gz" target="_blank">HTC dev</a></li>
+                            <strong>akya's kernel</strong> - Default kernel of NExtGen <a href="https://www.androidfilehost.com/?fid=24591000424948132" target="_blank" class="label">Download</a></li>
+                        <li>Source: <a href="http://www.htcdev.com/devcenter/downloads" target="_blank">HTC dev</a></li>
                         <li>Compiler: <a href="https://github.com/sakindia123/Android_Toolchains/tree/master/arm-eabi-4.4.3" target="_blank">arm-eabi-4.4.3</a></li>
                         <li>Kernel Version: 2.6.38</li>
                     </ul>
@@ -354,62 +318,84 @@
 
             </div>
         </div>
-    </section>
+    </main>
 
     <footer>
-        <div class="row">
-            <ul>
-                <li>
-                    <a href="license.html">
-                        <span class="icon-license"></span> License</a>
-                </li>
-                <li>
-                    <a href="about.html">
-                        <span class="icon-about"></span> About Me</a>
-                </li>
-                <li>
-                    <a href="https://github.com/akyag" target="_blank">
-                        <span class="icon-github"></span> GitHub</a>
-                </li>
-                <li>
-                    <a href="http://validator.w3.org/check?uri=referer" target="_blank">
-                        <span class="icon-html5"></span> Valid HTML</a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="row text-center">
-            <p>
-                <span class="icon-copyright"></span> 2009-2016 - weboreviews.com
-                <span>|</span> Designed By Akshay Ghate</p>
-        </div>
-
-        <div class="row">
-            <div class="my-wrap my-icon-effect text-center">
-                <a href="https://www.facebook.com/Web.o.Reviews" target="_blank" class="my-icon my-icon-facebook">Facebook</a>
-                <a href="https://twitter.com/akshayg" target="_blank" class="my-icon my-icon-twitter">Twitter</a>
-                <a href="http://in.linkedin.com/in/akshayghate" target="_blank" class="my-icon my-icon-linkedin">LinkedIn</a>
-                <a href="http://akyag.deviantart.com" target="_blank" class="my-icon my-icon-deviantart">DeviantArt</a>
-                <a href="contact.html" class="my-icon my-icon-contact">Contact</a>
+        <div class="container">
+            <div class="row">
+                <div class="col-1 my-wrap my-icon-effect text-center">
+                    <a href="https://www.facebook.com/Web.o.Reviews" target="_blank" class="my-icon my-icon-facebook">Facebook</a>
+                    <a href="https://twitter.com/akshayg" target="_blank" class="my-icon my-icon-twitter">Twitter</a>
+                    <a href="http://in.linkedin.com/in/akshayghate" target="_blank" class="my-icon my-icon-linkedin">LinkedIn</a>
+                    <a href="http://akyag.deviantart.com" target="_blank" class="my-icon my-icon-deviantart">DeviantArt</a>
+                    <a href="contact.html" class="my-icon my-icon-contact">Contact</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <ul>
+                        <li>
+                            <a href="license.html">
+                                <span class="icon-license"></span> License</a>
+                        </li>
+                        <li>
+                            <a href="archive.html">
+                                <span class="icon-archive"></span> Archive</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/akyag" target="_blank">
+                                <span class="icon-github"></span> GitHub</a>
+                        </li>
+                        <li>
+                            <a href="http://validator.w3.org/check?uri=referer" target="_blank">
+                                <span class="icon-html5"></span> Valid HTML</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
+        <div class="footer-last">
+            <div class="container">
+                <div class="row sm">
+                    <div class="col-5">
+                        <p>
+                            <span class="icon-copyright"></span> 2009-2016 - weboreviews.com
+                        </p>
+                    </div>
+                    <div class="col-2">
+                        <a href="index.html">
+                            <img class="op" src="img/flogo.svg" width="100" alt="Web-o-Reviews">
+                        </a>
+                    </div>
+                    <div class="col-5">
+                        <p>
+                            Designed with &hearts; By Akshay Ghate
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </footer>
 
+    <script src="js/jquery.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/default.js"></script>
     <script>
-    // Please don't use this code on your site, use your own GA code
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-		ga('create', 'UA-3104348-6', 'weboreviews.com');
-		ga('send', 'pageview');
-
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-3104348-6', 'auto');
+        ga('send', 'pageview');
     </script>
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/vendor/fastclick.js"></script>
-    <script src="js/foundation/foundation.min.js"></script>
-    <script src="js/app.js"></script>
 </body>
 
 </html>
