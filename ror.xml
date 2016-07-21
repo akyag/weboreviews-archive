@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
+<channel>
+  <title>ROR Sitemap for http://weboreviews.com/</title>
+  <link>http://weboreviews.com/</link>
+
+<item>
+     <link>http://weboreviews.com/</link>
+     <title>Web-o-Reviews</title>
+     <description>Pune based custom website design services starting from as low as Rs.12000</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>0</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://weboreviews.com/index.html</link>
+     <title>Web-o-Reviews</title>
+     <description>Pune based custom website design services starting from as low as Rs.12000</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://weboreviews.com/design.html</link>
+     <title>Design</title>
+     <description>Packages offered by Web-o-Reviews for custom website design.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://weboreviews.com/work.html</link>
+     <title>Portfolio</title>
+     <description>All Projects that Web-o-Reviews has worked on along with customer reviews.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://weboreviews.com/contact.html</link>
+     <title>Contact Me</title>
+     <description>Contact me using the form below to discuss your project requirements.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://weboreviews.com/about.html</link>
+     <title>About Me</title>
+     <description>Information about Akshay Ghate, author of this website. You can get in touch with him easily using the contact page.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://weboreviews.com/license.html</link>
+     <title>License</title>
+     <description>Licenses of all the plug-ins used in building Web-o-Reviews.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://weboreviews.com/archive.html</link>
+     <title>Archive</title>
+     <description>Archive page listing Android ROM and Gallery.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://weboreviews.com/data/airclub/index.html</link>
+     <title>Air Club</title>
+     <description>Air Club</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://weboreviews.com/data/airclub/v2/index.html</link>
+     <title>Air Club</title>
+     <description>Air Club</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://weboreviews.com/data/airclub/v3/index.html</link>
+     <title>Air Club</title>
+     <description>Air Club</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://weboreviews.com/data/airclub/v4/index.html</link>
+     <title>Air Club</title>
+     <description>Air Club</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://weboreviews.com/data/persimmon/index.html</link>
+     <title>Persimmon</title>
+     <description>Persimmon</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://weboreviews.com/rom.html</link>
+     <title>Android</title>
+     <description>NExtGen - A Custom ROM based on Android Gingerbread 2.3.x for HTC Explorer (Pico).</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://weboreviews.com/gallery.html</link>
+     <title>Gallery</title>
+     <description>Gallery of wallpapers, forum signatures, android colorscreens.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://weboreviews.com/gallery-2.html</link>
+     <title>Gallery 2</title>
+     <description>Gallery Page#2</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+</channel>
+</rss>
+  
