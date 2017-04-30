@@ -37,6 +37,14 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
+     <link>http://weboreviews.com/scripts.html</link>
+     <title>Scripts</title>
+     <description>Python code snippets.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
      <link>http://weboreviews.com/contact.html</link>
      <title>Contact Me</title>
      <description>Contact me using the form below to discuss your project requirements.</description>

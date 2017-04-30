@@ -2,6 +2,7 @@ http://weboreviews.com/
 http://weboreviews.com/index.html
 http://weboreviews.com/design.html
 http://weboreviews.com/work.html
+http://weboreviews.com/scripts.html
 http://weboreviews.com/contact.html
 http://weboreviews.com/about.html
 http://weboreviews.com/license.html
