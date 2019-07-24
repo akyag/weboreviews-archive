@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="has-navbar-fixed-top">
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Akshay Ghate">
     <meta name="Description" content="Contact me using the form below to discuss your project requirements.">
     <meta name="Keywords" content="pune,freelance,website,designer,webdesign,create website,custom design,android">
@@ -18,149 +18,287 @@
 
 <body>
     <header>
-        <div class="row md">
-            <div class="col-3">
-                <a href="index.html">
-                    <img class="op" src="img/logo.svg" width="300" alt="Web-o-Reviews">
-                </a>
-            </div>
-            <div class="col-9">
-                <nav class="right">
-                    <ul>
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li>
-                            <a href="design.html">Design</a>
-                        </li>
-                        <li>
-                            <a href="work.html">Work</a>
-                        </li>
-                        <li>
-                            <a href="scripts.html">Scripts</a>
-                        </li>
-                        <li>
-                            <a href="contact.html" class="active">Contact</a>
-                        </li>
-                        <li>
-                            <a href="about.html">About</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
-    <main>
-        <div class="header-panel">
+        <!--Navigation-->
+        <nav class="navbar has-shadow is-spaced is-fixed-top" aria-label="main navigation">
             <div class="container">
-                <div class="row md">
-                    <div class="col-6">
-                        <p class="center">
-                            <img src="img/mail.svg" class="headerimg ani fadeInLeft" width="320" alt="Portfolio">
-                        </p>
+                <!--Logo-->
+                <div class="navbar-brand">
+                    <a href="index.html">
+                        <img src="img/logo.svg" width="230" alt="Web-o-Reviews">
+                    </a>
+                    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+                        <span aria-hidden="true">
+                            <!-- --></span>
+                        <span aria-hidden="true">
+                            <!-- --></span>
+                        <span aria-hidden="true">
+                            <!-- --></span>
+                    </a>
+                </div>
+                <div id="navMenu" class="navbar-menu">
+                    <!--Left menu-->
+                    <div class="navbar-start">
+                        <a class="navbar-item" href="index.html">Home</a>
+                        <a class="navbar-item" href="design.html">Design</a>
+                        <a class="navbar-item" href="work.html">Work</a>
+                        <a class="navbar-item" href="about.html">About</a>
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link">More</a>
+                            <div class="navbar-dropdown">
+                                <a class="navbar-item" href="scripts.html">Scripts</a>
+                                <a class="navbar-item" href="archive.html">Archive</a>
+                                <hr class="navbar-divider">
+                                <a class="navbar-item" href="license.html">License</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-6">
-                        <p class="headline">Contact Me</p>
-                        <p class="tagline">Fill the form below.</p>
+                    <!--Right Menu-->
+                    <div class="navbar-end">
+                        <div class="navbar-item">
+                            <a class="button is-primary is-rounded" href="contact.html"><span class="icon"><i class="fas fa-envelope">
+                                        <!-- --></i></span><span>Contact</span></a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero is-dark is-bold is-medium">
+            <div class="hero-body">
+                <div class="container">
+                    <div class="columns">
+                        <!--Left side-->
+                        <div class="column has-text-centered">
+                            <img src="img/mail.svg" class="animated fadeInLeft" width="320" alt="Responsive">
+                        </div>
+                        <!--Right side-->
+                        <div class="column has-text-centered">
+                            <h1 class="title is-spaced is-size-4-touch">
+                                Contact Me
+                            </h1>
+                            <h2 class="subtitle is-size-6-touch">
+                                Fill the form below.
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Content-->
         <section class="container">
-            <div class="row2">
-                <h1>Contact Me:</h1>
+            <div class="content has-text-justified">
+                <h1 class="title is-spaced secondary is-size-4-touch">Contact Me:</h1>
                 <p>Already feel we could work together or just want to say hi? Contacting me is a simple process, just fill the form below.</p>
                 <p>You only have to give basic information. It will take you a couple of minutes at the most. You will not be billed, and there is no obligation to proceed. I will contact you immediately to discuss your requirements.</p>
                 <p>You can also reach me at -
                     <script>
-                    var username = "akshay.226";
+                        var username = "akshay.226";
                     var hostname = "gmail.com";
                     var linktext = username + "@" + hostname;
                     document.write("<a href='" + "mail" + "to:" + username + "@" + hostname + "'>" + linktext + "</a>");
                     </script>
                 </p>
             </div>
-            <div class="row2">
-                <div class="is-container">
-                    <form id="contactform" method="POST">
-                        <input type="hidden" name="_subject" value="New Web-o-Reviews submission!" />
-                        <div class="is-style">
-                            <span><input class="slide-up" id="name" placeholder="Your name!" type="text" name="_name" required /><label for="name">Name</label></span>
-                            <span><input class="slide-up" id="email" placeholder="Your email address!" type="email" name="_replyto" required /><label for="email">Email</label></span>
-                            <input type="text" name="_gotcha" style="display:none" />
-                            <span><textarea style="padding-top:5rem;" class="slide-up" id="msg" placeholder="Your message!" name="Message" rows="8" required></textarea><label for="msg">Message</label></span>
-                        </div>
-                        <p>
-                            <button class="button primary" type="submit"><span class="icon-check"></span>Send It!</button>
-                        </p>
-                        <input type="hidden" name="_next" value="//weboreviews.com/thanks.html" />
-                    </form>
-                    <script>
-                    var contactform = document.getElementById('contactform');
-                    contactform.setAttribute('action', '//formspree.io/' + 'akshay.226' + '@' + 'gmail' + '.' + 'com');
-                    </script>
+            <div class="columns">
+                <div class="column is-8 is-offset-1">
+                    <div class="margin2">
+                        <form id="contactform" name="contactform" accept-charset="utf-8" method="POST">
+                            <fieldset id="fs-frm-inputs">
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-normal">
+                                        <label class="label">From</label>
+                                    </div>
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <p class="control is-expanded has-icons-left">
+                                                <input class="input" type="text" name="name" id="full-name" placeholder="Name" required="">
+                                                <span class="icon is-small is-left">
+                                                    <i class="fas fa-user">
+                                                        <!-- --></i>
+                                                </span>
+                                            </p>
+                                        </div>
+                                        <div class="field">
+                                            <p class="control is-expanded has-icons-left">
+                                                <input class="input" type="email" name="_replyto" id="email-address" placeholder="Email" required="">
+                                                <span class="icon is-small is-left">
+                                                    <i class="fas fa-envelope">
+                                                        <!-- --></i>
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field is-horizontal">
+                                    <div class="field-label"></div>
+                                    <div class="field-body">
+                                        <div class="field is-expanded">
+                                            <div class="field has-addons">
+                                                <p class="control">
+                                                    <a class="button is-static">
+                                                        +91
+                                                    </a>
+                                                </p>
+                                                <p class="control is-expanded">
+                                                    <input class="input" type="tel" name="telephone" id="telephone" placeholder="Your phone number">
+                                                </p>
+                                            </div>
+                                            <p class="help">Optional</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-normal">
+                                        <label class="label">Subject</label>
+                                    </div>
+                                    <div class="field-body">
+                                        <div class="field is-narrow">
+                                            <div class="control">
+                                                <div class="select is-fullwidth">
+                                                    <select name="department" id="department" required="">
+                                                        <option value="" selected="" disabled="">Select</option>
+                                                        <option value="Enquiry">Enquiry</option>
+                                                        <option value="Website development">Website development</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-normal">
+                                        <label class="label">Message</label>
+                                    </div>
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <div class="control">
+                                                <textarea class="textarea" name="message" id="message" placeholder="Explain how I can help you" required=""></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="_subject" id="email-subject" value="New Web-o-Reviews submission!" />
+                            </fieldset>
+                            <div class="field is-horizontal">
+                                <div class="field-label">
+                                    <!-- Left empty for spacing -->
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control">
+                                            <button class="button is-primary" type="submit">
+                                                Send message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="hidden" name="_next" value="//weboreviews.com/thanks.html" />
+                        </form>
+                        <script>
+                        var contactform = document.getElementById('contactform');
+                        contactform.setAttribute('action', '//formspree.io/' + 'akshay.226' + '@' + 'gmail' + '.' + 'com');
+                        </script>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-    <footer>
+    <!--Footer-->
+    <footer class="footer">
         <div class="container">
-            <div class="row">
-                <div class="col-1 my-wrap my-icon-effect text-center">
-                    <a href="https://www.facebook.com/Web.o.Reviews" target="_blank" class="my-icon my-icon-facebook">Facebook</a>
-                    <a href="https://twitter.com/akshayg" target="_blank" class="my-icon my-icon-twitter">Twitter</a>
-                    <a href="https://www.linkedin.com/in/akshayghate/" target="_blank" class="my-icon my-icon-linkedin">LinkedIn</a>
-                    <a href="https://akyag.deviantart.com/" target="_blank" class="my-icon my-icon-deviantart">DeviantArt</a>
-                    <a href="contact.html" class="my-icon my-icon-contact">Contact</a>
+            <div class="columns">
+                <!--Left Side-->
+                <div class="column has-text-centered-touch is-two-fifths">
+                    <div class="footer-list">
+                        <h5 class="is-uppercase">Information</h5>
+                        <ul>
+                            <li>
+                                <i class="fas fa-id-card">
+                                    <!-- --></i><a href="license.html">
+                                    <span class="footer-margin">License</span></a>
+                            </li>
+                            <li>
+                                <i class="fas fa-box">
+                                    <!-- --></i><a href="archive.html">
+                                    <span class="footer-margin">Archive</span></a>
+                            </li>
+                            <li>
+                                <i class="fab fa-github-alt">
+                                    <!-- --></i><a href="https://github.com/akyag" target="_blank">
+                                    <span class="footer-margin">GitHub</span></a>
+                            </li>
+                            <li>
+                                <i class="fab fa-html5">
+                                    <!-- --></i><a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fweboreviews.com%2F" target="_blank">
+                                    <span class="footer-margin">Valid HTML</span></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-1">
-                    <ul>
-                        <li>
-                            <a href="license.html">
-                                <span class="icon-license"></span> License</a>
-                        </li>
-                        <li>
-                            <a href="archive.html">
-                                <span class="icon-archive"></span> Archive</a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/akyag" target="_blank">
-                                <span class="icon-github"></span> GitHub</a>
-                        </li>
-                        <li>
-                            <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fweboreviews.com%2F" target="_blank">
-                                <span class="icon-html5"></span> Valid HTML</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer-last">
-            <div class="container">
-                <div class="row sm">
-                    <div class="col-5">
+                <!--Social and Logo-->
+                <div class="column has-text-centered">
+                    <div>
                         <p>
-                            <span class="icon-copyright"></span> 2009-2019 - weboreviews.com
+                            <img src="img/logo-white.svg" width="230" alt="Web-o-Reviews">
                         </p>
                     </div>
-                    <div class="col-2">
+                    <div><a href="https://www.facebook.com/Web.o.Reviews" target="_blank" class="ifacebook"><span class="icon is-large">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x">
+                                        <!-- --></i>
+                                    <i class="fab fa-facebook-f fa-stack-1x fa-inverse">
+                                        <!-- --></i>
+                                </span>
+                            </span></a>
+                        <a href="https://twitter.com/akshayg" target="_blank" class="itwitter"><span class="icon is-large">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x">
+                                        <!-- --></i>
+                                    <i class="fab fa-twitter fa-stack-1x fa-inverse">
+                                        <!-- --></i>
+                                </span>
+                            </span></a>
+                        <a href="https://www.linkedin.com/in/akshayghate/" target="_blank" class="ilinkedin"><span class="icon is-large">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x">
+                                        <!-- --></i>
+                                    <i class="fab fa-linkedin fa-stack-1x fa-inverse">
+                                        <!-- --></i>
+                                </span>
+                            </span></a>
+                        <a href="https://akyag.deviantart.com/" target="_blank" class="ideviantart"><span class="icon is-large">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x">
+                                        <!-- --></i>
+                                    <i class="fab fa-deviantart fa-stack-1x fa-inverse">
+                                        <!-- --></i>
+                                </span>
+                            </span></a>
+                        <a href="contact.html" target="_blank" class="icontact"><span class="icon is-large">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x">
+                                        <!-- --></i>
+                                    <i class="fas fa-envelope fa-stack-1x fa-inverse">
+                                        <!-- --></i>
+                                </span>
+                            </span></a></div>
+                    <div>
                         <p>
-                            <a href="index.html">
-                                <img class="op" src="img/flogo.svg" width="100" alt="Web-o-Reviews">
-                            </a>
-                        </p>
-                    </div>
-                    <div class="col-5">
-                        <p>
-                            Designed with <i class="icon-heart"></i> By Akshay Ghate
+                            <i class="fas fa-copyright">
+                                <!-- --></i><span class="footer-margin">
+                                <!-- --></span>2009-2019 - weboreviews.com | Designed with <i class="fas fa-heart">
+                                <!-- --></i> by Akshay Ghate.
                         </p>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
+    <!-- Back To Top Button -->
+    <a href="#" class="vanillatop"><i class="fas fa-chevron-up fa-2x fa-inverse">
+            <!-- --></i></a>
     <script src="js/app.min.js"></script>
 </body>
 

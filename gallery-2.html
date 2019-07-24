@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="has-navbar-fixed-top">
 
 <head>
     <meta charset="utf-8">
@@ -13,233 +13,373 @@
     <meta name="msapplication-TileImage" content="faviconbg.png">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="css/style.css">
-    <title>Gallery 2</title>
+    <title>Gallery (2)</title>
 </head>
 
 <body>
     <header>
-        <div class="row md">
-            <div class="col-3">
-                <a href="index.html">
-                    <img class="op" src="img/logo.svg" width="300" alt="Web-o-Reviews">
-                </a>
+        <!--Navigation-->
+        <nav class="navbar has-shadow is-spaced is-fixed-top" aria-label="main navigation">
+            <div class="container">
+                <!--Logo-->
+                <div class="navbar-brand">
+                    <a href="index.html">
+                        <img src="img/logo.svg" width="230" alt="Web-o-Reviews">
+                    </a>
+                    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+                      <span aria-hidden="true"><!-- --></span>
+                      <span aria-hidden="true"><!-- --></span>
+                      <span aria-hidden="true"><!-- --></span>
+                    </a>
+                </div>
+                <div id="navMenu" class="navbar-menu">
+                    <!--Left menu-->
+                    <div class="navbar-start">
+                        <a class="navbar-item" href="index.html">Home</a>
+                        <a class="navbar-item" href="design.html">Design</a>
+                        <a class="navbar-item" href="work.html">Work</a>
+                        <a class="navbar-item" href="about.html">About</a>
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link">More</a>
+                            <div class="navbar-dropdown">
+                                <a class="navbar-item" href="scripts.html">Scripts</a>
+                                <a class="navbar-item is-active" href="archive.html">Archive</a>
+                                <hr class="navbar-divider">
+                                <a class="navbar-item" href="license.html">License</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Right Menu-->
+                    <div class="navbar-end">
+                        <div class="navbar-item">
+                            <a class="button is-primary is-outlined is-rounded" href="contact.html"><span class="icon"><i class="fas fa-envelope"><!-- --></i></span><span>Contact</span></a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-9">
-                <nav class="right">
+        </nav>
+    </header>
+    <main>
+        <section class="hero is-dark is-bold is-medium">
+            <div class="hero-body">
+                <div class="container">
+                    <div class="columns">
+                        <!--Left side-->
+                        <div class="column has-text-centered">
+                            <img src="img/gallery.svg" class="animated fadeInLeft" width="280" alt="Responsive">
+                        </div>
+                        <!--Right side-->
+                        <div class="column has-text-centered">
+                            <h1 class="title is-spaced is-size-4-touch">
+                                Gallery
+                            </h1>
+                            <h2 class="subtitle is-size-6-touch">
+                                Forums signatures, wallpapers, css / photoshop effects that I did for fun.
+                           </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Content-->
+        <section class="container">
+            <div class="margin2">
+                <nav class="breadcrumb" aria-label="breadcrumbs">
                     <ul>
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li>
-                            <a href="design.html">Design</a>
-                        </li>
-                        <li>
-                            <a href="work.html">Work</a>
-                        </li>
-                        <li>
-                            <a href="scripts.html">Scripts</a>
-                        </li>
-                        <li>
-                            <a href="contact.html">Contact</a>
-                        </li>
-                        <li>
-                            <a href="about.html">About</a>
-                        </li>
+                        <li><a href="index.html">Web-o-Reviews</a></li>
+                        <li><a href="archive.html">Archive</a></li>
+                        <li class="is-active"><a href="#" aria-current="page">Gallery (2)</a></li>
+                    </ul>
+                </nav>
+            </div>            
+            <div class="content has-text-justified">
+                <h1 class="title is-spaced secondary is-size-4-touch">Gallery:</h1>
+                <h2 class="subtitle is-size-4 secondary  is-size-5-touch">Forum Signatures:</h2>
+                <div class="tile is-ancestor box has-text-centered">
+                    <div class="tile is-vertical">
+                        <div class="tile">
+                        <div class="tile is-parent">
+                            <div class="tile is-child">
+                                <a href=""><img src="img/gallery/s1.png" class="th2" id="open-modalg1" width="230" height="150" alt="Legolas"></a>
+                                <p class="title is-6">Legolas</p>
+                            </div>
+                        </div>
+                        <div class="tile is-parent">
+                            <div class="tile is-child">
+                                <a href=""><img src="img/gallery/s2.png" class="th2" id="open-modalg2" width="230" height="150" alt="Archer"></a>
+                                <p class="title is-6">Archer</p>
+                            </div>
+                        </div>
+                        <div class="tile is-parent">
+                            <div class="tile is-child">
+                                <a href=""><img src="img/gallery/s3.png" class="th2" id="open-modalg3" width="230" height="150" alt="Aeon Flux"></a>
+                                <p class="title is-6">Aeon Flux</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tile">
+                    <div class="tile is-parent">
+                        <div class="tile is-child">
+                            <a href=""><img src="img/gallery/s4.png" class="th2" id="open-modalg4" width="230" height="150" alt="Archer 2"></a>
+                            <p class="title is-6">Archer 2</p>
+                        </div>
+                    </div>
+                    <div class="tile is-parent">
+                        <div class="tile is-child">
+                            <a href=""><img src="img/gallery/s5.png" class="th2" id="open-modalg5" width="230" height="150" alt="Die Hard"></a>
+                            <p class="title is-6">Die Hard</p>
+                        </div>
+                    </div>
+                    <div class="tile is-parent">
+                        <div class="tile is-child">
+                            <a href=""><img src="img/gallery/s6.png" class="th2" id="open-modalg6" width="230" height="150" alt="Hitman"></a>
+                            <p class="title is-6">Hitman</p>
+                        </div>
+                    </div>
+                </div>
+                    <div class="tile">
+                    <div class="tile is-parent">
+                        <div class="tile is-child">
+                            <a href=""><img src="img/gallery/s7.png" class="th2" id="open-modalg7" width="230" height="150" alt="Kung Fu Panda"></a>
+                            <p class="title is-6">Kung Fu Panda</p>
+                        </div>
+                    </div>
+                    <div class="tile is-parent">
+                        <div class="tile is-child">
+                            <a href=""><img src="img/gallery/s8.png" class="th2" id="open-modalg8" width="230" height="150" alt="Joker"></a>
+                            <p class="title is-6">Joker</p>
+                        </div>
+                    </div>
+                    <div class="tile is-parent">
+                        <div class="tile is-child">
+                            <a href=""><img src="img/gallery/s9.png" class="th2" id="open-modalg9" width="230" height="150" alt="Wolverine"></a>
+                            <p class="title is-6">Wolverine</p>
+                        </div>
+                    </div>
+                </div>
+                    <div class="tile">
+                    <div class="tile is-parent is-4">
+                        <div class="tile is-child">
+                            <a href=""><img src="img/gallery/s10.png" class="th2" id="open-modalg10" width="230" height="150" alt="Joker 2"></a>
+                            <p class="title is-6">Joker 2</p>
+                        </div>
+                    </div>
+
+                </div>                
+
+            </div>
+        </div></div>
+                <div class="modal" id="myModalg1">
+                    <div class="modal-background"></div>
+                    <div class="modal-content">
+                        <button class="modal-close is-large bulma-modal-close">
+                            <!-- --></button>
+                        <p class="image">
+                            <img src="img/gallery/source/s1b.png" alt="Legolas">
+                        </p>
+                    </div>
+                </div>
+                <div class="modal" id="myModalg2">
+                    <div class="modal-background"></div>
+                    <div class="modal-content">
+                        <button class="modal-close is-large bulma-modal-close">
+                            <!-- --></button>
+                        <p class="image">
+                            <img src="img/gallery/source/s2b.png" alt="Archer">
+                        </p>
+                    </div>
+                </div>
+                <div class="modal" id="myModalg3">
+                    <div class="modal-background"></div>
+                    <div class="modal-content">
+                        <button class="modal-close is-large bulma-modal-close">
+                            <!-- --></button>
+                        <p class="image">
+                            <img src="img/gallery/source/s3b.png" alt="Aeon Flux">
+                        </p>
+                    </div>
+                </div>
+                <div class="modal" id="myModalg4">
+                    <div class="modal-background"></div>
+                    <div class="modal-content">
+                        <button class="modal-close is-large bulma-modal-close">
+                            <!-- --></button>
+                        <p class="image">
+                            <img src="img/gallery/source/s4b.png" alt="Archer 2">
+                        </p>
+                    </div>
+                </div>
+                <div class="modal" id="myModalg5">
+                    <div class="modal-background"></div>
+                    <div class="modal-content">
+                        <button class="modal-close is-large bulma-modal-close">
+                            <!-- --></button>
+                        <p class="image">
+                            <img src="img/gallery/source/s5b.png" alt="Die Hard">
+                        </p>
+                    </div>
+                </div>
+                <div class="modal" id="myModalg6">
+                    <div class="modal-background"></div>
+                    <div class="modal-content">
+                        <button class="modal-close is-large bulma-modal-close">
+                            <!-- --></button>
+                        <p class="image">
+                            <img src="img/gallery/source/s6b.png" alt="Hitman">
+                        </p>
+                    </div>
+                </div>
+                <div class="modal" id="myModalg7">
+                    <div class="modal-background"></div>
+                    <div class="modal-content">
+                        <button class="modal-close is-large bulma-modal-close">
+                            <!-- --></button>
+                        <p class="image">
+                            <img src="img/gallery/source/s7b.png" alt="Kung Fu Panda">
+                        </p>
+                    </div>
+                </div>
+                <div class="modal" id="myModalg8">
+                    <div class="modal-background"></div>
+                    <div class="modal-content">
+                        <button class="modal-close is-large bulma-modal-close">
+                            <!-- --></button>
+                        <p class="image">
+                            <img src="img/gallery/source/s8b.png" alt="Joker">
+                        </p>
+                    </div>
+                </div>
+                <div class="modal" id="myModalg9">
+                    <div class="modal-background"></div>
+                    <div class="modal-content">
+                        <button class="modal-close is-large bulma-modal-close">
+                            <!-- --></button>
+                        <p class="image">
+                            <img src="img/gallery/source/s9b.png" alt="Wolverine">
+                        </p>
+                    </div>
+                </div>
+                <div class="modal" id="myModalg10">
+                    <div class="modal-background"></div>
+                    <div class="modal-content">
+                        <button class="modal-close is-large bulma-modal-close">
+                            <!-- --></button>
+                        <p class="image">
+                            <img src="img/gallery/source/s10b.png" alt="Joker 2">
+                        </p>
+                    </div>
+                </div>
+
+            <div class="margin2">
+                <nav class="pagination is-rounded is-right" aria-label="pagination">
+                    <a class="pagination-previous" href="gallery.html">Previous</a>
+                    <a class="pagination-next">Next page</a>
+                    <ul class="pagination-list">
+                        <li><a class="pagination-link" href="gallery.html" aria-label="Goto page 1">1</a></li>
+                        <li><a class="pagination-link is-current" aria-label="Page 2" aria-current="page">2</a></li>
                     </ul>
                 </nav>
             </div>
-        </div>
-    </header>
-    <main>
-        <div class="header-panel">
-            <div class="container">
-                <div class="row md">
-                    <div class="col-6">
-                        <p class="center">
-                            <img src="img/gallery.svg" class="headerimg ani fadeInLeft" width="280" alt="Responsive">
-                        </p>
-                    </div>
-                    <div class="col-6">
-                        <p class="headline">Gallery</p>
-                        <p class="tagline">Forums signatures, wallpapers, css / photoshop effects that I did for fun.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <section class="container">
-            <div class="row">
-                <h1>Gallery:</h1>
-                <div class="pagination">
-                    <ul>
-                        <li><a href="gallery.html">«</a></li>
-                        <li><a href="gallery.html">1</a></li>
-                        <li><a class="active" href="#">2</a></li>
-                        <li><a href="#">»</a></li>
-                    </ul>
-                </div>
-                <h2>Forum Signatures:</h2>
-                <div class="panel">
-                    <div class="row md">
-                        <div class="col-4 gallery">
-                            <img src="img/gallery/s1.png" class="th ho s1" width="230" height="150" alt="Legolas">
-                        </div>
-                        <div class="col-4 gallery">
-                            <img src="img/gallery/s2.png" class="th ho s2" width="230" height="150" alt="Archer">
-                        </div>
-                        <div class="col-4 gallery">
-                            <img src="img/gallery/s3.png" class="th ho s3" width="230" height="150" alt="Aeon Flux">
-                        </div>
-                    </div>
-                    <div class="row md">
-                        <div class="col-4 gallery">
-                            <img src="img/gallery/s4.png" class="th ho s4" width="230" height="150" alt="Archer 2">
-                        </div>
-                        <div class="col-4 gallery">
-                            <img src="img/gallery/s5.png" class="th ho s5" width="230" height="150" alt="Die Hard">
-                        </div>
-                        <div class="col-4 gallery">
-                            <img src="img/gallery/s6.png" class="th ho s6" width="230" height="150" alt="Hitman">
-                        </div>
-                    </div>
-                    <div class="row md">
-                        <div class="col-4 gallery">
-                            <img src="img/gallery/s7.png" class="th ho s7" width="230" height="150" alt="Kung Fu Panda">
-                        </div>
-                        <div class="col-4 gallery">
-                            <img src="img/gallery/s8.png" class="th ho s8" width="230" height="150" alt="Joker">
-                        </div>
-                        <div class="col-4 gallery">
-                            <img src="img/gallery/s9.png" class="th ho s9" width="230" height="150" alt="Wolverine">
-                        </div>
-                    </div>
-                    <div class="row md">
-                        <div class="col-4 gallery">
-                            <img src="img/gallery/s10.png" class="th ho s10" width="230" height="150" alt="Joker 2">
-                        </div>
-                        <div class="col-4 gallery">
-                        </div>
-                        <div class="col-4 gallery">
-                        </div>
-                    </div>
-                    <div id="g1" class="iziModal">
-                        <img src="img/gallery/source/w1b.png" alt="Glow"></div>
-                    <div id="g2" class="iziModal">
-                        <img src="img/gallery/source/w2b.png" alt="Shine"></div>
-                    <div id="g3" class="iziModal">
-                        <img src="img/gallery/source/w3b.png" alt="Milla"></div>
-                    <div id="g4" class="iziModal">
-                        <img src="img/gallery/source/a1b.png" alt="Custom 1.0"></div>
-                    <div id="g5" class="iziModal">
-                        <img src="img/gallery/source/a2b.jpg" alt="Simplistic 1.0"></div>
-                    <div id="g6" class="iziModal">
-                        <img src="img/gallery/source/a3b.jpg" alt="Sherlock"></div>
-                    <div id="g7" class="iziModal">
-                        <img src="img/gallery/source/a4b.jpg" alt="Go Green"></div>
-                    <div id="g8" class="iziModal">
-                        <img src="img/gallery/source/a5b.jpg" alt="Cerulean"></div>
-                    <div id="airclub" class="iziModal">
-                        <img src="img/airclub-lg.png" width="1200" height="1672" alt="Air Club"></div>
-                </div>
-                <div id="ensys" class="iziModal">
-                    <img src="img/ensys-lg.png" width="1242" height="1282" alt="Ensys"></div>
-                <div id="mangesh" class="iziModal">
-                    <img src="img/mangesh-lg.png" width="1212" height="977" alt="Mangesh Thombare"></div>
-                <div id="posimind" class="iziModal">
-                    <img src="img/posimind-lg.png" width="1100" height="900" alt="Posimind"></div>
-                <div id="persimmon" class="iziModal">
-                    <img src="img/persimmon-lg.png" width="1228" height="1475" alt="Persimmon"></div>
-                <div id="photo-retouch" class="iziModal">
-                    <img src="img/photo-retouch-lg.jpg" width="801" height="484" alt="Photo Retouch Service"></div>
-                <div id="s1" class="iziModal">
-                    <img src="img/gallery/source/s1b.png" alt="Legolas"></div>
-                <div id="s2" class="iziModal">
-                    <img src="img/gallery/source/s2b.png" alt="Archer"></div>
-                <div id="s3" class="iziModal">
-                    <img src="img/gallery/source/s3b.png" alt="Aeon Flux"></div>
-                <div id="s4" class="iziModal">
-                    <img src="img/gallery/source/s4b.png" alt="Archer 2"></div>
-                <div id="s5" class="iziModal">
-                    <img src="img/gallery/source/s5b.png" alt="Die Hard"></div>
-                <div id="s6" class="iziModal">
-                    <img src="img/gallery/source/s6b.png" alt="Hitman"></div>
-                <div id="s7" class="iziModal">
-                    <img src="img/gallery/source/s7b.png" alt="Kung Fu Panda"></div>
-                <div id="s8" class="iziModal">
-                    <img src="img/gallery/source/s8b.png" alt="Joker"></div>
-                <div id="s9" class="iziModal">
-                    <img src="img/gallery/source/s9b.png" alt="Wolverine"></div>
-                <div id="s10" class="iziModal">
-                    <img src="img/gallery/source/s10b.png" alt="Joker 2"></div>
-                </div>
-            <div class="pagination">
-                <ul>
-                    <li><a href="gallery.html">«</a></li>
-                    <li><a href="gallery.html">1</a></li>
-                    <li><a class="active" href="#">2</a></li>
-                    <li><a href="#">»</a></li>
-                </ul>
-            </div>
+
+                
         </section>
     </main>
-    <footer>
+    <!--Footer-->
+    <footer class="footer">
         <div class="container">
-            <div class="row">
-                <div class="col-1 my-wrap my-icon-effect text-center">
-                    <a href="https://www.facebook.com/Web.o.Reviews" target="_blank" class="my-icon my-icon-facebook">Facebook</a>
-                    <a href="https://twitter.com/akshayg" target="_blank" class="my-icon my-icon-twitter">Twitter</a>
-                    <a href="https://www.linkedin.com/in/akshayghate/" target="_blank" class="my-icon my-icon-linkedin">LinkedIn</a>
-                    <a href="https://akyag.deviantart.com/" target="_blank" class="my-icon my-icon-deviantart">DeviantArt</a>
-                    <a href="contact.html" class="my-icon my-icon-contact">Contact</a>
+            <div class="columns">
+                <!--Left Side-->
+                <div class="column has-text-centered-touch is-two-fifths">
+                    <div class="footer-list">
+                        <h5 class="is-uppercase">Information</h5>
+                        <ul>
+                            <li>
+                                <i class="fas fa-id-card">
+                                    <!-- --></i><a href="license.html">
+                                    <span class="footer-margin">License</span></a>
+                            </li>
+                            <li>
+                                <i class="fas fa-box">
+                                    <!-- --></i><a href="archive.html">
+                                    <span class="footer-margin">Archive</span></a>
+                            </li>
+                            <li>
+                                <i class="fab fa-github-alt">
+                                    <!-- --></i><a href="https://github.com/akyag" target="_blank">
+                                    <span class="footer-margin">GitHub</span></a>
+                            </li>
+                            <li>
+                                <i class="fab fa-html5">
+                                    <!-- --></i><a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fweboreviews.com%2F" target="_blank">
+                                    <span class="footer-margin">Valid HTML</span></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-1">
-                    <ul>
-                        <li>
-                            <a href="license.html">
-                                <span class="icon-license"></span> License</a>
-                        </li>
-                        <li>
-                            <a href="archive.html">
-                                <span class="icon-archive"></span> Archive</a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/akyag" target="_blank">
-                                <span class="icon-github"></span> GitHub</a>
-                        </li>
-                        <li>
-                            <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fweboreviews.com%2F" target="_blank">
-                                <span class="icon-html5"></span> Valid HTML</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer-last">
-            <div class="container">
-                <div class="row sm">
-                    <div class="col-5">
+                <!--Social and Logo-->
+                <div class="column has-text-centered">
+                    <div>
                         <p>
-                            <span class="icon-copyright"></span> 2009-2019 - weboreviews.com
+                            <img src="img/logo-white.svg" width="230" alt="Web-o-Reviews">
                         </p>
                     </div>
-                    <div class="col-2">
+                    <div><a href="https://www.facebook.com/Web.o.Reviews" target="_blank" class="ifacebook"><span class="icon is-large">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x">
+                                        <!-- --></i>
+                                    <i class="fab fa-facebook-f fa-stack-1x fa-inverse">
+                                        <!-- --></i>
+                                </span>
+                            </span></a>
+                        <a href="https://twitter.com/akshayg" target="_blank" class="itwitter"><span class="icon is-large">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x">
+                                        <!-- --></i>
+                                    <i class="fab fa-twitter fa-stack-1x fa-inverse">
+                                        <!-- --></i>
+                                </span>
+                            </span></a>
+                        <a href="https://www.linkedin.com/in/akshayghate/" target="_blank" class="ilinkedin"><span class="icon is-large">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x">
+                                        <!-- --></i>
+                                    <i class="fab fa-linkedin fa-stack-1x fa-inverse">
+                                        <!-- --></i>
+                                </span>
+                            </span></a>
+                        <a href="https://akyag.deviantart.com/" target="_blank" class="ideviantart"><span class="icon is-large">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x">
+                                        <!-- --></i>
+                                    <i class="fab fa-deviantart fa-stack-1x fa-inverse">
+                                        <!-- --></i>
+                                </span>
+                            </span></a>
+                        <a href="contact.html" target="_blank" class="icontact"><span class="icon is-large">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x">
+                                        <!-- --></i>
+                                    <i class="fas fa-envelope fa-stack-1x fa-inverse">
+                                        <!-- --></i>
+                                </span>
+                            </span></a></div>
+                    <div>
                         <p>
-                            <a href="index.html">
-                                <img class="op" src="img/flogo.svg" width="100" alt="Web-o-Reviews">
-                            </a>
-                        </p>
-                    </div>
-                    <div class="col-5">
-                        <p>
-                            Designed with <i class="icon-heart"></i> By Akshay Ghate
+                            <i class="fas fa-copyright">
+                                <!-- --></i><span class="footer-margin">
+                                <!-- --></span>2009-2019 - weboreviews.com | Designed with <i class="fas fa-heart">
+                                <!-- --></i> by Akshay Ghate.
                         </p>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
+    <!-- Back To Top Button -->
+    <a href="#" class="vanillatop"><i class="fas fa-chevron-up fa-2x fa-inverse">
+            <!-- --></i></a>
     <script src="js/app.min.js"></script>
+    <script src="js/gallery2-modal.min.js"></script>
 </body>
 
 </html>
