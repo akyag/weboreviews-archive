@@ -79,12 +79,9 @@
                         </div>
                         <!--Right side-->
                         <div class="column has-text-centered">
-                            <h1 class="is-size-2 has-text-weight-bold is-spaced is-size-4-touch">
+                            <h1 class="is-family-secondary is-size-2 has-text-weight-normal is-spaced is-size-4-touch">
                                 Contact Me
                             </h1>
-                            <h2 class="is-size-4 is-size-6-touch header-margin">
-                                Fill the form below.
-                            </h2>
                         </div>
                     </div>
                 </div>
@@ -94,12 +91,10 @@
         <!--Content-->
         <section class="container">
             <div class="content has-text-justified">
-                <h1 class="title is-spaced secondary is-size-4-touch">Contact Me:</h1>
+                <h1 class="title is-spaced secondary is-size-4-touch">Contact Form:</h1>
                 <p>Already feel we could work together or just want to say hi? Contacting me is a simple process, just
                     fill the form below.</p>
-                <p>You only have to give basic information. It will take you a couple of minutes at the most. You will
-                    not be billed, and there is no obligation to proceed. I will contact you immediately to discuss your
-                    requirements.</p>
+                <p>All informations from the contact form like name, email, subject, messages etc. will not be shared in public.</p>
                 <p>You can also reach me at -
                     <script>
                         var username = "akshay.226";
@@ -161,24 +156,38 @@
                                         </div>
                                     </div>
                                 </div>
+                                <label class="label is-large">What it is about this contact?</label>
                                 <div class="field is-horizontal">
                                     <div class="field-label is-normal">
-                                        <label class="label">Subject</label>
+                                        <label class="label">Department</label>
                                     </div>
                                     <div class="field-body">
                                         <div class="field is-narrow">
                                             <div class="control">
                                                 <div class="select is-fullwidth">
                                                     <select name="department" id="department" required="">
-                                                        <option value="" selected="" disabled="">Select</option>
-                                                        <option value="Enquiry">Enquiry</option>
                                                         <option value="Website development">Website development</option>
+                                                        <option value="Enquiry">Enquiry</option>
+                                                        <option value="Chat">Chat</option>
+                                                        <option value="Other">Other</option>
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-normal">
+                                      <label class="label">Subject</label>
+                                    </div>
+                                    <div class="field-body">
+                                      <div class="field">
+                                        <div class="control">
+                                          <input class="input" type="text" placeholder="Do you want to build a snowman?" required="">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
                                 <div class="field is-horizontal">
                                     <div class="field-label is-normal">
                                         <label class="label">Message</label>
@@ -190,6 +199,14 @@
                                                     placeholder="Explain how I can help you" required=""></textarea>
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="control">
+                                      <label class="checkbox">
+                                        <input type="checkbox" required="">
+                                        I understand that this form collects my name and email so I can be contacted.
+                                      </label>
                                     </div>
                                 </div>
                                 <input type="hidden" name="_subject" id="email-subject"
