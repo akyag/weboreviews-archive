@@ -17,9 +17,6 @@
 </head>
 
 <body>
-    <div id="preloader">
-        <div id="status"></div>
-    </div>
     <header>
         <!--Navigation-->
         <nav class="navbar has-shadow is-spaced is-fixed-top" aria-label="main navigation">
@@ -75,7 +72,7 @@
                     <div class="columns">
                         <!--Left side-->
                         <div class="column has-text-centered">
-                            <img src="img/portfolio.svg" class="animated delay-1s fadeInLeft" width="300" alt="Portfolio Icon">
+                            <img src="img/portfolio.svg" class="animated fadeInLeft" width="300" alt="Portfolio Icon">
                         </div>
                         <!--Right side-->
                         <div class="column has-text-centered">
@@ -93,115 +90,155 @@
         </section>
         <!--Content-->
         <section class="container">
-            <div class="content has-text-justified">
+            <div class="content">
                 <h1 class="title is-spaced secondary is-size-4-touch">Work:</h1>
-                <div class="tile is-ancestor box">
-                    <div class="tile is-vertical">
-                        <div class="tile">
-                            <div class="tile is-parent">
-                                <div class="tile is-child">
-                                    <p class="title is-size-5-touch">Air Club</p>
-                                    <p>
-                                        <a href=""><img src="img/airclub.png" class="th" id="open-modal1"
-                                                alt="Air Club"></a>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="modal" id="myModal1">
-                                <div class="modal-background"></div>
-                                <div class="modal-content">
-                                    <button class="modal-close is-large bulma-modal-close">
-                                        <!-- --></button>
-                                    <p class="image">
-                                        <img src="img/airclub-lg.png" alt="Air Club">
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="tile is-parent">
-                                <div class="tile is-child">
-                                    <p class="subtitle">Info:</p>
-                                    <ul>
-                                        <li>
-                                            Responsive design.
-                                        </li>
-                                        <li>
-                                            Image slider.
-                                        </li>
-                                        <li>
-                                            Multiple color variations.
-                                        </li>
-                                    </ul>
-                                    <p>
-                                        <a class="button is-primary" href="data/airclub/index.html" target="_blank">
-                                            <span class="icon"><i class="fas fa-link">
-                                                    <!-- --></i></span></a>
-                                        <a class="button" href="data/airclub/v2/index.html" target="_blank">
-                                            <span class="icon"><i class="fas fa-link">
-                                                    <!-- --></i></span><span>V2</span></a>
-                                        <a class="button" href="data/airclub/v3/index.html" target="_blank">
-                                            <span class="icon"><i class="fas fa-link">
-                                                    <!-- --></i></span><span>V3</span></a>
-                                        <a class="button" href="data/airclub/v4/index.html" target="_blank">
-                                            <span class="icon"><i class="fas fa-link">
-                                                    <!-- --></i></span><span>V4</span></a>
-                                    </p>
-                                </div>
-                            </div>
+                <div class="tile is-ancestor box is-paddingless">
+                    <div class="tile is-parent">
+                        <div class="tile is-child">
+                            <p class="th"><img src="img/airclub.png" alt="Air Club"></p>
                         </div>
                     </div>
-                </div>
-                <div class="tile is-ancestor box">
-                    <div class="tile is-vertical">
-                        <div class="tile">
-                            <div class="tile is-parent">
-                                <div class="tile is-child">
-                                    <p class="title is-size-5-touch">Ensys</p>
-                                    <p>
-                                        <a href=""><img src="img/ensys.png" class="th" id="open-modal2" alt="Ensys"></a>
-                                    </p>
-                                </div>
+                    <div class="tile is-parent has-background-grey-darker has-text-white-bis">
+                        <div class="tile is-child">
+                            <div class="project__side">
+                                <h3 class="is-size-3 header-margin has-text-secondary">
+                                    Air Club
+                                </h3>
+                                <h5 class="is-size-5 has-text-white-bis">
+                                    Info:
+                                </h5>
+                                <ul>
+                                    <li>
+                                        <p><span class="is-orange"></span>Responsive design.</p>
+                                    </li>
+                                    <li>
+                                        <p><span class="is-cyan"></span>Image slider.</p>
+                                    </li>
+                                    <li>
+                                        <p><span class="is-purple"></span>Multiple color variations.</p>
+                                    </li>
+                                </ul>
+                                <p>
+                                    <a class="button is-primary" href="data/airclub/index.html" target="_blank">
+                                        <span class="icon"><i class="fas fa-link">
+                                                <!-- --></i></span></a>
+                                    <a class="button is-primary is-light" href="data/airclub/v2/index.html"
+                                        target="_blank">
+                                        <span class="icon"><i class="fas fa-link">
+                                                <!-- --></i></span><span>v2</span></a>
+                                    <a class="button is-primary is-light" href="data/airclub/v3/index.html"
+                                        target="_blank">
+                                        <span class="icon"><i class="fas fa-link">
+                                                <!-- --></i></span><span>v3</span></a>
+                                    <a class="button is-primary is-light" href="data/airclub/v4/index.html"
+                                        target="_blank">
+                                        <span class="icon"><i class="fas fa-link">
+                                                <!-- --></i></span><span>v4</span></a>
+                                </p>
                             </div>
-                            <div class="modal" id="myModal2">
-                                <div class="modal-background"></div>
-                                <div class="modal-content">
-                                    <button class="modal-close is-large bulma-modal-close">
-                                        <!-- --></button>
-                                    <p class="image is-3by3">
-                                        <img src="img/ensys-lg.png" alt="Ensys">
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="tile is-parent">
-                                <div class="tile is-child">
-                                    <p class="subtitle">Info:</p>
-                                    <ul>
-                                        <li>
-                                            Local business website.
-                                        </li>
-                                        <li>
-                                            Responsive design.
-                                        </li>
-                                        <li>
-                                            Image slider.
-                                        </li>
-                                        <li>
-                                            Contact form with map.
-                                        </li>
-                                    </ul>
-                                    <p>
-                                        <a class="button is-primary" href="http://ensys.in" target="_blank">
-                                            <span class="icon"><i class="fas fa-link">
-                                                    <!-- --></i></span></a>
-                                        <a class="button" href="" id="open-button-modal2">
-                                            <span class="icon"><i class="fas fa-link">
-                                                    <!-- --></i></span><span>View</span></a>
-                                    </p>
-                                </div>
-                            </div>
+
                         </div>
-                        <div class="tile is-parent">
-                            <div class="tile is-child">
-                                <h3 class="secondary is-size-5-touch">Testimonial:</h3>
+                    </div>
+
+                </div>
+
+
+                <div class="has-text-centered header-margin">
+                    <span><i class="fas fa-grip-lines"></i><i class="fas fa-grip-lines"></i><i
+                            class="fas fa-grip-lines"></i></span>
+                </div>
+
+                <div class="tile is-ancestor box is-paddingless">
+                    <div class="tile is-parent">
+                        <div class="tile is-child">
+                            <p class="th"><img src="img/saptarshi.png" alt="Saptarshi"></p>
+                        </div>
+                    </div>
+                    <div class="tile is-parent has-background-grey-darker has-text-white-bis">
+                        <div class="tile is-child">
+                            <div class="project__side">
+                                <h3 class="is-size-3 header-margin has-text-secondary">
+                                    Saptarshi
+                                </h3>
+                                <h5 class="is-size-5 has-text-white-bis">
+                                    Info:
+                                </h5>
+                                <ul>
+                                    <li>
+                                        <p><span class="is-orange"></span>Responsive design.</p>
+                                    </li>
+                                    <li>
+                                        <p><span class="is-cyan"></span>Image slider.</p>
+                                    </li>
+                                    <li>
+                                        <p><span class="is-purple"></span>Scrolling header.</p>
+                                    </li>
+                                    <li>
+                                        <p><span class="is-red"></span>Embedded map.</p>
+                                    </li>
+                                </ul>
+                                <p>
+                                    <a class="button is-primary modal6">
+                                        <span class="icon"><i class="fas fa-link">
+                                                <!-- --></i></span><span>View</span></a>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="has-text-centered header-margin">
+                    <span><i class="fas fa-grip-lines"></i><i class="fas fa-grip-lines"></i><i
+                            class="fas fa-grip-lines"></i></span>
+                </div>
+
+
+                <div class="tile is-ancestor box is-paddingless">
+                    <div class="tile is-parent">
+                        <div class="tile is-child">
+                            <p class="th"><img src="img/ensys.png" alt="Ensys"></p>
+                        </div>
+                    </div>
+                    <div class="tile is-parent is-vertical has-background-grey-darker has-text-white-bis">
+                        <div class="tile is-child">
+                            <div class="project__side">
+                                <h3 class="is-size-3 header-margin has-text-secondary">
+                                    Ensys
+                                </h3>
+                                <h5 class="is-size-5 has-text-white-bis">
+                                    Info:
+                                </h5>
+                                <ul>
+                                    <li>
+                                        <p><span class="is-turquoise"></span>Local business website.</p>
+                                    </li>
+                                    <li>
+                                        <p><span class="is-green"></span>Responsive design.</p>
+                                    </li>
+                                    <li>
+                                        <p><span class="is-purple"></span>Image slider.</p>
+                                    </li>
+                                    <li>
+                                        <p><span class="is-yellow"></span>Contact form with map.</p>
+                                    </li>
+                                </ul>
+                                <p>
+                                    <a class="button is-primary" href="http://ensys.in" target="_blank">
+                                        <span class="icon"><i class="fas fa-link">
+                                                <!-- --></i></span></a>
+                                    <a class="button is-primary is-light modal5">
+                                        <span class="icon"><i class="fas fa-link">
+                                                <!-- --></i></span><span>View</span></a>
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="tile is-child">
+                            <div class="project__side">
+                                <h4 class="is-size-4 is-size-5-touch has-text-white-bis">Testimonial:</h4>
                                 <div>
                                     <p><span class="icon icon-margin"><i class="fas fa-quote-left">
                                                 <!-- --></i></span>We thank Akshay for the fantastic job done for our
@@ -215,62 +252,61 @@
                                         that the experience, knowledge and enthusiasm of this young man would show in
                                         our new website.<span class="icon icon-margin"><i class="fas fa-quote-right">
                                                 <!-- --></i></span></p>
-                                    <p class="subtitle is-5 has-text-centered"> - Ensys Engineers</p>
+                                    <p class="has-text-centered has-text-white-bis"> - Ensys Engineers</p>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
-                <div class="tile is-ancestor box">
-                    <div class="tile is-vertical">
-                        <div class="tile">
-                            <div class="tile is-parent">
-                                <div class="tile is-child">
-                                    <p class="title is-size-5-touch">Mangesh Thombare</p>
-                                    <p>
-                                        <a href=""><img src="img/mangesh.png" class="th" id="open-modal3"
-                                                alt="Mangesh Thombare"></a>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="modal" id="myModal3">
-                                <div class="modal-background"></div>
-                                <div class="modal-content">
-                                    <button class="modal-close is-large bulma-modal-close">
-                                        <!-- --></button>
-                                    <p class="image">
-                                        <img src="img/mangesh-lg.png" alt="Mangesh Thombare">
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="tile is-parent">
-                                <div class="tile is-child">
-                                    <p class="subtitle">Info:</p>
-                                    <ul>
-                                        <li>
-                                            Portfolio website.
-                                        </li>
-                                        <li>
-                                            Responsive design.
-                                        </li>
-                                        <li>
-                                            Embedded videos and documents.
-                                        </li>
-                                        <li>
-                                            Modals for images.
-                                        </li>
-                                    </ul>
-                                    <p>
-                                        <a class="button is-primary" href="" id="open-button-modal3">
-                                            <span class="icon"><i class="fas fa-link">
-                                                    <!-- --></i></span><span>View</span></a>
-                                    </p>
-                                </div>
-                            </div>
+
+
+                <div class="has-text-centered header-margin">
+                    <span><i class="fas fa-grip-lines"></i><i class="fas fa-grip-lines"></i><i
+                            class="fas fa-grip-lines"></i></span>
+                </div>
+
+
+                <div class="tile is-ancestor box is-paddingless">
+                    <div class="tile is-parent">
+                        <div class="tile is-child">
+                            <p class="th"><img src="img/mangesh.png" alt="Mangesh Thombare"></p>
                         </div>
-                        <div class="tile is-parent">
-                            <div class="tile is-child">
-                                <h3 class="secondary is-size-5-touch">Testimonial:</h3>
+                    </div>
+                    <div class="tile is-parent is-vertical has-background-grey-darker has-text-white-bis">
+                        <div class="tile is-child">
+                            <div class="project__side">
+                                <h3 class="is-size-3 header-margin has-text-secondary">
+                                    Mangesh Thombare
+                                </h3>
+                                <h5 class="is-size-5 has-text-white-bis">
+                                    Info:
+                                </h5>
+                                <ul>
+                                    <li>
+                                        <p><span class="is-green"></span>Portfolio website.</p>
+                                    </li>
+                                    <li>
+                                        <p><span class="is-red"></span>Responsive design.</p>
+                                    </li>
+                                    <li>
+                                        <p><span class="is-purple"></span>Embedded videos and documents.</p>
+                                    </li>
+                                    <li>
+                                        <p><span class="is-cyan"></span>Modal for images.</p>
+                                    </li>
+                                </ul>
+                                <p>
+                                    <a class="button is-primary modal4">
+                                        <span class="icon"><i class="fas fa-link">
+                                                <!-- --></i></span><span>View</span></a>
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="tile is-child">
+                            <div class="project__side">
+                                <h4 class="is-size-4 is-size-5-touch has-text-white-bis">Testimonial:</h4>
                                 <div>
                                     <p><span class="icon icon-margin"><i class="fas fa-quote-left">
                                                 <!-- --></i></span>Akshay designed my portfolio website. The best part
@@ -282,157 +318,154 @@
                                         affordable price. It has been a pleasure working with Akshay.<span
                                             class="icon icon-margin"><i class="fas fa-quote-right">
                                                 <!-- --></i></span></p>
-                                    <p class="subtitle is-5 has-text-centered"> - Mangesh Thombare</p>
+                                    <p class="has-text-centered has-text-white-bis"> - Mangesh Thombare</p>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
-                <div class="tile is-ancestor box">
-                    <div class="tile is-vertical">
-                        <div class="tile">
-                            <div class="tile is-parent">
-                                <div class="tile is-child">
-                                    <p class="title is-size-5-touch">Posimind</p>
-                                    <p>
-                                        <a href=""><img src="img/posimind.png" class="th" id="open-modal4"
-                                                alt="Posimind"></a>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="modal" id="myModal4">
-                                <div class="modal-background"></div>
-                                <div class="modal-content">
-                                    <button class="modal-close is-large bulma-modal-close">
-                                        <!-- --></button>
-                                    <p class="image">
-                                        <img src="img/posimind-lg.png" alt="Posimind">
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="tile is-parent">
-                                <div class="tile is-child">
-                                    <p class="subtitle">Info:</p>
-                                    <ul>
-                                        <li>
-                                            Local business website.
-                                        </li>
-                                        <li>
-                                            Non-responsive design.
-                                        </li>
-                                        <li>
-                                            Customized contact forms.
-                                        </li>
-                                    </ul>
-                                    <p>
-                                        <a class="button is-primary" href="" id="open-button-modal4">
-                                            <span class="icon"><i class="fas fa-link">
-                                                    <!-- --></i></span><span>View</span></a>
-                                    </p>
-                                </div>
-                            </div>
+
+                <div class="has-text-centered header-margin">
+                    <span><i class="fas fa-grip-lines"></i><i class="fas fa-grip-lines"></i><i
+                            class="fas fa-grip-lines"></i></span>
+                </div>
+
+
+
+                <div class="tile is-ancestor box is-paddingless">
+                    <div class="tile is-parent">
+                        <div class="tile is-child">
+                            <p class="th"><img src="img/posimind.png" alt="Posimind"></p>
                         </div>
                     </div>
-                </div>
-                <div class="tile is-ancestor box">
-                    <div class="tile is-vertical">
-                        <div class="tile">
-                            <div class="tile is-parent">
-                                <div class="tile is-child">
-                                    <p class="title is-size-5-touch">Persimmon</p>
-                                    <p>
-                                        <a href=""><img src="img/persimmon.png" class="th" id="open-modal5"
-                                                alt="Persimmon"></a>
-                                    </p>
-                                </div>
+                    <div class="tile is-parent has-background-grey-darker has-text-white-bis">
+                        <div class="tile is-child">
+                            <div class="project__side">
+                                <h3 class="is-size-3 header-margin has-text-secondary">
+                                    Posimind
+                                </h3>
+                                <h5 class="is-size-5 has-text-white-bis">
+                                    Info:
+                                </h5>
+                                <ul>
+                                    <li>
+                                        <p><span class="is-red"></span>Local business website.</p>
+                                    </li>
+                                    <li>
+                                        <p><span class="is-green"></span>Non-responsive design.</p>
+                                    </li>
+                                    <li>
+                                        <p><span class="is-turquoise"></span>Customized contact forms.</p>
+                                    </li>
+                                </ul>
+                                <p>
+                                    <a class="button is-primary modal3">
+                                        <span class="icon"><i class="fas fa-link">
+                                                <!-- --></i></span><span>View</span></a>
+                                </p>
                             </div>
-                            <div class="modal" id="myModal5">
-                                <div class="modal-background"></div>
-                                <div class="modal-content">
-                                    <button class="modal-close is-large bulma-modal-close">
-                                        <!-- --></button>
-                                    <p class="image is-3by4">
-                                        <img src="img/persimmon-lg.png" alt="Persimmon">
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="tile is-parent">
-                                <div class="tile is-child">
-                                    <p class="subtitle">Info:</p>
-                                    <ul>
-                                        <li>
-                                            Responsive design.
-                                        </li>
-                                        <li>
-                                            Custom icon navigation.
-                                        </li>
-                                        <li>
-                                            CSS3 hover effects.
-                                        </li>
-                                        <li>
-                                            Image slider.
-                                        </li>
-                                    </ul>
-                                    <p>
-                                        <a class="button is-primary" href="data/persimmon/index.html" target="_blank">
-                                            <span class="icon"><i class="fas fa-link">
-                                                    <!-- --></i></span></a>
-                                        <a class="button" href="" id="open-button-modal5">
-                                            <span class="icon"><i class="fas fa-link">
-                                                    <!-- --></i></span><span>View</span></a>
-                                    </p>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
+
                 </div>
-                <div class="tile is-ancestor box">
-                    <div class="tile is-vertical">
-                        <div class="tile">
-                            <div class="tile is-parent">
-                                <div class="tile is-child">
-                                    <p class="title is-size-5-touch">Photo Retouch Service</p>
-                                    <p>
-                                        <a href=""><img src="img/photo-retouch.png" class="th" id="open-modal6"
-                                                alt="Photo Retouch Service"></a>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="modal" id="myModal6">
-                                <div class="modal-background"></div>
-                                <div class="modal-content">
-                                    <button class="modal-close is-large bulma-modal-close">
-                                        <!-- --></button>
-                                    <p class="image">
-                                        <img src="img/photo-retouch-lg.jpg" alt="Photo Retouch Service">
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="tile is-parent">
-                                <div class="tile is-child">
-                                    <p class="subtitle">Info:</p>
-                                    <ul>
-                                        <li>
-                                            Photo Studio website.
-                                        </li>
-                                        <li>
-                                            Non-responsive design.
-                                        </li>
-                                        <li>
-                                            Image slideshow.
-                                        </li>
-                                    </ul>
-                                    <p>
-                                        <a class="button is-primary" href="" id="open-button-modal6">
-                                            <span class="icon"><i class="fas fa-link">
-                                                    <!-- --></i></span><span>View</span></a>
-                                    </p>
-                                </div>
-                            </div>
+
+                <div class="has-text-centered header-margin">
+                    <span><i class="fas fa-grip-lines"></i><i class="fas fa-grip-lines"></i><i
+                            class="fas fa-grip-lines"></i></span>
+                </div>
+
+
+
+                <div class="tile is-ancestor box is-paddingless">
+                    <div class="tile is-parent">
+                        <div class="tile is-child">
+                            <p class="th"><img src="img/persimmon.png" alt="Persimmon"></p>
                         </div>
-                        <div class="tile is-parent">
-                            <div class="tile is-child">
-                                <h3 class="secondary is-size-5-touch">Testimonial:</h3>
+                    </div>
+                    <div class="tile is-parent has-background-grey-darker has-text-white-bis">
+                        <div class="tile is-child">
+                            <div class="project__side">
+                                <h3 class="is-size-3 header-margin has-text-secondary">
+                                    Persimmon
+                                </h3>
+                                <h5 class="is-size-5 has-text-white-bis">
+                                    Info:
+                                </h5>
+                                <ul>
+                                    <li>
+                                        <p><span class="is-cyan"></span>Responsive design.</p>
+                                    </li>
+                                    <li>
+                                        <p><span class="is-orange"></span>Custom icon navigation.</p>
+                                    </li>
+                                    <li>
+                                        <p><span class="is-green"></span>CSS3 hover effects.</p>
+                                    </li>
+                                    <li>
+                                        <p><span class="is-purple"></span>Image slider.</p>
+                                    </li>
+                                </ul>
+                                <p>
+                                    <a class="button is-primary" href="data/persimmon/index.html" target="_blank">
+                                        <span class="icon"><i class="fas fa-link">
+                                                <!-- --></i></span></a>
+                                    <a class="button is-primary is-light modal2">
+                                        <span class="icon"><i class="fas fa-link">
+                                                <!-- --></i></span><span>View</span></a>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="has-text-centered header-margin">
+                    <span><i class="fas fa-grip-lines"></i><i class="fas fa-grip-lines"></i><i
+                            class="fas fa-grip-lines"></i></span>
+                </div>
+
+
+                <div class="tile is-ancestor box is-paddingless">
+                    <div class="tile is-parent">
+                        <div class="tile is-child">
+                            <p class="th"><img src="img/photo-retouch.png" alt="Photo Retouch Service" /></p>
+                        </div>
+                    </div>
+                    <div class="tile is-parent is-vertical has-background-grey-darker has-text-white-bis">
+                        <div class="tile is-child">
+                            <div class="project__side">
+                                <h3 class="is-size-3 header-margin has-text-secondary">
+                                    Photo Retouch Service
+                                </h3>
+                                <h5 class="is-size-5 has-text-white-bis">
+                                    Info:
+                                </h5>
+                                <ul>
+                                    <li>
+                                        <p><span class="is-yellow"></span>Photo Studio website.</p>
+                                    </li>
+                                    <li>
+                                        <p><span class="is-orange"></span>Non-responsive design.</p>
+                                    </li>
+                                    <li>
+                                        <p><span class="is-turquoise"></span>Image slideshow.</p>
+                                    </li>
+                                </ul>
+                                <p>
+                                    <a class="button is-primary modal1">
+                                        <span class="icon"><i class="fas fa-link">
+                                                <!-- --></i></span><span>View</span></a>
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="tile is-child">
+                            <div class="project__side">
+                                <h4 class="is-size-4 is-size-5-touch has-text-white-bis">Testimonial:</h4>
                                 <div>
                                     <p><span class="icon icon-margin"><i class="fas fa-quote-left">
                                                 <!-- --></i></span>Akshay thanks for your friendly service and support
@@ -447,12 +480,17 @@
                                     <p>I will refer myself to Akshay again when need something.<span
                                             class="icon icon-margin"><i class="fas fa-quote-right">
                                                 <!-- --></i></span></p>
-                                    <p class="subtitle is-5 has-text-centered"> - Aus (Photo Retouch Service)</p>
+                                    <p class="has-text-centered has-text-white-bis"> - Aus (Photo Retouch Service)</p>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
+
+
+
+
             </div>
         </section>
     </main>
@@ -552,13 +590,11 @@
                 </div>
             </div>
         </div>
-    </footer>
-    <!-- Back To Top Button -->
+    </footer> <!-- Back To Top Button -->
     <a href="#" class="vanillatop"><i class="fas fa-chevron-up fa-inverse">
             <!-- --></i></a>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>            
     <script src="js/app.min.js"></script>
-    <script src="js/work-modal.min.js"></script>
+    <script src="js/6-basicLightbox.min.js"></script>
 </body>
 
 </html>

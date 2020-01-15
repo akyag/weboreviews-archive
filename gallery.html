@@ -17,9 +17,6 @@
 </head>
 
 <body>
-    <div id="preloader">
-        <div id="status"></div>
-    </div>
     <header>
         <!--Navigation-->
         <nav class="navbar has-shadow is-spaced is-fixed-top" aria-label="main navigation">
@@ -102,57 +99,48 @@
                     </ul>
                 </nav>
             </div>
-            <div class="content has-text-justified">
+            <div class="content">
                 <h1 class="title is-spaced secondary is-size-4-touch">Gallery:</h1>
                 <h2 class="subtitle is-size-4 secondary is-size-5-touch">Wallpapers:</h2>
                 <div class="tile is-ancestor box has-text-centered">
                     <div class="tile is-parent">
                         <div class="tile is-child">
-                            <a href=""><img src="img/gallery/w1.png" class="th2" id="open-modalg1" alt="Glow"></a>
+                            <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                                <figure class="th2">
+                                    <a href="img/gallery/source/w1b.png" itemprop="contentUrl" data-size="1920x1080">
+                                        <img src="img/gallery/w1.png" itemprop="thumbnail" alt="Glow" />
+                                    </a>
+                                    <figcaption itemprop="caption description">Glow</figcaption>
+                                </figure>
+                            </div>
                             <p class="title is-6">Glow</p>
                         </div>
                     </div>
                     <div class="tile is-parent">
                         <div class="tile is-child">
-                            <a href=""><img src="img/gallery/w2.png" class="th2" id="open-modalg2" alt="Shine"></a>
+                            <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                                <figure class="th2">
+                                    <a href="img/gallery/source/w2b.png" itemprop="contentUrl" data-size="1920x1080">
+                                        <img src="img/gallery/w2.png" itemprop="thumbnail" alt="Shine" />
+                                    </a>
+                                    <figcaption itemprop="caption description">Shine</figcaption>
+                                </figure>
+                            </div>
                             <p class="title is-6">Shine</p>
                         </div>
                     </div>
                     <div class="tile is-parent">
                         <div class="tile is-child">
-                            <a href=""><img src="img/gallery/w3.png" class="th2" id="open-modalg3" alt="Milla"></a>
+                            <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                                <figure class="th2">
+                                    <a href="img/gallery/source/w3b.png" itemprop="contentUrl" data-size="1920x1080">
+                                        <img src="img/gallery/w3.png" itemprop="thumbnail" alt="Milla" />
+                                    </a>
+                                    <figcaption itemprop="caption description">Milla</figcaption>
+                                </figure>
+                            </div>
                             <p class="title is-6">Milla</p>
                         </div>
-                    </div>
-                </div>
-                <div class="modal" id="myModalg1">
-                    <div class="modal-background"></div>
-                    <div class="modal-content">
-                        <button class="modal-close is-large bulma-modal-close">
-                            <!-- --></button>
-                        <p class="image">
-                            <img src="img/gallery/source/w1b.png" alt="Glow">
-                        </p>
-                    </div>
-                </div>
-                <div class="modal" id="myModalg2">
-                    <div class="modal-background"></div>
-                    <div class="modal-content">
-                        <button class="modal-close is-large bulma-modal-close">
-                            <!-- --></button>
-                        <p class="image">
-                            <img src="img/gallery/source/w2b.png" alt="Shine">
-                        </p>
-                    </div>
-                </div>
-                <div class="modal" id="myModalg3">
-                    <div class="modal-background"></div>
-                    <div class="modal-content">
-                        <button class="modal-close is-large bulma-modal-close">
-                            <!-- --></button>
-                        <p>
-                            <img src="img/gallery/source/w3b.png" alt="Milla">
-                        </p>
                     </div>
                 </div>
                 <h2 class="subtitle is-size-4 secondary is-size-5-touch">Android Colorscreens:</h2>
@@ -161,22 +149,44 @@
                         <div class="tile">
                             <div class="tile is-parent">
                                 <div class="tile is-child">
-                                    <a href=""><img src="img/gallery/a1.png" class="th2" id="open-modalg4" width="230"
-                                            height="150" alt="Custom 1.0"></a>
+                                    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                                        <figure class="th2">
+                                            <a href="img/gallery/source/a1b.png" itemprop="contentUrl"
+                                                data-size="1400x1400">
+                                                <img src="img/gallery/a1.png" itemprop="thumbnail" alt="Custom 1.0" />
+                                            </a>
+                                            <figcaption itemprop="caption description">Custom 1.0</figcaption>
+                                        </figure>
+                                    </div>
                                     <p class="title is-6">Custom 1.0</p>
                                 </div>
                             </div>
                             <div class="tile is-parent">
                                 <div class="tile is-child">
-                                    <a href=""><img src="img/gallery/a2.png" class="th2" id="open-modalg5" width="230"
-                                            height="150" alt="Simplistic 1.0"></a>
+                                    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                                        <figure class="th2">
+                                            <a href="img/gallery/source/a2b.jpg" itemprop="contentUrl"
+                                                data-size="1100x1200">
+                                                <img src="img/gallery/a2.png" itemprop="thumbnail"
+                                                    alt="Simplistic 1.0" />
+                                            </a>
+                                            <figcaption itemprop="caption description">Simplistic 1.0</figcaption>
+                                        </figure>
+                                    </div>
                                     <p class="title is-6">Simplistic 1.0</p>
                                 </div>
                             </div>
                             <div class="tile is-parent">
                                 <div class="tile is-child">
-                                    <a href=""><img src="img/gallery/a3.png" class="th2" id="open-modalg6" width="230"
-                                            height="150" alt="Sherlock"></a>
+                                    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                                        <figure class="th2">
+                                            <a href="img/gallery/source/a3b.jpg" itemprop="contentUrl"
+                                                data-size="1100x1800">
+                                                <img src="img/gallery/a3.png" itemprop="thumbnail" alt="Sherlock" />
+                                            </a>
+                                            <figcaption itemprop="caption description">Sherlock</figcaption>
+                                        </figure>
+                                    </div>
                                     <p class="title is-6">Sherlock</p>
                                 </div>
                             </div>
@@ -184,15 +194,29 @@
                         <div class="tile">
                             <div class="tile is-parent is-4">
                                 <div class="tile is-child">
-                                    <a href=""><img src="img/gallery/a4.png" class="th2" id="open-modalg7" width="230"
-                                            height="150" alt="Go Green"></a>
+                                    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                                        <figure class="th2">
+                                            <a href="img/gallery/source/a4b.jpg" itemprop="contentUrl"
+                                                data-size="1100x1200">
+                                                <img src="img/gallery/a4.png" itemprop="thumbnail" alt="Go Green" />
+                                            </a>
+                                            <figcaption itemprop="caption description">Go Green</figcaption>
+                                        </figure>
+                                    </div>
                                     <p class="title is-6">Go Green</p>
                                 </div>
                             </div>
                             <div class="tile is-parent is-4">
                                 <div class="tile is-child">
-                                    <a href=""><img src="img/gallery/a5.png" class="th2" id="open-modalg8" width="230"
-                                            height="150" alt="Cerulean"></a>
+                                    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                                        <figure class="th2">
+                                            <a href="img/gallery/source/a5b.jpg" itemprop="contentUrl"
+                                                data-size="1100x800">
+                                                <img src="img/gallery/a5.png" itemprop="thumbnail" alt="Cerulean" />
+                                            </a>
+                                            <figcaption itemprop="caption description">Cerulean</figcaption>
+                                        </figure>
+                                    </div>
                                     <p class="title is-6">Cerulean</p>
                                 </div>
                             </div>
@@ -200,56 +224,7 @@
                     </div>
                 </div>
             </div>
-            <div class="modal" id="myModalg4">
-                <div class="modal-background"></div>
-                <div class="modal-content">
-                    <button class="modal-close is-large bulma-modal-close">
-                        <!-- --></button>
-                    <p class="image">
-                        <img src="img/gallery/source/a1b.png" alt="Custom 1.0">
-                    </p>
-                </div>
-            </div>
-            <div class="modal" id="myModalg5">
-                <div class="modal-background"></div>
-                <div class="modal-content">
-                    <button class="modal-close is-large bulma-modal-close">
-                        <!-- --></button>
-                    <p class="image">
-                        <img src="img/gallery/source/a2b.jpg" alt="Simplistic 1.0">
-                    </p>
-                </div>
-            </div>
-            <div class="modal" id="myModalg6">
-                <div class="modal-background"></div>
-                <div class="modal-content">
-                    <button class="modal-close is-large bulma-modal-close">
-                        <!-- --></button>
-                    <p>
-                        <img src="img/gallery/source/a3b.jpg" alt="Sherlock">
-                    </p>
-                </div>
-            </div>
-            <div class="modal" id="myModalg7">
-                <div class="modal-background"></div>
-                <div class="modal-content">
-                    <button class="modal-close is-large bulma-modal-close">
-                        <!-- --></button>
-                    <p>
-                        <img src="img/gallery/source/a4b.jpg" alt="Go Green">
-                    </p>
-                </div>
-            </div>
-            <div class="modal" id="myModalg8">
-                <div class="modal-background"></div>
-                <div class="modal-content">
-                    <button class="modal-close is-large bulma-modal-close">
-                        <!-- --></button>
-                    <p>
-                        <img src="img/gallery/source/a5b.jpg" alt="Cerulean">
-                    </p>
-                </div>
-            </div>
+
             <div class="margin2">
                 <nav class="pagination is-rounded is-right" aria-label="pagination">
                     <a class="pagination-previous">Previous</a>
@@ -261,6 +236,44 @@
                 </nav>
             </div>
         </section>
+
+        <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="pswp__bg"></div>
+            <div class="pswp__scroll-wrap">
+                <div class="pswp__container">
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                </div>
+                <div class="pswp__ui pswp__ui--hidden">
+                    <div class="pswp__top-bar">
+                        <div class="pswp__counter"></div>
+                        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                        <button class="pswp__button pswp__button--share" title="Share"></button>
+                        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                        <div class="pswp__preloader">
+                            <div class="pswp__preloader__icn">
+                                <div class="pswp__preloader__cut">
+                                    <div class="pswp__preloader__donut"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                        <div class="pswp__share-tooltip"></div>
+                    </div>
+                    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                    </button>
+                    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                    </button>
+                    <div class="pswp__caption">
+                        <div class="pswp__caption__center"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
     <!--Footer-->
     <footer class="footer has-text-white-bis">
@@ -362,9 +375,10 @@
     <!-- Back To Top Button -->
     <a href="#" class="vanillatop"><i class="fas fa-chevron-up fa-inverse">
             <!-- --></i></a>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/app.min.js"></script>
-    <script src="js/gallery-modal.min.js"></script>
+    <script src="js/3-photoswipe-core.js"></script>
+    <script src="js/4-photoswipe-ui-default.js"></script>
+    <script src="js/5-photoswipe.js"></script>
 </body>
 
 </html>

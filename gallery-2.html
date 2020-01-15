@@ -17,9 +17,6 @@
 </head>
 
 <body>
-    <div id="preloader">
-        <div id="status"></div>
-    </div>
     <header>
         <!--Navigation-->
         <nav class="navbar has-shadow is-spaced is-fixed-top" aria-label="main navigation">
@@ -102,7 +99,7 @@
                     </ul>
                 </nav>
             </div>
-            <div class="content has-text-justified">
+            <div class="content">
                 <h1 class="title is-spaced secondary is-size-4-touch">Gallery:</h1>
                 <h2 class="subtitle is-size-4 secondary is-size-5-touch">Forum Signatures:</h2>
                 <div class="tile is-ancestor box has-text-centered">
@@ -110,22 +107,43 @@
                         <div class="tile">
                             <div class="tile is-parent">
                                 <div class="tile is-child">
-                                    <a href=""><img src="img/gallery/s1.png" class="th2" id="open-modalg1" width="230"
-                                            height="150" alt="Legolas"></a>
+                                    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                                        <figure class="th2">
+                                            <a href="img/gallery/source/s1b.png" itemprop="contentUrl"
+                                                data-size="510x160">
+                                                <img src="img/gallery/s1.png" itemprop="thumbnail" alt="Legolas" />
+                                            </a>
+                                            <figcaption itemprop="caption description">Legolas</figcaption>
+                                        </figure>
+                                    </div>
                                     <p class="title is-6">Legolas</p>
                                 </div>
                             </div>
                             <div class="tile is-parent">
                                 <div class="tile is-child">
-                                    <a href=""><img src="img/gallery/s2.png" class="th2" id="open-modalg2" width="230"
-                                            height="150" alt="Archer"></a>
+                                    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                                        <figure class="th2">
+                                            <a href="img/gallery/source/s2b.png" itemprop="contentUrl"
+                                                data-size="500x150">
+                                                <img src="img/gallery/s2.png" itemprop="thumbnail" alt="Archer" />
+                                            </a>
+                                            <figcaption itemprop="caption description">Archer</figcaption>
+                                        </figure>
+                                    </div>
                                     <p class="title is-6">Archer</p>
                                 </div>
                             </div>
                             <div class="tile is-parent">
                                 <div class="tile is-child">
-                                    <a href=""><img src="img/gallery/s3.png" class="th2" id="open-modalg3" width="230"
-                                            height="150" alt="Aeon Flux"></a>
+                                    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                                        <figure class="th2">
+                                            <a href="img/gallery/source/s3b.png" itemprop="contentUrl"
+                                                data-size="500x150">
+                                                <img src="img/gallery/s3.png" itemprop="thumbnail" alt="Aeon Flux" />
+                                            </a>
+                                            <figcaption itemprop="caption description">Aeon Flux</figcaption>
+                                        </figure>
+                                    </div>
                                     <p class="title is-6">Aeon Flux</p>
                                 </div>
                             </div>
@@ -133,22 +151,43 @@
                         <div class="tile">
                             <div class="tile is-parent">
                                 <div class="tile is-child">
-                                    <a href=""><img src="img/gallery/s4.png" class="th2" id="open-modalg4" width="230"
-                                            height="150" alt="Archer 2"></a>
+                                    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                                        <figure class="th2">
+                                            <a href="img/gallery/source/s4b.png" itemprop="contentUrl"
+                                                data-size="500x150">
+                                                <img src="img/gallery/s4.png" itemprop="thumbnail" alt="Archer 2" />
+                                            </a>
+                                            <figcaption itemprop="caption description">Archer 2</figcaption>
+                                        </figure>
+                                    </div>
                                     <p class="title is-6">Archer 2</p>
                                 </div>
                             </div>
                             <div class="tile is-parent">
                                 <div class="tile is-child">
-                                    <a href=""><img src="img/gallery/s5.png" class="th2" id="open-modalg5" width="230"
-                                            height="150" alt="Die Hard"></a>
+                                    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                                        <figure class="th2">
+                                            <a href="img/gallery/source/s5b.png" itemprop="contentUrl"
+                                                data-size="500x150">
+                                                <img src="img/gallery/s5.png" itemprop="thumbnail" alt="Die Hard" />
+                                            </a>
+                                            <figcaption itemprop="caption description">Die Hard</figcaption>
+                                        </figure>
+                                    </div>
                                     <p class="title is-6">Die Hard</p>
                                 </div>
                             </div>
                             <div class="tile is-parent">
                                 <div class="tile is-child">
-                                    <a href=""><img src="img/gallery/s6.png" class="th2" id="open-modalg6" width="230"
-                                            height="150" alt="Hitman"></a>
+                                    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                                        <figure class="th2">
+                                            <a href="img/gallery/source/s6b.png" itemprop="contentUrl"
+                                                data-size="500x200">
+                                                <img src="img/gallery/s6.png" itemprop="thumbnail" alt="Hitman" />
+                                            </a>
+                                            <figcaption itemprop="caption description">Hitman</figcaption>
+                                        </figure>
+                                    </div>
                                     <p class="title is-6">Hitman</p>
                                 </div>
                             </div>
@@ -156,22 +195,44 @@
                         <div class="tile">
                             <div class="tile is-parent">
                                 <div class="tile is-child">
-                                    <a href=""><img src="img/gallery/s7.png" class="th2" id="open-modalg7" width="230"
-                                            height="150" alt="Kung Fu Panda"></a>
+                                    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                                        <figure class="th2">
+                                            <a href="img/gallery/source/s7b.png" itemprop="contentUrl"
+                                                data-size="500x200">
+                                                <img src="img/gallery/s7.png" itemprop="thumbnail"
+                                                    alt="Kung Fu Panda" />
+                                            </a>
+                                            <figcaption itemprop="caption description">Kung Fu Panda</figcaption>
+                                        </figure>
+                                    </div>
                                     <p class="title is-6">Kung Fu Panda</p>
                                 </div>
                             </div>
                             <div class="tile is-parent">
                                 <div class="tile is-child">
-                                    <a href=""><img src="img/gallery/s8.png" class="th2" id="open-modalg8" width="230"
-                                            height="150" alt="Joker"></a>
+                                    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                                        <figure class="th2">
+                                            <a href="img/gallery/source/s8b.png" itemprop="contentUrl"
+                                                data-size="500x200">
+                                                <img src="img/gallery/s8.png" itemprop="thumbnail" alt="Joker" />
+                                            </a>
+                                            <figcaption itemprop="caption description">Joker</figcaption>
+                                        </figure>
+                                    </div>
                                     <p class="title is-6">Joker</p>
                                 </div>
                             </div>
                             <div class="tile is-parent">
                                 <div class="tile is-child">
-                                    <a href=""><img src="img/gallery/s9.png" class="th2" id="open-modalg9" width="230"
-                                            height="150" alt="Wolverine"></a>
+                                    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                                        <figure class="th2">
+                                            <a href="img/gallery/source/s9b.png" itemprop="contentUrl"
+                                                data-size="500x200">
+                                                <img src="img/gallery/s9.png" itemprop="thumbnail" alt="Wolverine" />
+                                            </a>
+                                            <figcaption itemprop="caption description">Wolverine</figcaption>
+                                        </figure>
+                                    </div>
                                     <p class="title is-6">Wolverine</p>
                                 </div>
                             </div>
@@ -179,118 +240,22 @@
                         <div class="tile">
                             <div class="tile is-parent is-4">
                                 <div class="tile is-child">
-                                    <a href=""><img src="img/gallery/s10.png" class="th2" id="open-modalg10" width="230"
-                                            height="150" alt="Joker 2"></a>
+                                    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                                        <figure class="th2">
+                                            <a href="img/gallery/source/s10b.png" itemprop="contentUrl"
+                                                data-size="500x200">
+                                                <img src="img/gallery/s10.png" itemprop="thumbnail" alt="Joker 2" />
+                                            </a>
+                                            <figcaption itemprop="caption description">Joker 2</figcaption>
+                                        </figure>
+                                    </div>
                                     <p class="title is-6">Joker 2</p>
                                 </div>
                             </div>
-
                         </div>
-
                     </div>
                 </div>
             </div>
-            <div class="modal" id="myModalg1">
-                <div class="modal-background"></div>
-                <div class="modal-content">
-                    <button class="modal-close is-large bulma-modal-close">
-                        <!-- --></button>
-                    <p class="image">
-                        <img src="img/gallery/source/s1b.png" alt="Legolas">
-                    </p>
-                </div>
-            </div>
-            <div class="modal" id="myModalg2">
-                <div class="modal-background"></div>
-                <div class="modal-content">
-                    <button class="modal-close is-large bulma-modal-close">
-                        <!-- --></button>
-                    <p class="image">
-                        <img src="img/gallery/source/s2b.png" alt="Archer">
-                    </p>
-                </div>
-            </div>
-            <div class="modal" id="myModalg3">
-                <div class="modal-background"></div>
-                <div class="modal-content">
-                    <button class="modal-close is-large bulma-modal-close">
-                        <!-- --></button>
-                    <p class="image">
-                        <img src="img/gallery/source/s3b.png" alt="Aeon Flux">
-                    </p>
-                </div>
-            </div>
-            <div class="modal" id="myModalg4">
-                <div class="modal-background"></div>
-                <div class="modal-content">
-                    <button class="modal-close is-large bulma-modal-close">
-                        <!-- --></button>
-                    <p class="image">
-                        <img src="img/gallery/source/s4b.png" alt="Archer 2">
-                    </p>
-                </div>
-            </div>
-            <div class="modal" id="myModalg5">
-                <div class="modal-background"></div>
-                <div class="modal-content">
-                    <button class="modal-close is-large bulma-modal-close">
-                        <!-- --></button>
-                    <p class="image">
-                        <img src="img/gallery/source/s5b.png" alt="Die Hard">
-                    </p>
-                </div>
-            </div>
-            <div class="modal" id="myModalg6">
-                <div class="modal-background"></div>
-                <div class="modal-content">
-                    <button class="modal-close is-large bulma-modal-close">
-                        <!-- --></button>
-                    <p class="image">
-                        <img src="img/gallery/source/s6b.png" alt="Hitman">
-                    </p>
-                </div>
-            </div>
-            <div class="modal" id="myModalg7">
-                <div class="modal-background"></div>
-                <div class="modal-content">
-                    <button class="modal-close is-large bulma-modal-close">
-                        <!-- --></button>
-                    <p class="image">
-                        <img src="img/gallery/source/s7b.png" alt="Kung Fu Panda">
-                    </p>
-                </div>
-            </div>
-            <div class="modal" id="myModalg8">
-                <div class="modal-background"></div>
-                <div class="modal-content">
-                    <button class="modal-close is-large bulma-modal-close">
-                        <!-- --></button>
-                    <p class="image">
-                        <img src="img/gallery/source/s8b.png" alt="Joker">
-                    </p>
-                </div>
-            </div>
-            <div class="modal" id="myModalg9">
-                <div class="modal-background"></div>
-                <div class="modal-content">
-                    <button class="modal-close is-large bulma-modal-close">
-                        <!-- --></button>
-                    <p class="image">
-                        <img src="img/gallery/source/s9b.png" alt="Wolverine">
-                    </p>
-                </div>
-            </div>
-            <div class="modal" id="myModalg10">
-                <div class="modal-background"></div>
-                <div class="modal-content">
-                    <button class="modal-close is-large bulma-modal-close">
-                        <!-- --></button>
-                    <p class="image">
-                        <img src="img/gallery/source/s10b.png" alt="Joker 2">
-                    </p>
-                </div>
-            </div>
-
             <div class="margin2">
                 <nav class="pagination is-rounded is-right" aria-label="pagination">
                     <a class="pagination-previous" href="gallery.html">Previous</a>
@@ -301,9 +266,45 @@
                     </ul>
                 </nav>
             </div>
-
-
         </section>
+
+        <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="pswp__bg"></div>
+            <div class="pswp__scroll-wrap">
+                <div class="pswp__container">
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                </div>
+                <div class="pswp__ui pswp__ui--hidden">
+                    <div class="pswp__top-bar">
+                        <div class="pswp__counter"></div>
+                        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                        <button class="pswp__button pswp__button--share" title="Share"></button>
+                        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                        <div class="pswp__preloader">
+                            <div class="pswp__preloader__icn">
+                                <div class="pswp__preloader__cut">
+                                    <div class="pswp__preloader__donut"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                        <div class="pswp__share-tooltip"></div>
+                    </div>
+                    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                    </button>
+                    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                    </button>
+                    <div class="pswp__caption">
+                        <div class="pswp__caption__center"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
     <!--Footer-->
     <footer class="footer has-text-white-bis">
@@ -405,9 +406,10 @@
     <!-- Back To Top Button -->
     <a href="#" class="vanillatop"><i class="fas fa-chevron-up fa-inverse">
             <!-- --></i></a>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/app.min.js"></script>
-    <script src="js/gallery2-modal.min.js"></script>
+    <script src="js/3-photoswipe-core.js"></script>
+    <script src="js/4-photoswipe-ui-default.js"></script>
+    <script src="js/5-photoswipe.js"></script>
 </body>
 
 </html>
