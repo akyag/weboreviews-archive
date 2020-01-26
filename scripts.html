@@ -91,7 +91,7 @@
         </section>
         <!--Content-->
         <section class="container">
-            <div class="content has-text-justified">
+            <div class="content">
                 <h1 class="title is-spaced secondary is-size-4-touch">My daily backup script:</h1>
                 <p>This script uses tarfile module for compressing, shutil module for copying files, subprocess module
                     to run shell commands to encrypt the backup using gpg, logging module to write logs at every action
@@ -117,18 +117,21 @@
                 </p>
             </div>
             <div class="container">
-                <div id="disqus_thread"></div>
-                <script>
-                    (function () { // DON'T EDIT BELOW THIS LINE
-                        var d = document,
-                            s = d.createElement('script');
-                        s.src = 'https://web-o-reviews.disqus.com/embed.js';
-                        s.setAttribute('data-timestamp', +new Date());
-                        (d.head || d.body).appendChild(s);
-                    })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments
-                        powered by Disqus.</a></noscript>
+                <div class="content">
+                    <div id="disqus_thread"></div>
+                    <script>
+                        (function () { // DON'T EDIT BELOW THIS LINE
+                            var d = document,
+                                s = d.createElement('script');
+                            s.src = 'https://web-o-reviews.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments
+                            powered by Disqus.</a></noscript>
+                </div>
+
             </div>
         </section>
     </main>
@@ -137,7 +140,7 @@
         <div class="container">
             <div class="columns">
                 <!--Left Side-->
-                <div class="column has-text-centered-touch is-two-fifths">
+                <div class="column has-text-centered-touch is-paddingless">
                     <div class="footer-list">
                         <h5 class="is-uppercase">Information</h5>
                         <ul>
