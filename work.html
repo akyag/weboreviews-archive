@@ -12,7 +12,8 @@
     <link rel="apple-touch-icon" href="faviconbg.png">
     <meta name="msapplication-TileImage" content="faviconbg.png">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-dark.css" media="screen and (prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="css/style.css" media="screen and (prefers-color-scheme: light)">
     <title>Portfolio</title>
 </head>
 
@@ -24,7 +25,14 @@
                 <!--Logo-->
                 <div class="navbar-brand">
                     <a href="index.html">
-                        <img src="img/logo.svg" width="230" alt="Web-o-Reviews">
+                        <picture>
+                            <!-- Use this image if the user's OS setting is light or unset -->
+                            <source srcset="img/logo-transparent.svg"
+                                media="(prefers-color-scheme: light) or (prefers-color-scheme: no-preference)">
+                            <!-- Use this image if the user's OS setting is dark -->
+                            <source srcset="img/logo-white-transparent.svg" media="(prefers-color-scheme: dark)">
+                            <img src="img/logo-transparent.svg" width="230" alt="Web-o-Reviews">
+                        </picture>
                     </a>
                     <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu"
                         aria-expanded="false">
@@ -56,8 +64,8 @@
                     <!--Right Menu-->
                     <div class="navbar-end">
                         <div class="navbar-item">
-                            <a class="button is-primary is-outlined is-rounded" href="contact.html"><span
-                                    class="icon"><i class="fas fa-envelope">
+                            <a class="button is-success is-rounded" href="contact.html"><span class="icon"><i
+                                        class="fas fa-envelope">
                                         <!-- --></i></span><span>Contact</span></a>
                         </div>
                     </div>
@@ -72,14 +80,15 @@
                     <div class="columns">
                         <!--Left side-->
                         <div class="column has-text-centered">
-                            <img src="img/portfolio.svg" class="animated fadeInLeft" width="300" alt="Portfolio Icon">
+                            <img src="img/portfolio.svg" class="animate__animated animate__fadeInLeft" width="300"
+                                alt="Portfolio Icon">
                         </div>
                         <!--Right side-->
                         <div class="column has-text-centered">
                             <h1 class="is-family-secondary is-size-2 has-text-weight-normal is-spaced is-size-4-touch">
                                 Work
                             </h1>
-                            <h2 class="is-size-4 is-size-6-touch header-margin">
+                            <h2 class="is-size-4 is-size-6-touch mb-4">
                                 Some of my recent work..
                             </h2>
                         </div>
@@ -91,7 +100,7 @@
         <!--Content-->
         <section class="container">
             <div class="content">
-                <h1 class="title is-spaced secondary is-size-3-touch">Work:</h1>
+                <h1 class="title is-spaced ml-4 is-size-3-touch">Work:</h1>
                 <div class="tile is-ancestor box is-paddingless">
                     <div class="tile is-parent">
                         <div class="tile is-child">
@@ -101,12 +110,15 @@
                     <div class="tile is-parent has-background-grey-darker has-text-white-bis">
                         <div class="tile is-child">
                             <div class="project__side">
-                                <h3 class="is-size-3 is-size-4-touch header-margin has-text-secondary">
+                                <h3 class="is-size-3 is-size-4-touch my-4 has-text-secondary">
                                     Air Club
                                 </h3>
                                 <h5 class="is-size-5 has-text-white-bis">
                                     Info:
                                 </h5>
+                                <p>The requirements of this mockup were an animated slideshow, small panels for travel
+                                    destination photos which provide more information on hover, login box etc. You can
+                                    view the live version by clicking below.</p>
                                 <ul>
                                     <li>
                                         <p><span class="is-orange"></span>Responsive design.</p>
@@ -122,15 +134,15 @@
                                     <a class="button is-primary" href="data/airclub/index.html" target="_blank">
                                         <span class="icon"><i class="fas fa-link">
                                                 <!-- --></i></span></a>
-                                    <a class="button is-primary is-light" href="data/airclub/v2/index.html"
+                                    <a class="button is-secondary is-light" href="data/airclub/v2/index.html"
                                         target="_blank">
                                         <span class="icon"><i class="fas fa-link">
                                                 <!-- --></i></span><span>v2</span></a>
-                                    <a class="button is-primary is-light" href="data/airclub/v3/index.html"
+                                    <a class="button is-secondary is-light" href="data/airclub/v3/index.html"
                                         target="_blank">
                                         <span class="icon"><i class="fas fa-link">
                                                 <!-- --></i></span><span>v3</span></a>
-                                    <a class="button is-primary is-light" href="data/airclub/v4/index.html"
+                                    <a class="button is-secondary is-light" href="data/airclub/v4/index.html"
                                         target="_blank">
                                         <span class="icon"><i class="fas fa-link">
                                                 <!-- --></i></span><span>v4</span></a>
@@ -143,7 +155,7 @@
                 </div>
 
 
-                <div class="has-text-centered header-margin">
+                <div class="has-text-centered mb-4">
                     <span><i class="fas fa-grip-lines"></i><i class="fas fa-grip-lines"></i><i
                             class="fas fa-grip-lines"></i></span>
                 </div>
@@ -157,7 +169,7 @@
                     <div class="tile is-parent has-background-grey-darker has-text-white-bis">
                         <div class="tile is-child">
                             <div class="project__side">
-                                <h3 class="is-size-3 is-size-4-touch header-margin has-text-secondary">
+                                <h3 class="is-size-3 is-size-4-touch my-4 has-text-secondary">
                                     Saptarshi
                                 </h3>
                                 <h5 class="is-size-5 has-text-white-bis">
@@ -186,11 +198,10 @@
 
                         </div>
                     </div>
-
                 </div>
 
 
-                <div class="has-text-centered header-margin">
+                <div class="has-text-centered mb-4">
                     <span><i class="fas fa-grip-lines"></i><i class="fas fa-grip-lines"></i><i
                             class="fas fa-grip-lines"></i></span>
                 </div>
@@ -205,12 +216,15 @@
                     <div class="tile is-parent is-vertical has-background-grey-darker has-text-white-bis">
                         <div class="tile is-child">
                             <div class="project__side">
-                                <h3 class="is-size-3 is-size-4-touch header-margin has-text-secondary">
+                                <h3 class="is-size-3 is-size-4-touch my-4 has-text-secondary">
                                     Ensys
                                 </h3>
                                 <h5 class="is-size-5 has-text-white-bis">
                                     Info:
                                 </h5>
+                                <p>This heat pump manufacturing business required a website to showcase the pumps they
+                                    were making along with the manufacturing facilities, their past clients and a
+                                    contact page which showed their location on map.</p>
                                 <ul>
                                     <li>
                                         <p><span class="is-turquoise"></span>Local business website.</p>
@@ -229,7 +243,7 @@
                                     <a class="button is-primary" href="http://ensys.in" target="_blank">
                                         <span class="icon"><i class="fas fa-link">
                                                 <!-- --></i></span></a>
-                                    <a class="button is-primary is-light" id="modal5">
+                                    <a class="button is-secondary is-light" id="modal5">
                                         <span class="icon"><i class="fas fa-link">
                                                 <!-- --></i></span><span>View</span></a>
                                 </p>
@@ -240,7 +254,7 @@
                             <div class="project__side">
                                 <h4 class="is-size-4 is-size-5-touch has-text-white-bis">Testimonial:</h4>
                                 <div>
-                                    <p><span class="icon icon-margin"><i class="fas fa-quote-left">
+                                    <p><span class="icon mx-3"><i class="fas fa-quote-left">
                                                 <!-- --></i></span>We thank Akshay for the fantastic job done for our
                                         website <a href="http://ensys.in" target="_blank">Ensys</a>.</p>
                                     <p>It was a pleasure working with Akshay, as he worked closely with us at every step
@@ -250,7 +264,7 @@
                                         and showing a genuine interest in helping the customer to achieve the required
                                         results. From the first moment we felt that our project was in good hands and
                                         that the experience, knowledge and enthusiasm of this young man would show in
-                                        our new website.<span class="icon icon-margin"><i class="fas fa-quote-right">
+                                        our new website.<span class="icon mx-3"><i class="fas fa-quote-right">
                                                 <!-- --></i></span></p>
                                     <p class="has-text-centered has-text-white-bis"> - Ensys Engineers</p>
                                 </div>
@@ -261,7 +275,7 @@
                 </div>
 
 
-                <div class="has-text-centered header-margin">
+                <div class="has-text-centered mb-4">
                     <span><i class="fas fa-grip-lines"></i><i class="fas fa-grip-lines"></i><i
                             class="fas fa-grip-lines"></i></span>
                 </div>
@@ -276,12 +290,15 @@
                     <div class="tile is-parent is-vertical has-background-grey-darker has-text-white-bis">
                         <div class="tile is-child">
                             <div class="project__side">
-                                <h3 class="is-size-3 is-size-4-touch header-margin has-text-secondary">
+                                <h3 class="is-size-3 is-size-4-touch my-4 has-text-secondary">
                                     Mangesh Thombare
                                 </h3>
                                 <h5 class="is-size-5 has-text-white-bis">
                                     Info:
                                 </h5>
+                                <p>This was a portfolio website project for a game designer. His requirements were a
+                                    responsive website which showcased his CV, embedded videos and documents of his
+                                    completed projects and lastly a contact form.</p>
                                 <ul>
                                     <li>
                                         <p><span class="is-green"></span>Portfolio website.</p>
@@ -308,7 +325,7 @@
                             <div class="project__side">
                                 <h4 class="is-size-4 is-size-5-touch has-text-white-bis">Testimonial:</h4>
                                 <div>
-                                    <p><span class="icon icon-margin"><i class="fas fa-quote-left">
+                                    <p><span class="icon mx-3"><i class="fas fa-quote-left">
                                                 <!-- --></i></span>Akshay designed my portfolio website. The best part
                                         about working with him was that, I got a site fully customized and tailored to
                                         my needs. It is easy to navigate and works seamlessly on all platforms mobiles,
@@ -316,7 +333,7 @@
                                         precision within 24 hours of request. He has the patience to work at your pace
                                         every step of the way. You can have a fully personalized experience at an
                                         affordable price. It has been a pleasure working with Akshay.<span
-                                            class="icon icon-margin"><i class="fas fa-quote-right">
+                                            class="icon mx-3"><i class="fas fa-quote-right">
                                                 <!-- --></i></span></p>
                                     <p class="has-text-centered has-text-white-bis"> - Mangesh Thombare</p>
                                 </div>
@@ -326,7 +343,7 @@
 
                 </div>
 
-                <div class="has-text-centered header-margin">
+                <div class="has-text-centered mb-4">
                     <span><i class="fas fa-grip-lines"></i><i class="fas fa-grip-lines"></i><i
                             class="fas fa-grip-lines"></i></span>
                 </div>
@@ -342,7 +359,7 @@
                     <div class="tile is-parent has-background-grey-darker has-text-white-bis">
                         <div class="tile is-child">
                             <div class="project__side">
-                                <h3 class="is-size-3 is-size-4-touch header-margin has-text-secondary">
+                                <h3 class="is-size-3 is-size-4-touch my-4 has-text-secondary">
                                     Posimind
                                 </h3>
                                 <h5 class="is-size-5 has-text-white-bis">
@@ -371,7 +388,7 @@
 
                 </div>
 
-                <div class="has-text-centered header-margin">
+                <div class="has-text-centered mb-4">
                     <span><i class="fas fa-grip-lines"></i><i class="fas fa-grip-lines"></i><i
                             class="fas fa-grip-lines"></i></span>
                 </div>
@@ -387,12 +404,14 @@
                     <div class="tile is-parent has-background-grey-darker has-text-white-bis">
                         <div class="tile is-child">
                             <div class="project__side">
-                                <h3 class="is-size-3 is-size-4-touch header-margin has-text-secondary">
+                                <h3 class="is-size-3 is-size-4-touch my-4 has-text-secondary">
                                     Persimmon
                                 </h3>
                                 <h5 class="is-size-5 has-text-white-bis">
                                     Info:
                                 </h5>
+                                <p>This mockup design showcases a simple responsive text website and a fucntioning
+                                    slideshow. You can view the live version by clicking below.</p>
                                 <ul>
                                     <li>
                                         <p><span class="is-cyan"></span>Responsive design.</p>
@@ -411,7 +430,7 @@
                                     <a class="button is-primary" href="data/persimmon/index.html" target="_blank">
                                         <span class="icon"><i class="fas fa-link">
                                                 <!-- --></i></span></a>
-                                    <a class="button is-primary is-light" id="modal2">
+                                    <a class="button is-secondary is-light" id="modal2">
                                         <span class="icon"><i class="fas fa-link">
                                                 <!-- --></i></span><span>View</span></a>
                                 </p>
@@ -423,7 +442,7 @@
                 </div>
 
 
-                <div class="has-text-centered header-margin">
+                <div class="has-text-centered mb-4">
                     <span><i class="fas fa-grip-lines"></i><i class="fas fa-grip-lines"></i><i
                             class="fas fa-grip-lines"></i></span>
                 </div>
@@ -438,7 +457,7 @@
                     <div class="tile is-parent is-vertical has-background-grey-darker has-text-white-bis">
                         <div class="tile is-child">
                             <div class="project__side">
-                                <h3 class="is-size-3 is-size-4-touch header-margin has-text-secondary">
+                                <h3 class="is-size-3 is-size-4-touch my-4 has-text-secondary">
                                     Photo Retouch Service
                                 </h3>
                                 <h5 class="is-size-5 has-text-white-bis">
@@ -467,7 +486,7 @@
                             <div class="project__side">
                                 <h4 class="is-size-4 is-size-5-touch has-text-white-bis">Testimonial:</h4>
                                 <div>
-                                    <p><span class="icon icon-margin"><i class="fas fa-quote-left">
+                                    <p><span class="icon mx-3"><i class="fas fa-quote-left">
                                                 <!-- --></i></span>Akshay thanks for your friendly service and support
                                         on building web. Just a little review about Akshay's service. This is my
                                         opinion:</p>
@@ -478,7 +497,7 @@
                                         difficult website, but you can simply ask, discuss and trust him, as I'm sure
                                         this is the guy you can trust (and this is the most important imho)</p>
                                     <p>I will refer myself to Akshay again when need something.<span
-                                            class="icon icon-margin"><i class="fas fa-quote-right">
+                                            class="icon mx-3"><i class="fas fa-quote-right">
                                                 <!-- --></i></span></p>
                                     <p class="has-text-centered has-text-white-bis"> - Aus (Photo Retouch Service)</p>
                                 </div>
@@ -495,35 +514,36 @@
         </section>
     </main>
     <!--Footer-->
-    <footer class="footer has-text-white-bis">
+    <div class="footer-top"></div>
+    <footer class="footer">
         <div class="container">
-            <div class="columns">
+            <div class="columns is-centered">
                 <!--Left Side-->
                 <div class="column has-text-centered-touch is-paddingless">
                     <div class="footer-list">
-                        <h5 class="is-uppercase">Information</h5>
+                        <h4 class="is-uppercase">Information</h4>
                         <ul>
                             <li>
-                                <i class="fas fa-id-card">
+                                <i class="fas fa-id-card ic-license">
                                     <!-- --></i><a href="license.html">
-                                    <span class="footer-margin">License</span></a>
+                                    <span class="ml-2">License</span></a>
                             </li>
                             <li>
-                                <i class="fas fa-box">
+                                <i class="fas fa-box ic-archive">
                                     <!-- --></i><a href="archive.html">
-                                    <span class="footer-margin">Archive</span></a>
+                                    <span class="ml-2">Archive</span></a>
                             </li>
                             <li>
-                                <i class="fab fa-github-alt">
+                                <i class="fab fa-github-alt ic-github">
                                     <!-- --></i><a href="https://github.com/akyag" target="_blank">
-                                    <span class="footer-margin">GitHub</span></a>
+                                    <span class="ml-2">GitHub</span></a>
                             </li>
                             <li>
-                                <i class="fab fa-html5">
+                                <i class="fab fa-html5 ic-html5">
                                     <!-- --></i><a
                                     href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fweboreviews.com%2F"
                                     target="_blank">
-                                    <span class="footer-margin">Valid HTML</span></a>
+                                    <span class="ml-2">Valid HTML</span></a>
                             </li>
                         </ul>
                     </div>
@@ -532,7 +552,14 @@
                 <div class="column has-text-centered">
                     <div>
                         <p>
-                            <img src="img/logo-white.svg" width="230" alt="Web-o-Reviews">
+                            <picture>
+                                <!-- Use this image if the user's OS setting is light or unset -->
+                                <source srcset="img/logo-transparent.svg"
+                                    media="(prefers-color-scheme: light) or (prefers-color-scheme: no-preference)">
+                                <!-- Use this image if the user's OS setting is dark -->
+                                <source srcset="img/logo-white-transparent.svg" media="(prefers-color-scheme: dark)">
+                                <img src="img/logo-transparent.svg" width="230" alt="Web-o-Reviews">
+                            </picture>
                         </p>
                     </div>
                     <div><a href="https://www.facebook.com/Web.o.Reviews" target="_blank" class="ifacebook"><span
@@ -582,7 +609,7 @@
                     <div>
                         <p>
                             <i class="fas fa-copyright">
-                                <!-- --></i><span class="footer-margin">
+                                <!-- --></i><span class="ml-2">
                                 <!-- --></span>2009-2020 - weboreviews.com | Designed with <i class="fas fa-heart">
                                 <!-- --></i> by Akshay Ghate.
                         </p>
@@ -590,7 +617,8 @@
                 </div>
             </div>
         </div>
-    </footer> <!-- Back To Top Button -->
+    </footer>
+    <!-- Back To Top Button -->
     <a href="#" class="vanillatop"><i class="fas fa-chevron-up fa-inverse">
             <!-- --></i></a>
     <script src="js/app.min.js"></script>

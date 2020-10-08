@@ -13,7 +13,8 @@
     <link rel="apple-touch-icon" href="faviconbg.png">
     <meta name="msapplication-TileImage" content="faviconbg.png">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-dark.css" media="screen and (prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="css/style.css" media="screen and (prefers-color-scheme: light)">
     <title>Android</title>
 </head>
 
@@ -25,7 +26,14 @@
                 <!--Logo-->
                 <div class="navbar-brand">
                     <a href="index.html">
-                        <img src="img/logo.svg" width="230" alt="Web-o-Reviews">
+                        <picture>
+                            <!-- Use this image if the user's OS setting is light or unset -->
+                            <source srcset="img/logo-transparent.svg"
+                                media="(prefers-color-scheme: light) or (prefers-color-scheme: no-preference)">
+                            <!-- Use this image if the user's OS setting is dark -->
+                            <source srcset="img/logo-white-transparent.svg" media="(prefers-color-scheme: dark)">
+                            <img src="img/logo-transparent.svg" width="230" alt="Web-o-Reviews">
+                        </picture>
                     </a>
                     <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu"
                         aria-expanded="false">
@@ -57,8 +65,8 @@
                     <!--Right Menu-->
                     <div class="navbar-end">
                         <div class="navbar-item">
-                            <a class="button is-primary is-outlined is-rounded" href="contact.html"><span
-                                    class="icon"><i class="fas fa-envelope">
+                            <a class="button is-success is-rounded" href="contact.html"><span class="icon"><i
+                                        class="fas fa-envelope">
                                         <!-- --></i></span><span>Contact</span></a>
                         </div>
                     </div>
@@ -73,14 +81,15 @@
                     <div class="columns">
                         <!--Left side-->
                         <div class="column has-text-centered">
-                            <img src="img/android.svg" class="animated fadeInLeftBig" width="280" alt="Android Icon">
+                            <img src="img/android.svg" class="animate__animated animate__fadeInLeftBig" width="280"
+                                alt="Android Icon">
                         </div>
                         <!--Right side-->
                         <div class="column has-text-centered">
                             <h1 class="is-family-secondary is-size-2 has-text-weight-normal is-spaced is-size-4-touch">
                                 NExtGen
                             </h1>
-                            <h2 class="is-size-4 is-size-6-touch header-margin">
+                            <h2 class="is-size-4 is-size-6-touch mb-4">
                                 A Custom ROM based on Android Gingerbread 2.3.x for HTC Explorer (Pico)
                             </h2>
                         </div>
@@ -91,7 +100,7 @@
         </section>
         <!--Content-->
         <section class="container">
-            <div class="margin2">
+            <div class="m-6">
                 <nav class="breadcrumb" aria-label="breadcrumbs">
                     <ul>
                         <li><a href="index.html">Web-o-Reviews</a></li>
@@ -101,8 +110,8 @@
                 </nav>
             </div>
             <div class="content">
-                <h1 class="title is-spaced secondary is-size-3-touch">NExtGen:</h1>
-                <img src="img/splash_title.png" alt="logo" width="600">
+                <h1 class="title is-spaced ml-4 is-size-3-touch">NExtGen:</h1>
+                <img src="img/nextgen.svg" alt="logo">
             </div>
             <div class="content box">
                 <h4 class="is-spaced is-4 is-size-5-touch">NExtGen 1.6, a ROM for the HTC Pico (Explorer)</h4>
@@ -118,7 +127,7 @@
                 <p>
                     <strong>Stable Release Date:</strong> 2013-06-15</p>
             </div>
-            <h4 class="secondary is-spaced is-size-4 is-size-5-touch">About the ROM:</h4>
+            <h4 class="ml-4 is-spaced is-size-4 is-size-5-touch">About the ROM:</h4>
             <div class="content box">
                 <h3 class="is-spaced is-size-5 ">ROM Details:</h3>
                 <ul>
@@ -168,7 +177,7 @@
                             target="_blank"><span class="tag is-primary">this</span></a> post for more info.</li>
                 </ul>
             </div>
-            <h4 class="secondary is-spaced is-size-4 is-size-5-touch">Other Tweaks:</h4>
+            <h4 class="ml-4 is-spaced is-size-4 is-size-5-touch">Other Tweaks:</h4>
             <div class="content box">
                 <ul>
                     <li>SD Card speed tweak</li>
@@ -181,7 +190,7 @@
                         SDCardWizard.apk, Smith.apk, UpgradeSetup.apk</li>
                 </ul>
             </div>
-            <h4 class="secondary is-spaced is-size-4 is-size-5-touch">build.prop Tweaks:</h4>
+            <h4 class="ml-4 is-spaced is-size-4 is-size-5-touch">build.prop Tweaks:</h4>
             <div class="content box">
                 <ul>
                     <li>Better scrolling responsiveness</li>
@@ -199,7 +208,7 @@
                         <span class="icon is-small"><i class="fas fa-cloud-download-alt">
                                 <!-- --></i></span><span>Android File Host</span></a>
                 </div>
-                <p class="is-family-code margin3">
+                <p class="is-family-code my-1">
                     <strong>MD5:</strong> 6778081a4144113181bbb1df09d582d0</p>
                 <p>Always check MD5 checksum after you finish downloading for verifying data integrity.</p>
                 <h3 class="is-spaced is-4 is-size-5-touch">Superwipe:</h3>
@@ -212,10 +221,10 @@
                         <span class="icon is-small"><i class="fas fa-cloud-download-alt">
                                 <!-- --></i></span><span>Android File Host</span></a>
                 </div>
-                <p class="is-family-code margin3">
+                <p class="is-family-code my-1">
                     <strong>MD5:</strong> 3f312ef3e582252fb6bef2936bda42cd</p>
             </div>
-            <h4 class="secondary is-spaced is-size-4 is-size-5-touch">Changelog:</h4>
+            <h4 class="ml-4 is-spaced is-size-4 is-size-5-touch">Changelog:</h4>
             <div class="content box">
                 <p>
                     <strong>v 1.6</strong>
@@ -308,9 +317,9 @@
                         you want to. It is not done automatically since user apps aren't touched during upgrade.)</li>
                 </ul>
             </div>
-            <h4 class="secondary is-spaced is-size-4 is-size-5-touch">Installation Instructions:</h4>
+            <h4 class="ml-4 is-spaced is-size-4 is-size-5-touch">Installation Instructions:</h4>
             <div class="content box">
-                <p class="secondary is-spaced is-size-4 is-size-5-touch">You need:</p>
+                <p class="ml-4 is-spaced is-size-4 is-size-5-touch">You need:</p>
                 <ol>
                     <li>Yannou's CWM recovery. (For downloading and installation instruction please visit <a
                             href="http://forum.xda-developers.com/showthread.php?t=1415223" target="_blank"><span
@@ -321,7 +330,7 @@
                 </ol>
                 <p>That's it !</p>
             </div>
-            <h4 class="secondary is-spaced is-size-4 is-size-5-touch">Installation:</h4>
+            <h4 class="ml-4 is-spaced is-size-4 is-size-5-touch">Installation:</h4>
             <div class="content box">
                 <p>Please follow these instructions exactly and I guarantee you won't face any problems at all.</p>
                 <ol>
@@ -339,7 +348,7 @@
                     <li>Now you can restore your apps back with titanium backup.</li>
                 </ol>
             </div>
-            <h4 class="secondary is-spaced is-size-4 is-size-5-touch">Upgrading:</h4>
+            <h4 class="ml-4 is-spaced is-size-4 is-size-5-touch">Upgrading:</h4>
             <div class="content box">
                 <p>Upgrading from previous version of NExtGEN is very easy.</p>
                 <ol>
@@ -350,14 +359,14 @@
                 <p>Please note that all your previous apps and their data will remain as it is. Also the first boot will
                     take longer if you have 100s of apps installed. So be patient.</p>
             </div>
-            <h4 class="secondary is-spaced is-size-4 is-size-5-touch">Kernels:</h4>
+            <h4 class="ml-4 is-spaced is-size-4 is-size-5-touch">Kernels:</h4>
             <div class="content box">
                 <p>Default kernel details:</p>
                 <ul>
                     <li>
                         <strong>akya's kernel</strong> - Default kernel of NExtGen <a
                             href="https://www.androidfilehost.com/?fid=24591000424948132" target="_blank"
-                            class="label">Download</a></li>
+                            class="tag is-medium is-primary">Download</a></li>
                     <li>Source: <a href="http://www.htcdev.com/devcenter/downloads" target="_blank">HTC dev</a></li>
                     <li>Compiler: <a href="https://github.com/sakindia123/Android_Toolchains/tree/master/arm-eabi-4.4.3"
                             target="_blank">arm-eabi-4.4.3</a></li>
@@ -371,35 +380,36 @@
         </section>
     </main>
     <!--Footer-->
-    <footer class="footer has-text-white-bis">
+    <div class="footer-top"></div>
+    <footer class="footer">
         <div class="container">
-            <div class="columns">
+            <div class="columns is-centered">
                 <!--Left Side-->
                 <div class="column has-text-centered-touch is-paddingless">
                     <div class="footer-list">
-                        <h5 class="is-uppercase">Information</h5>
+                        <h4 class="is-uppercase">Information</h4>
                         <ul>
                             <li>
-                                <i class="fas fa-id-card">
+                                <i class="fas fa-id-card ic-license">
                                     <!-- --></i><a href="license.html">
-                                    <span class="footer-margin">License</span></a>
+                                    <span class="ml-2">License</span></a>
                             </li>
                             <li>
-                                <i class="fas fa-box">
+                                <i class="fas fa-box ic-archive">
                                     <!-- --></i><a href="archive.html">
-                                    <span class="footer-margin">Archive</span></a>
+                                    <span class="ml-2">Archive</span></a>
                             </li>
                             <li>
-                                <i class="fab fa-github-alt">
+                                <i class="fab fa-github-alt ic-github">
                                     <!-- --></i><a href="https://github.com/akyag" target="_blank">
-                                    <span class="footer-margin">GitHub</span></a>
+                                    <span class="ml-2">GitHub</span></a>
                             </li>
                             <li>
-                                <i class="fab fa-html5">
+                                <i class="fab fa-html5 ic-html5">
                                     <!-- --></i><a
                                     href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fweboreviews.com%2F"
                                     target="_blank">
-                                    <span class="footer-margin">Valid HTML</span></a>
+                                    <span class="ml-2">Valid HTML</span></a>
                             </li>
                         </ul>
                     </div>
@@ -408,7 +418,14 @@
                 <div class="column has-text-centered">
                     <div>
                         <p>
-                            <img src="img/logo-white.svg" width="230" alt="Web-o-Reviews">
+                            <picture>
+                                <!-- Use this image if the user's OS setting is light or unset -->
+                                <source srcset="img/logo-transparent.svg"
+                                    media="(prefers-color-scheme: light) or (prefers-color-scheme: no-preference)">
+                                <!-- Use this image if the user's OS setting is dark -->
+                                <source srcset="img/logo-white-transparent.svg" media="(prefers-color-scheme: dark)">
+                                <img src="img/logo-transparent.svg" width="230" alt="Web-o-Reviews">
+                            </picture>
                         </p>
                     </div>
                     <div><a href="https://www.facebook.com/Web.o.Reviews" target="_blank" class="ifacebook"><span
@@ -458,7 +475,7 @@
                     <div>
                         <p>
                             <i class="fas fa-copyright">
-                                <!-- --></i><span class="footer-margin">
+                                <!-- --></i><span class="ml-2">
                                 <!-- --></span>2009-2020 - weboreviews.com | Designed with <i class="fas fa-heart">
                                 <!-- --></i> by Akshay Ghate.
                         </p>

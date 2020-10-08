@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="Refresh" content="3; URL=https://weboreviews.com">
+    <meta http-equiv="Refresh" content="4; URL=https://weboreviews.com">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Akshay Ghate">
     <meta name="Description" content="404 Error Page">
@@ -13,7 +13,8 @@
     <link rel="apple-touch-icon" href="faviconbg.png">
     <meta name="msapplication-TileImage" content="faviconbg.png">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-dark.css" media="screen and (prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="css/style.css" media="screen and (prefers-color-scheme: light)">
     <title>Page Not Found</title>
 </head>
 
@@ -25,7 +26,14 @@
                 <!--Logo-->
                 <div class="navbar-brand">
                     <a href="index.html">
-                        <img src="img/logo.svg" width="230" alt="Web-o-Reviews">
+                        <picture>
+                            <!-- Use this image if the user's OS setting is light or unset -->
+                            <source srcset="img/logo-transparent.svg"
+                                media="(prefers-color-scheme: light) or (prefers-color-scheme: no-preference)">
+                            <!-- Use this image if the user's OS setting is dark -->
+                            <source srcset="img/logo-white-transparent.svg" media="(prefers-color-scheme: dark)">
+                            <img src="img/logo-transparent.svg" width="230" alt="Web-o-Reviews">
+                        </picture>
                     </a>
                     <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu"
                         aria-expanded="false">
@@ -57,8 +65,8 @@
                     <!--Right Menu-->
                     <div class="navbar-end">
                         <div class="navbar-item">
-                            <a class="button is-primary is-outlined is-rounded" href="contact.html"><span
-                                    class="icon"><i class="fas fa-envelope">
+                            <a class="button is-success is-rounded" href="contact.html"><span class="icon"><i
+                                        class="fas fa-envelope">
                                         <!-- --></i></span><span>Contact</span></a>
                         </div>
                     </div>
@@ -74,9 +82,9 @@
                     <h1 class="is-family-secondary is-size-1 has-text-weight-normal is-spaced">
                         404
                     </h1>
-                    <h2 class="is-size-4 header-margin">
-                        <i class="fas fa-quote-left icon-margin"></i>Uh oh, the content you were looking for could not
-                        be found.<i class="fas fa-quote-right icon-margin">
+                    <h2 class="is-size-4 mt-4">
+                        <i class="fas fa-quote-left mx-3"></i>Uh oh, the content you were looking for could not
+                        be found.<i class="fas fa-quote-right mx-3">
                             <!-- --></i>
                     </h2>
                 </div>
@@ -84,35 +92,36 @@
         </section>
     </main>
     <!--Footer-->
-    <footer class="footer has-text-white-bis">
+    <div class="footer-top"></div>
+    <footer class="footer">
         <div class="container">
-            <div class="columns">
+            <div class="columns is-centered">
                 <!--Left Side-->
                 <div class="column has-text-centered-touch is-paddingless">
                     <div class="footer-list">
-                        <h5 class="is-uppercase">Information</h5>
+                        <h4 class="is-uppercase">Information</h4>
                         <ul>
                             <li>
-                                <i class="fas fa-id-card">
+                                <i class="fas fa-id-card ic-license">
                                     <!-- --></i><a href="license.html">
-                                    <span class="footer-margin">License</span></a>
+                                    <span class="ml-2">License</span></a>
                             </li>
                             <li>
-                                <i class="fas fa-box">
+                                <i class="fas fa-box ic-archive">
                                     <!-- --></i><a href="archive.html">
-                                    <span class="footer-margin">Archive</span></a>
+                                    <span class="ml-2">Archive</span></a>
                             </li>
                             <li>
-                                <i class="fab fa-github-alt">
+                                <i class="fab fa-github-alt ic-github">
                                     <!-- --></i><a href="https://github.com/akyag" target="_blank">
-                                    <span class="footer-margin">GitHub</span></a>
+                                    <span class="ml-2">GitHub</span></a>
                             </li>
                             <li>
-                                <i class="fab fa-html5">
+                                <i class="fab fa-html5 ic-html5">
                                     <!-- --></i><a
                                     href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fweboreviews.com%2F"
                                     target="_blank">
-                                    <span class="footer-margin">Valid HTML</span></a>
+                                    <span class="ml-2">Valid HTML</span></a>
                             </li>
                         </ul>
                     </div>
@@ -121,7 +130,14 @@
                 <div class="column has-text-centered">
                     <div>
                         <p>
-                            <img src="img/logo-white.svg" width="230" alt="Web-o-Reviews">
+                            <picture>
+                                <!-- Use this image if the user's OS setting is light or unset -->
+                                <source srcset="img/logo-transparent.svg"
+                                    media="(prefers-color-scheme: light) or (prefers-color-scheme: no-preference)">
+                                <!-- Use this image if the user's OS setting is dark -->
+                                <source srcset="img/logo-white-transparent.svg" media="(prefers-color-scheme: dark)">
+                                <img src="img/logo-transparent.svg" width="230" alt="Web-o-Reviews">
+                            </picture>
                         </p>
                     </div>
                     <div><a href="https://www.facebook.com/Web.o.Reviews" target="_blank" class="ifacebook"><span
@@ -171,7 +187,7 @@
                     <div>
                         <p>
                             <i class="fas fa-copyright">
-                                <!-- --></i><span class="footer-margin">
+                                <!-- --></i><span class="ml-2">
                                 <!-- --></span>2009-2020 - weboreviews.com | Designed with <i class="fas fa-heart">
                                 <!-- --></i> by Akshay Ghate.
                         </p>

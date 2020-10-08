@@ -13,7 +13,8 @@
     <link rel="apple-touch-icon" href="faviconbg.png">
     <meta name="msapplication-TileImage" content="faviconbg.png">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-dark.css" media="screen and (prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="css/style.css" media="screen and (prefers-color-scheme: light)">
     <title>About Me</title>
 </head>
 
@@ -25,7 +26,14 @@
                 <!--Logo-->
                 <div class="navbar-brand">
                     <a href="index.html">
-                        <img src="img/logo.svg" width="230" alt="Web-o-Reviews">
+                        <picture>
+                            <!-- Use this image if the user's OS setting is light or unset -->
+                            <source srcset="img/logo-transparent.svg"
+                                media="(prefers-color-scheme: light) or (prefers-color-scheme: no-preference)">
+                            <!-- Use this image if the user's OS setting is dark -->
+                            <source srcset="img/logo-white-transparent.svg" media="(prefers-color-scheme: dark)">
+                            <img src="img/logo-transparent.svg" width="230" alt="Web-o-Reviews">
+                        </picture>
                     </a>
                     <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu"
                         aria-expanded="false">
@@ -57,8 +65,8 @@
                     <!--Right Menu-->
                     <div class="navbar-end">
                         <div class="navbar-item">
-                            <a class="button is-primary is-outlined is-rounded" href="contact.html"><span
-                                    class="icon"><i class="fas fa-envelope">
+                            <a class="button is-success is-rounded" href="contact.html"><span class="icon"><i
+                                        class="fas fa-envelope">
                                         <!-- --></i></span><span>Contact</span></a>
                         </div>
                     </div>
@@ -73,7 +81,8 @@
                     <div class="columns">
                         <!--Left side-->
                         <div class="column has-text-centered">
-                            <img src="img/about.svg" class="animated zoomInLeft" width="200" alt="About Icon">
+                            <img src="img/about.svg" class="animate__animated animate__fadeInLeft" width="200"
+                                alt="About Icon">
                         </div>
                         <!--Right side-->
                         <div class="column has-text-centered">
@@ -89,14 +98,15 @@
         <!--Content-->
         <section class="container">
             <div class="content">
-                <h1 class="title is-spaced secondary is-size-3-touch">Hello !</h1>
+                <h1 class="title is-spaced ml-4 is-size-3-touch">Hello !</h1>
                 <p class="">
-                    <img src="img/me.png" alt="Akshay Ghate" class="is-pulled-right icon-margin th">
+                    <img src="img/me.png" alt="Akshay Ghate" class="is-pulled-right mx-3 th">
                 </p>
                 <p>I'm a self taught web/graphic designer. I love working with HTML5, CSS3 and design tools such as
-                    Adobe Photoshop, Inkscape and CorelDraw. I have been coding for a while now, learning new languages
-                    and improving my techniques. In my free time I enjoy playing, watching football, tinker with
-                    computer hardware, try new Linux distros and similar nerdy stuff.</p>
+                    Adobe Photoshop, Inkscape and CorelDraw. I have been coding for a while now, focusing on learning
+                    python atm. I am fascinated by topics such as encryption, design trends, security etc. In my free
+                    time I enjoy playing, watching football, tinkering with computer hardware, watching movies.. mostly
+                    sci-fi and fantasy.</p>
                 <p>If you have any questions, or just want to say hi, feel free to contact me through email -
                     <script>
                         var username = "akshay.226";
@@ -108,9 +118,10 @@
                         href="https://raw.githubusercontent.com/akyag/akyag.github.io/master/public_key.asc"
                         target="_blank">here</a> is my public encryption key.</p>
                 <p>Paying me online is easy, click here to pay me through PayTM or UPI -
-                    <a href="https://securegw.paytm.in/link/85463/LL_9874171" class="button" target="_blank"><span>Pay
+                    <a href="https://securegw.paytm.in/link/85463/LL_9874171" class="button is-primary"
+                        target="_blank"><span>Pay
                             with</span>
-                        <img src="img/paytmlogo.png" class="icon-margin" alt="paytmlogo"></a></p>
+                        <img src="img/paytmlogo.svg" width="65" class="mx-3" alt="paytmlogo"></a></p>
                 <p class="subtitle is-5 has-text-centered"> - Akshay Ghate</p>
                 <p>
                     <em><strong>Special thanks:</strong></em>
@@ -122,35 +133,36 @@
         </section>
     </main>
     <!--Footer-->
-    <footer class="footer has-text-white-bis">
+    <div class="footer-top"></div>
+    <footer class="footer">
         <div class="container">
-            <div class="columns">
+            <div class="columns is-centered">
                 <!--Left Side-->
                 <div class="column has-text-centered-touch is-paddingless">
                     <div class="footer-list">
-                        <h5 class="is-uppercase">Information</h5>
+                        <h4 class="is-uppercase">Information</h4>
                         <ul>
                             <li>
-                                <i class="fas fa-id-card">
+                                <i class="fas fa-id-card ic-license">
                                     <!-- --></i><a href="license.html">
-                                    <span class="footer-margin">License</span></a>
+                                    <span class="ml-2">License</span></a>
                             </li>
                             <li>
-                                <i class="fas fa-box">
+                                <i class="fas fa-box ic-archive">
                                     <!-- --></i><a href="archive.html">
-                                    <span class="footer-margin">Archive</span></a>
+                                    <span class="ml-2">Archive</span></a>
                             </li>
                             <li>
-                                <i class="fab fa-github-alt">
+                                <i class="fab fa-github-alt ic-github">
                                     <!-- --></i><a href="https://github.com/akyag" target="_blank">
-                                    <span class="footer-margin">GitHub</span></a>
+                                    <span class="ml-2">GitHub</span></a>
                             </li>
                             <li>
-                                <i class="fab fa-html5">
+                                <i class="fab fa-html5 ic-html5">
                                     <!-- --></i><a
                                     href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fweboreviews.com%2F"
                                     target="_blank">
-                                    <span class="footer-margin">Valid HTML</span></a>
+                                    <span class="ml-2">Valid HTML</span></a>
                             </li>
                         </ul>
                     </div>
@@ -159,7 +171,14 @@
                 <div class="column has-text-centered">
                     <div>
                         <p>
-                            <img src="img/logo-white.svg" width="230" alt="Web-o-Reviews">
+                            <picture>
+                                <!-- Use this image if the user's OS setting is light or unset -->
+                                <source srcset="img/logo-transparent.svg"
+                                    media="(prefers-color-scheme: light) or (prefers-color-scheme: no-preference)">
+                                <!-- Use this image if the user's OS setting is dark -->
+                                <source srcset="img/logo-white-transparent.svg" media="(prefers-color-scheme: dark)">
+                                <img src="img/logo-transparent.svg" width="230" alt="Web-o-Reviews">
+                            </picture>
                         </p>
                     </div>
                     <div><a href="https://www.facebook.com/Web.o.Reviews" target="_blank" class="ifacebook"><span
@@ -209,7 +228,7 @@
                     <div>
                         <p>
                             <i class="fas fa-copyright">
-                                <!-- --></i><span class="footer-margin">
+                                <!-- --></i><span class="ml-2">
                                 <!-- --></span>2009-2020 - weboreviews.com | Designed with <i class="fas fa-heart">
                                 <!-- --></i> by Akshay Ghate.
                         </p>
