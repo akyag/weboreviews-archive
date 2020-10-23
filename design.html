@@ -79,8 +79,8 @@
               </svg><span>Contact</span></a>
             <!-- contact button medium screen -->
             <a class="flex items-center px-4 py-3 text-base font-semibold leading-tight text-white rounded shadow-md bg-primary-dark md:visible lg:invisible hover:bg-primary"
-              href="contact.html"><svg class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg"
-                viewbox="0 0 20 20" fill="currentColor">
+              href="contact.html"><svg class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20"
+                fill="currentColor">
                 <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                 <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
               </svg></a>
@@ -104,7 +104,8 @@
           <div class="flex content-end">
             <div x-data="{ dropdownOpen: false }" class="relative ">
               <button @click="dropdownOpen = !dropdownOpen"
-                class="relative z-10 block p-2 transition duration-200 ease-in bg-gray-300 rounded-md hover:bg-gray-200 hover:text-gray-100 focus:outline-none" aria-label="Menu">
+                class="relative z-10 block p-2 transition duration-200 ease-in bg-gray-300 rounded-md hover:bg-gray-200 hover:text-gray-100 focus:outline-none"
+                aria-label="Menu">
                 <svg class="w-5 h-5 text-gray-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24"
                   stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -220,8 +221,7 @@
     <div class="h-10 transform -translate-y-5 bg-secondary skew-y-1"></div>
     <!-- hero end -->
     <!-- content start -->
-    <div id="content-wrapper"
-      class="container h-auto min-h-full px-8 my-8 leading-relaxed text-left text-gray-900">
+    <div id="content-wrapper" class="container h-auto min-h-full px-8 my-8 leading-relaxed text-left text-gray-900">
       <h3 class="mx-3 my-3 text-3xl font-bold text-gray-700 ">Design:</h3>
       <div class="grid grid-flow-row grid-cols-1 gap-4 md:grid-cols-2">
         <!-- card start -->
@@ -363,11 +363,23 @@
             lightening
             fast.
           </p>
-          <p>
-            You are probably more interested in the result right? Head over here and see for
-            yourself - <a class="font-semibold text-teal-500 transition duration-150 ease-in-out hover:text-teal-400"
-              href="data/GTmetrix-report-weboreviews.com.pdf" target="_blank">Web-o-Reviews Analysis</a>
-          </p>
+          <div>
+            You are probably more interested in the result right? I tested my code in a few tools. GTmetrix to test
+            performance and an open source tool called Lighthouse from Google which has audits for performance,
+            accessibility, progressive web apps, SEO and more. Following are the results.
+            <ul class="list-decimal list-inside ">
+              <li><a class="font-semibold transition duration-150 ease-in-out text-primary-dark hover:text-primary"
+                  href="data/GTmetrix-report-weboreviews.com-20201023T051822-VUGVyBoy.pdf" target="_blank"
+                  rel="noopener">GTmetrix Analysis</a></li>
+              <li><a class="font-semibold transition duration-150 ease-in-out text-primary-dark hover:text-primary"
+                  href="data/weboreviews.com-20201023T174237.html" target="_blank" rel="noopener">Lighthouse - desktop
+                  device</a></li>
+              <li><a class="font-semibold transition duration-150 ease-in-out text-primary-dark hover:text-primary"
+                  href="data/weboreviews.com-20201023T174417-mobile.html" target="_blank" rel="noopener">Lighthouse -
+                  mobile device</a></li>
+            </ul>
+
+          </div>
         </div>
         <!-- card end -->
       </div>
