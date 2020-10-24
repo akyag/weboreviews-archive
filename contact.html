@@ -17,7 +17,7 @@
   <title>Contact Me</title>
 </head>
 
-<body class="text-lg antialiased bg-white font-body">
+<body class="text-lg antialiased text-gray-700 bg-gray-100 font-body">
   <!-- header start -->
   <header>
     <!-- navigation large screen start -->
@@ -30,18 +30,18 @@
                 <a href="index.html"><img src="img/logo-transparent.svg" width="230" alt="Web-o-Reviews"></a>
               </div>
             </div>
-            <a class="px-3 py-2 mx-1 text-base font-medium text-gray-700 transition duration-150 ease-in-out bg-gray-100 rounded-md hover:text-primary focus:outline-none focus:text-gray-700"
+            <a class="block px-3 py-2 mx-1 text-base font-medium transition duration-150 ease-in-out rounded-md hover:bg-gray-200 focus:outline-none"
               href="index.html">Home</a>
-            <a class="px-3 py-2 mx-1 text-base font-medium text-gray-700 transition duration-150 ease-in-out bg-gray-100 rounded-md hover:text-primary focus:outline-none focus:text-gray-700"
+            <a class="block px-3 py-2 mx-1 text-base font-medium transition duration-150 ease-in-out rounded-md hover:bg-gray-200 focus:outline-none"
               href="design.html">Design</a>
-            <a class="px-3 py-2 mx-1 text-base font-medium text-gray-700 transition duration-150 ease-in-out bg-gray-100 rounded-md hover:text-primary focus:outline-none focus:text-gray-700"
+            <a class="block px-3 py-2 mx-1 text-base font-medium transition duration-150 ease-in-out rounded-md hover:bg-gray-200 focus:outline-none"
               href="work.html">Work</a>
-            <a class="px-3 py-2 mx-1 text-base font-medium text-gray-700 transition duration-150 ease-in-out bg-gray-100 rounded-md hover:text-primary focus:outline-none focus:text-gray-700"
+            <a class="block px-3 py-2 mx-1 text-base font-medium transition duration-150 ease-in-out rounded-md hover:bg-gray-200 focus:outline-none"
               href="about.html">About</a>
             <div class="flex justify-center">
               <div x-data="{ dropdownOpen: false }" class="relative ">
                 <button @click="dropdownOpen = !dropdownOpen"
-                  class="relative z-10 flex items-center p-2 transition duration-200 ease-in bg-gray-100 rounded-md hover:bg-gray-200 hover:text-gray-100 focus:outline-none">
+                  class="relative z-10 flex items-center px-3 py-2 transition duration-200 ease-in bg-gray-100 rounded-md hover:bg-gray-200 hover:text-gray-100 focus:outline-none">
                   <span class="text-base font-medium text-gray-700 ">More</span> <svg class="w-5 h-5 text-gray-800"
                     xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd"
@@ -71,16 +71,16 @@
           </div>
           <div class="flex content-end">
             <!-- contact button large screen -->
-            <a class="inline-flex items-center px-4 py-3 text-base font-semibold leading-tight text-white rounded shadow-md bg-primary-dark md:invisible lg:visible hover:bg-primary"
+            <a class="inline-flex items-center px-4 py-3 text-base font-semibold leading-tight text-white bg-gray-700 rounded shadow-md md:invisible lg:visible hover:bg-primary"
               href="contact.html"><svg class="w-5 h-5 mr-2 text-white" xmlns="http://www.w3.org/2000/svg"
                 viewbox="0 0 20 20" fill="currentColor">
                 <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                 <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
               </svg><span>Contact</span></a>
             <!-- contact button medium screen -->
-            <a class="flex items-center px-4 py-3 text-base font-semibold leading-tight text-white rounded shadow-md bg-primary-dark md:visible lg:invisible hover:bg-primary"
-              href="contact.html"><svg class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg"
-                viewbox="0 0 20 20" fill="currentColor">
+            <a class="flex items-center px-4 py-3 text-base font-semibold leading-tight text-white bg-gray-700 rounded shadow-md md:visible lg:invisible hover:bg-primary"
+              href="contact.html"><svg class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20"
+                fill="currentColor">
                 <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                 <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
               </svg></a>
@@ -104,7 +104,8 @@
           <div class="flex content-end">
             <div x-data="{ dropdownOpen: false }" class="relative ">
               <button @click="dropdownOpen = !dropdownOpen"
-                class="relative z-10 block p-2 transition duration-200 ease-in bg-gray-300 rounded-md hover:bg-gray-200 hover:text-gray-100 focus:outline-none" aria-label="Menu">
+                class="relative z-10 block p-2 transition duration-200 ease-in bg-gray-300 rounded-md hover:bg-gray-200 hover:text-gray-100 focus:outline-none"
+                aria-label="Menu">
                 <svg class="w-5 h-5 text-gray-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24"
                   stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -197,14 +198,13 @@
   <!-- header end -->
   <!-- hero start -->
   <main class="pt-20">
-    <div
-      class="w-full h-auto min-h-full bg-gradient-to-r from-teal-600 to-teal-700 md:bg-gradient-to-r md:from-teal-500 md:via-teal-700 md:to-teal-800">
+    <div class="w-full h-auto min-h-full bg-teal-700">
       <div class="container items-center px-8 py-20">
-        <div class="grid justify-center grid-cols-1 gap-2 my-10 sm:grid-cols-2">
+        <div class="grid justify-center grid-cols-1 gap-2 place-items-center sm:grid-cols-2">
           <div>
             <img src="img/contact.svg" class="flex-shrink-0 " width="400" alt="Responsive Icon">
           </div>
-          <div class="my-auto ">
+          <div>
             <h1 class="my-4 text-4xl font-normal leading-relaxed text-center text-gray-200 font-display">
               Contact me
             </h1>
@@ -214,12 +214,20 @@
         </div>
       </div>
     </div>
-    <div class="h-10 transform -translate-y-5 bg-secondary skew-y-1"></div>
+    <section>
+      <svg version="1.1" viewbox="0 0 262.91 20.368" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(-36.792 -168.07)">
+          <path
+            d="m36.792 168.07s11.021 10.519 17.844 13.559c11.053 4.9255 23.559 6.704 35.66 6.8066 22.263 0.1887 43.546-11.584 65.809-11.409 14.389 0.11306 28.029 8.4322 42.413 8.0412 17.905-0.48677 38.599-11.462 52.171-12.863 13.572-1.401 18.315 7.1468 28.112 1.0125s16.753 3.4234 20.876-0.0289l0.0247-5.1191z"
+            fill="#2c7a7b" fill-rule="evenodd" />
+        </g>
+      </svg>
+    </section>
     <!-- hero end -->
     <!-- content start -->
     <div id="content-wrapper"
-      class="container h-auto min-h-full px-8 my-8 space-y-5 leading-relaxed text-left text-gray-900">
-      <h3 class="mx-3 my-3 text-3xl font-bold text-gray-700 ">Contact form:</h3>
+      class="container h-auto min-h-full px-8 py-20 my-8 space-y-5 leading-relaxed text-left bg-white shadow-md">
+      <h3 class="mx-3 my-3 text-4xl font-bold text-center ">Contact form</h3>
       <p>Already feel we could work together or just want to say hi? Contacting me is a simple process, just
         fill the form below.</p>
       <p>All the information from the contact form like name, email, subject, messages etc. will not be shared.</p>
@@ -239,16 +247,16 @@
         <form id="contactform" name="contactform" accept-charset="utf-8" method="POST">
           <fieldset id="fs-frm-inputs">
 
-            
+
             <div class="flex flex-row flex-wrap items-center">
 
               <div class="flex flex-row mb-4 sm:mr-4">
-                <div class="px-4 py-3 mr-4">
-                  <label for="full-name" class="font-semibold text-gray-700">From</label>
+                <div class="py-3 mr-4 md:px-4">
+                  <label for="full-name" class="font-semibold ">From</label>
                 </div>
                 <span
                   class="flex items-center px-4 bg-gray-300 border border-gray-200 rounded rounded-r-none shadow-md"><svg
-                    class="w-5 h-5 text-gray-700 fill-current" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20"
+                    class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20"
                     fill="currentColor">
                     <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
                       clip-rule="evenodd" />
@@ -259,12 +267,12 @@
               </div>
 
               <div class="flex flex-row mb-4 sm:mr-4">
-                <div class="px-4 py-3 mr-4">
-                  <label for="email-address" class="font-semibold text-gray-700">Email</label>
+                <div class="py-3 mr-4 md:px-4">
+                  <label for="email-address" class="font-semibold ">Email</label>
                 </div>
                 <span
                   class="flex items-center px-4 bg-gray-300 border border-gray-200 rounded rounded-r-none shadow-md"><svg
-                    class="w-5 h-5 text-gray-700 fill-current" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20"
+                    class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20"
                     fill="currentColor">
                     <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                     <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
@@ -274,56 +282,57 @@
                     type="email" name="_replyto" id="email-address" placeholder="Email" required=""></div>
               </div>
 
-            
 
-            <div class="flex flex-row w-auto sm:mr-4">
-              <div class="px-4 py-3 mr-1">
-                <label for="telephone" class="font-semibold text-gray-700">Phone</label>
+
+              <div class="flex flex-row w-auto sm:mr-4">
+                <div class="py-3 mr-1 md:px-4">
+                  <label for="telephone" class="font-semibold ">Phone</label>
+                </div>
+                <span
+                  class="flex items-center px-4 bg-gray-300 border border-gray-200 rounded rounded-r-none shadow-md"><svg
+                    class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20"
+                    fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z"
+                      clip-rule="evenodd" />
+                  </svg></span>
+                <div><input
+                    class="w-full px-4 py-4 leading-tight placeholder-gray-700 placeholder-opacity-50 bg-white border-2 border-gray-300 rounded rounded-l-none shadow-md appearance-none hover:bg-gray-100 hover:border-gray-600 focus:outline-none focus:bg-white focus:border-teal-400"
+                    type="tel" name="telephone" id="telephone" placeholder="Your phone number*"></div>
+
               </div>
-              <span
-                class="flex items-center px-4 bg-gray-300 border border-gray-200 rounded rounded-r-none shadow-md"><svg
-                  class="w-5 h-5 text-gray-700 fill-current" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20"
-                  fill="currentColor">
-                  <path fill-rule="evenodd"
-                    d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z"
-                    clip-rule="evenodd" />
-                </svg></span>
-              <div><input
-                  class="w-full px-4 py-4 leading-tight placeholder-gray-700 placeholder-opacity-50 bg-white border-2 border-gray-300 rounded rounded-l-none shadow-md appearance-none hover:bg-gray-100 hover:border-gray-600 focus:outline-none focus:bg-white focus:border-teal-400"
-                  type="tel" name="telephone" id="telephone" placeholder="Your phone number*"></div>
-
-            </div></div>
-            <span class="ml-24 text-xs text-gray-800">*Optional</span>
-            <div class="my-4 text-2xl font-semibold"><span class="text-gray-700 border-b-4 border-green-600">What is
+            </div>
+            <span class="ml-16 text-xs text-gray-800 md:ml-24">*Optional</span>
+            <div class="my-6 text-2xl font-semibold"><span class="text-gray-700 border-b-4 border-green-600">What is
                 this contact about?</span></div>
-            <div class="px-4 py-3 mr-4">
-              <label for="department" class="font-semibold text-gray-700">Department</label>
+            <div class="py-3 mr-4 md:px-4">
+              <label for="department" class="font-semibold ">Department</label>
             </div>
 
             <div class="relative inline-block w-64">
 
               <select name="department" id="department" required=""
-                class="px-4 py-4 mb-4 leading-tight text-gray-700 bg-white border-2 border-gray-300 rounded shadow-md appearance-none hover:bg-gray-100 hover:border-gray-600 focus:outline-none focus:bg-white focus:border-teal-400">
+                class="px-4 py-4 mb-4 leading-tight bg-white border-2 border-gray-300 rounded shadow-md appearance-none hover:bg-gray-100 hover:border-gray-600 focus:outline-none focus:bg-white focus:border-teal-400">
                 <option value="" disabled selected>Select your option</option>
                 <option value="Website development">Website development</option>
                 <option value="Enquiry">Inquiry</option>
                 <option value="Chat">Chat</option>
                 <option value="Other">Other</option>
               </select>
-              <div class="absolute inset-y-0 right-0 flex items-center mb-3 mr-12 text-gray-700 pointer-events-none">
+              <div class="absolute inset-y-0 right-0 flex items-center mb-3 mr-12 pointer-events-none">
                 <svg class="w-6 h-6 text-teal-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
                   <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
               </div>
             </div>
 
-            <div class="px-4 py-3 mr-4">
-              <label for="subject" class="font-semibold text-gray-700">Subject</label>
+            <div class="py-3 mr-4 md:px-4">
+              <label for="email-subject" class="font-semibold ">Subject</label>
             </div>
 
 
             <div class="flex flex-row mb-4 shadow-md w-max sm:mr-4">
               <span class="flex items-center px-4 bg-gray-300 border border-gray-200 rounded rounded-r-none"><svg
-                  class="w-5 h-5 text-gray-700 fill-current" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20"
+                  class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20"
                   fill="currentColor">
                   <path fill-rule="evenodd"
                     d="M9.243 3.03a1 1 0 01.727 1.213L9.53 6h2.94l.56-2.243a1 1 0 111.94.486L14.53 6H17a1 1 0 110 2h-2.97l-1 4H15a1 1 0 110 2h-2.47l-.56 2.242a1 1 0 11-1.94-.485L10.47 14H7.53l-.56 2.242a1 1 0 11-1.94-.485L5.47 14H3a1 1 0 110-2h2.97l1-4H5a1 1 0 110-2h2.47l.56-2.243a1 1 0 011.213-.727zM9.03 8l-1 4h2.938l1-4H9.031z"
@@ -331,11 +340,12 @@
                 </svg></span>
               <div class="flex flex-grow"><input
                   class="w-full px-4 py-4 leading-tight placeholder-gray-700 placeholder-opacity-50 bg-white border-2 border-gray-300 rounded rounded-l-none appearance-none hover:bg-gray-100 hover:border-gray-600 focus:outline-none focus:bg-white focus:border-teal-400"
-                  type="text" id="subject" placeholder="Do you want to build a snowman?" required=""></div>
+                  type="text" name="_subject" id="email-subject" placeholder="Do you want to build a snowman?"
+                  required=""></div>
             </div>
 
-            <div class="px-4 py-3 mr-4">
-              <label for="message" class="font-semibold text-gray-700">Message</label>
+            <div class="py-3 mr-4 md:px-4">
+              <label for="message" class="font-semibold ">Message</label>
             </div>
 
             <div class="mb-4 sm:mr-4">
@@ -344,12 +354,12 @@
                 name="message" id="message" placeholder="Explain how I can help you" required=""></textarea>
             </div>
             <label>
-              <input class="w-4 h-4" type="checkbox" required="">
+              <input class="w-4 h-4 mr-4" type="checkbox" required="">
               I understand that this form collects my name and email so I can be
               contacted.</label>
 
 
-            <input type="hidden" name="_subject" id="email-subject" value="New Web-o-Reviews submission!" />
+            <!-- <input type="hidden" name="_subject" id="email-subject" value="New Web-o-Reviews submission!" /> -->
 
           </fieldset>
 
@@ -378,17 +388,30 @@
 
   </main>
   <!-- content end -->
+  <!-- Footer wave start -->
+  <section>
+    <svg viewbox="0 0 1920 250" xmlns="http://www.w3.org/2000/svg" class="mt-20 ">
+      <path
+        d="M1920 250H0V0s126.707 78.536 349.975 80.05c177.852 1.203 362.805-63.874 553.803-63.874 290.517 0 383.458 57.712 603.992 61.408 220.527 3.696 278.059-61.408 412.23-17.239"
+        class="fill-current text-secondary "></path>
+      <path d="M1920 144s-467.917 116.857-1027.243-17.294C369.986 1.322 0 45.578 0 45.578V250h1920V144z"
+        class="fill-current text-secondary-lighter"></path>
+      <path
+        d="M0 195.553s208.547-75.581 701.325-20.768c376.707 41.908 520.834-67.962 722.545-67.962 222.926 0 311.553 83.523 496.129 86.394V250H0v-54.447z"
+        class="text-gray-100 fill-current"></path>
+    </svg></section>
+  <!-- Footer wave end -->
   <!-- footer start -->
-  <footer class="h-auto min-h-full overflow-hidden bg-gray-100 border-t-8 border-secondary">
+  <footer class="h-auto min-h-full py-10 overflow-hidden bg-gray-100 ">
     <div
       class="flex flex-col items-center justify-between max-w-6xl mx-auto my-12 sm:flex-row sm:items-end sm:px-6 lg:px-8 ">
       <div class="flex flex-row">
         <div class="w-40 space-y-3 md:space-y-0">
-          <div class="mb-4 font-semibold text-center text-gray-700 uppercase ">Information
+          <div class="mb-4 font-semibold text-center uppercase ">Information
           </div>
           <div class="grid grid-cols-6 leading-relaxed divide-x divide-gray-500">
-            <div class="col-span-2 ml-5"><svg class="w-5 h-5 mt-1 text-gray-700" xmlns="http://www.w3.org/2000/svg"
-                fill="none" viewbox="0 0 24 24" stroke="currentColor">
+            <div class="col-span-2 ml-5"><svg class="w-5 h-5 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewbox="0 0 24 24" stroke="currentColor">
                 <title>License</title>
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
@@ -399,8 +422,8 @@
             </div>
           </div>
           <div class="grid grid-cols-6 leading-relaxed divide-x divide-gray-500">
-            <div class="col-span-2 ml-5"><svg class="w-5 h-5 mt-1 text-gray-700" xmlns="http://www.w3.org/2000/svg"
-                fill="none" viewbox="0 0 24 24" stroke="currentColor">
+            <div class="col-span-2 ml-5"><svg class="w-5 h-5 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewbox="0 0 24 24" stroke="currentColor">
                 <title>Archive</title>
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
@@ -411,7 +434,7 @@
             </div>
           </div>
           <div class="grid grid-cols-6 leading-relaxed divide-x divide-gray-500">
-            <div class="col-span-2 ml-5"><svg class="w-5 h-5 mt-1 text-gray-700" xmlns="http://www.w3.org/2000/svg"
+            <div class="col-span-2 ml-5"><svg class="w-5 h-5 mt-1" xmlns="http://www.w3.org/2000/svg"
                 viewbox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
                 stroke-linejoin="round">
                 <title>Github</title>
@@ -426,10 +449,10 @@
           </div>
         </div>
         <div class="w-40 space-y-3 md:space-y-0">
-          <div class="mb-4 font-semibold text-center text-gray-700 uppercase ">Find me on
+          <div class="mb-4 font-semibold text-center uppercase ">Find me on
           </div>
           <div class="grid grid-cols-6 leading-relaxed divide-x divide-gray-500">
-            <div class="col-span-2 ml-5"><svg class="w-5 h-5 mt-1 text-gray-700" xmlns="http://www.w3.org/2000/svg"
+            <div class="col-span-2 ml-5"><svg class="w-5 h-5 mt-1" xmlns="http://www.w3.org/2000/svg"
                 viewbox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
                 stroke-linejoin="round">
                 <title>LinkedIn</title>
@@ -446,7 +469,7 @@
             </div>
           </div>
           <div class="grid grid-cols-6 leading-relaxed divide-x divide-gray-500">
-            <div class="col-span-2 ml-5"><svg class="w-5 h-5 mt-1 text-gray-700" xmlns="http://www.w3.org/2000/svg"
+            <div class="col-span-2 ml-5"><svg class="w-5 h-5 mt-1" xmlns="http://www.w3.org/2000/svg"
                 viewbox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
                 stroke-linejoin="round">
                 <title>Twitter</title>
@@ -460,7 +483,7 @@
             </div>
           </div>
           <div class="grid grid-cols-6 leading-relaxed divide-x divide-gray-500">
-            <div class="col-span-2 ml-5"><svg class="w-5 h-5 mt-1 text-gray-700" xmlns="http://www.w3.org/2000/svg"
+            <div class="col-span-2 ml-5"><svg class="w-5 h-5 mt-1" xmlns="http://www.w3.org/2000/svg"
                 viewbox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
                 stroke-linejoin="round">
                 <title>Facebook</title>
@@ -477,9 +500,8 @@
       <div class="flex flex-col items-center mt-6 sm:m-0 md:mr-20">
         <div><a href="index.html"><img src="img/logo-transparent.svg" width="230" alt="Web-o-Reviews"></a></div>
         <div class="grid grid-cols-1 divide-y-2 divide-gray-500 lg:grid-cols-2 lg:divide-y-0 lg:divide-x-2">
-          <div><svg class="inline-block w-5 h-5 mx-1 mb-1 text-gray-700 " xmlns="http://www.w3.org/2000/svg"
-              viewbox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-              stroke-linejoin="round">
+          <div><svg class="inline-block w-5 h-5 mx-1 mb-1 " xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"
+              stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
               <title>Copyright</title>
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <circle cx="12" cy="12" r="9" />

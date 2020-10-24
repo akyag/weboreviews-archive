@@ -6,8 +6,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Akshay Ghate">
-  <meta name="Description" content="Packages offered by Web-o-Reviews for custom website design.">
-  <meta name="Keywords" content="pune,webdesigner,package,website,design,freelance webdesigner,price">
+  <meta name="Description" content="Why choose me?">
+  <meta name="Keywords" content="pune,webdesigner,website,design,freelance designer,responsive">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="apple-touch-icon" href="faviconbg.png">
@@ -17,7 +17,7 @@
   <title>Design</title>
 </head>
 
-<body class="text-lg antialiased text-gray-900 bg-white font-body">
+<body class="text-lg antialiased text-gray-700 bg-gray-100 font-body">
   <!-- header start -->
   <header>
     <!-- navigation large screen start -->
@@ -30,18 +30,18 @@
                 <a href="index.html"><img src="img/logo-transparent.svg" width="230" alt="Web-o-Reviews"></a>
               </div>
             </div>
-            <a class="px-3 py-2 mx-1 text-base font-medium text-gray-700 transition duration-150 ease-in-out bg-gray-100 rounded-md hover:text-primary focus:outline-none focus:text-gray-700"
+            <a class="block px-3 py-2 mx-1 text-base font-medium transition duration-150 ease-in-out rounded-md hover:bg-gray-200 focus:outline-none"
               href="index.html">Home</a>
-            <a class="block px-3 py-2 mx-1 text-base font-medium text-white transition duration-150 ease-in-out bg-gray-700 rounded-md hover:text-white hover:bg-primary focus:outline-none"
+            <a class="block px-3 py-2 mx-1 text-base font-medium text-white transition duration-150 ease-in-out bg-gray-700 rounded-md hover:bg-primary focus:outline-none"
               href="design.html">Design</a>
-            <a class="px-3 py-2 mx-1 text-base font-medium text-gray-700 transition duration-150 ease-in-out bg-gray-100 rounded-md hover:text-primary focus:outline-none focus:text-gray-700"
+            <a class="block px-3 py-2 mx-1 text-base font-medium transition duration-150 ease-in-out rounded-md hover:bg-gray-200 focus:outline-none"
               href="work.html">Work</a>
-            <a class="px-3 py-2 mx-1 text-base font-medium text-gray-700 transition duration-150 ease-in-out bg-gray-100 rounded-md hover:text-primary focus:outline-none focus:text-gray-700"
+            <a class="block px-3 py-2 mx-1 text-base font-medium transition duration-150 ease-in-out rounded-md hover:bg-gray-200 focus:outline-none"
               href="about.html">About</a>
             <div class="flex justify-center">
               <div x-data="{ dropdownOpen: false }" class="relative ">
                 <button @click="dropdownOpen = !dropdownOpen"
-                  class="relative z-10 flex items-center p-2 transition duration-200 ease-in bg-gray-100 rounded-md hover:bg-gray-200 hover:text-gray-100 focus:outline-none">
+                  class="relative z-10 flex items-center px-3 py-2 transition duration-200 ease-in bg-gray-100 rounded-md hover:bg-gray-200 hover:text-gray-100 focus:outline-none">
                   <span class="text-base font-medium text-gray-700 ">More</span> <svg class="w-5 h-5 text-gray-800"
                     xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd"
@@ -198,14 +198,13 @@
   <!-- header end -->
   <!-- hero start -->
   <main class="pt-20">
-    <div
-      class="w-full h-auto min-h-full bg-gradient-to-r from-teal-600 to-teal-700 md:bg-gradient-to-r md:from-teal-500 md:via-teal-700 md:to-teal-800">
+    <div id="hero" class="w-full h-auto bg-teal-700">
       <div class="container items-center px-8 py-20">
-        <div class="grid justify-center grid-cols-1 gap-2 my-10 sm:grid-cols-2">
+        <div class="grid justify-center grid-cols-1 gap-2 place-items-center sm:grid-cols-2">
           <div>
             <img src="img/web-design.svg" class="flex-shrink-0 " width="500" alt="Responsive Icon">
           </div>
-          <div class="my-auto ">
+          <div class="">
             <h1 class="my-4 text-4xl font-normal leading-relaxed text-center text-gray-200 font-display">Web Design...
             </h1>
             <h2 class="my-4 text-2xl font-semibold leading-snug text-center text-gray-200 ">Why choose me? It's simple.
@@ -218,14 +217,22 @@
         </div>
       </div>
     </div>
-    <div class="h-10 transform -translate-y-5 bg-secondary skew-y-1"></div>
+    <section>
+      <svg version="1.1" viewbox="0 0 262.91 20.368" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(-36.792 -168.07)">
+          <path
+            d="m36.792 168.07s11.021 10.519 17.844 13.559c11.053 4.9255 23.559 6.704 35.66 6.8066 22.263 0.1887 43.546-11.584 65.809-11.409 14.389 0.11306 28.029 8.4322 42.413 8.0412 17.905-0.48677 38.599-11.462 52.171-12.863 13.572-1.401 18.315 7.1468 28.112 1.0125s16.753 3.4234 20.876-0.0289l0.0247-5.1191z"
+            fill="#2c7a7b" fill-rule="evenodd" />
+        </g>
+      </svg>
+    </section>
     <!-- hero end -->
     <!-- content start -->
-    <div id="content-wrapper" class="container h-auto min-h-full px-8 my-8 leading-relaxed text-left text-gray-900">
-      <h3 class="mx-3 my-3 text-3xl font-bold text-gray-700 ">Design:</h3>
+    <div id="content-wrapper" class="container h-auto min-h-full px-8 my-8 leading-relaxed text-left">
+      <h3 class="mx-3 mt-3 mb-8 text-4xl font-bold text-center ">Design</h3>
       <div class="grid grid-flow-row grid-cols-1 gap-4 md:grid-cols-2">
         <!-- card start -->
-        <div class="px-6 py-6 space-y-4 text-gray-700 bg-gray-100 rounded-md shadow-lg xl:px-10 xl:py-10">
+        <div class="px-6 py-6 space-y-4 bg-white rounded-md shadow-lg xl:px-10 xl:py-10">
           <div class="flex flex-row content-center">
             <svg class="flex items-center flex-shrink-0 w-12 h-12 mx-2 my-2 text-primary"
               xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
@@ -265,7 +272,7 @@
         </div>
         <!-- card end -->
         <!-- card start -->
-        <div class="px-6 py-6 text-gray-700 bg-gray-100 rounded-md shadow-lg xl:px-10 xl:py-10">
+        <div class="px-6 py-6 bg-white rounded-md shadow-lg xl:px-10 xl:py-10">
           <div class="flex flex-row content-center">
             <svg class="flex items-center flex-shrink-0 w-12 h-12 mx-2 my-2 text-primary"
               xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
@@ -280,7 +287,7 @@
         </div>
         <!-- card end -->
         <!-- card start -->
-        <div class="px-6 py-6 text-gray-700 bg-gray-100 rounded-md shadow-lg xl:px-10 xl:py-10">
+        <div class="px-6 py-6 bg-white rounded-md shadow-lg xl:px-10 xl:py-10">
           <div class="flex flex-row content-center">
             <svg class="flex items-center flex-shrink-0 w-12 h-12 mx-2 my-2 text-primary"
               xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
@@ -300,7 +307,7 @@
         <!-- card pair start -->
         <div>
           <div class="row-span-1 mb-2 ">
-            <div class="px-6 py-6 text-gray-700 bg-gray-100 rounded-md shadow-lg xl:px-10 xl:py-10">
+            <div class="px-6 py-6 bg-white rounded-md shadow-lg xl:px-10 xl:py-10">
               <div class="flex flex-row content-center">
                 <svg class="flex items-center flex-shrink-0 w-12 h-12 mx-2 my-2 text-primary"
                   xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
@@ -334,7 +341,7 @@
         <!-- card pair end -->
         <!-- card start -->
         <div
-          class="bg-gray-100 text-gray-700 shadow-lg px-6 py-6 xl:px-10 xl:py-10 space-y-4 rounded-md bg-speed-card bg-50% bg-no-repeat bg-right-bottom">
+          class="bg-white shadow-lg px-6 py-6 xl:px-10 xl:py-10 space-y-4 rounded-md bg-speed-card bg-50% bg-no-repeat bg-right-bottom">
           <div class="flex flex-row content-center">
             <svg class="flex items-center flex-shrink-0 w-12 h-12 mx-2 my-2 text-primary"
               xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
@@ -386,7 +393,7 @@
       <div class="grid grid-flow-row grid-cols-1 gap-4 mt-4 md:grid-cols-2">
 
         <!-- card start -->
-        <div class="px-6 py-6 space-y-4 text-gray-700 bg-gray-100 rounded-md shadow-lg xl:px-10 xl:py-10">
+        <div class="px-6 py-6 space-y-4 bg-white rounded-md shadow-lg xl:px-10 xl:py-10">
           <div class="flex flex-row content-center">
             <svg class="flex items-center flex-shrink-0 w-12 h-12 mx-2 my-2 text-primary"
               xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
@@ -427,17 +434,30 @@
     </div>
   </main>
   <!-- content end -->
+  <!-- Footer wave start -->
+  <section>
+    <svg viewbox="0 0 1920 250" xmlns="http://www.w3.org/2000/svg" class="mt-20 ">
+      <path
+        d="M1920 250H0V0s126.707 78.536 349.975 80.05c177.852 1.203 362.805-63.874 553.803-63.874 290.517 0 383.458 57.712 603.992 61.408 220.527 3.696 278.059-61.408 412.23-17.239"
+        class="fill-current text-secondary "></path>
+      <path d="M1920 144s-467.917 116.857-1027.243-17.294C369.986 1.322 0 45.578 0 45.578V250h1920V144z"
+        class="fill-current text-secondary-lighter"></path>
+      <path
+        d="M0 195.553s208.547-75.581 701.325-20.768c376.707 41.908 520.834-67.962 722.545-67.962 222.926 0 311.553 83.523 496.129 86.394V250H0v-54.447z"
+        class="text-gray-100 fill-current"></path>
+    </svg></section>
+  <!-- Footer wave end -->
   <!-- footer start -->
-  <footer class="h-auto min-h-full overflow-hidden bg-gray-100 border-t-8 border-secondary">
+  <footer class="h-auto min-h-full py-10 overflow-hidden bg-gray-100 ">
     <div
       class="flex flex-col items-center justify-between max-w-6xl mx-auto my-12 sm:flex-row sm:items-end sm:px-6 lg:px-8 ">
       <div class="flex flex-row">
         <div class="w-40 space-y-3 md:space-y-0">
-          <div class="mb-4 font-semibold text-center text-gray-700 uppercase ">Information
+          <div class="mb-4 font-semibold text-center uppercase ">Information
           </div>
           <div class="grid grid-cols-6 leading-relaxed divide-x divide-gray-500">
-            <div class="col-span-2 ml-5"><svg class="w-5 h-5 mt-1 text-gray-700" xmlns="http://www.w3.org/2000/svg"
-                fill="none" viewbox="0 0 24 24" stroke="currentColor">
+            <div class="col-span-2 ml-5"><svg class="w-5 h-5 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewbox="0 0 24 24" stroke="currentColor">
                 <title>License</title>
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
@@ -448,8 +468,8 @@
             </div>
           </div>
           <div class="grid grid-cols-6 leading-relaxed divide-x divide-gray-500">
-            <div class="col-span-2 ml-5"><svg class="w-5 h-5 mt-1 text-gray-700" xmlns="http://www.w3.org/2000/svg"
-                fill="none" viewbox="0 0 24 24" stroke="currentColor">
+            <div class="col-span-2 ml-5"><svg class="w-5 h-5 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewbox="0 0 24 24" stroke="currentColor">
                 <title>Archive</title>
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
@@ -460,7 +480,7 @@
             </div>
           </div>
           <div class="grid grid-cols-6 leading-relaxed divide-x divide-gray-500">
-            <div class="col-span-2 ml-5"><svg class="w-5 h-5 mt-1 text-gray-700" xmlns="http://www.w3.org/2000/svg"
+            <div class="col-span-2 ml-5"><svg class="w-5 h-5 mt-1" xmlns="http://www.w3.org/2000/svg"
                 viewbox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
                 stroke-linejoin="round">
                 <title>Github</title>
@@ -475,10 +495,10 @@
           </div>
         </div>
         <div class="w-40 space-y-3 md:space-y-0">
-          <div class="mb-4 font-semibold text-center text-gray-700 uppercase ">Find me on
+          <div class="mb-4 font-semibold text-center uppercase ">Find me on
           </div>
           <div class="grid grid-cols-6 leading-relaxed divide-x divide-gray-500">
-            <div class="col-span-2 ml-5"><svg class="w-5 h-5 mt-1 text-gray-700" xmlns="http://www.w3.org/2000/svg"
+            <div class="col-span-2 ml-5"><svg class="w-5 h-5 mt-1" xmlns="http://www.w3.org/2000/svg"
                 viewbox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
                 stroke-linejoin="round">
                 <title>LinkedIn</title>
@@ -495,7 +515,7 @@
             </div>
           </div>
           <div class="grid grid-cols-6 leading-relaxed divide-x divide-gray-500">
-            <div class="col-span-2 ml-5"><svg class="w-5 h-5 mt-1 text-gray-700" xmlns="http://www.w3.org/2000/svg"
+            <div class="col-span-2 ml-5"><svg class="w-5 h-5 mt-1" xmlns="http://www.w3.org/2000/svg"
                 viewbox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
                 stroke-linejoin="round">
                 <title>Twitter</title>
@@ -509,7 +529,7 @@
             </div>
           </div>
           <div class="grid grid-cols-6 leading-relaxed divide-x divide-gray-500">
-            <div class="col-span-2 ml-5"><svg class="w-5 h-5 mt-1 text-gray-700" xmlns="http://www.w3.org/2000/svg"
+            <div class="col-span-2 ml-5"><svg class="w-5 h-5 mt-1" xmlns="http://www.w3.org/2000/svg"
                 viewbox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
                 stroke-linejoin="round">
                 <title>Facebook</title>
@@ -526,9 +546,8 @@
       <div class="flex flex-col items-center mt-6 sm:m-0 md:mr-20">
         <div><a href="index.html"><img src="img/logo-transparent.svg" width="230" alt="Web-o-Reviews"></a></div>
         <div class="grid grid-cols-1 divide-y-2 divide-gray-500 lg:grid-cols-2 lg:divide-y-0 lg:divide-x-2">
-          <div><svg class="inline-block w-5 h-5 mx-1 mb-1 text-gray-700 " xmlns="http://www.w3.org/2000/svg"
-              viewbox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-              stroke-linejoin="round">
+          <div><svg class="inline-block w-5 h-5 mx-1 mb-1 " xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"
+              stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
               <title>Copyright</title>
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <circle cx="12" cy="12" r="9" />
