@@ -14,6 +14,7 @@
 	<meta name="msapplication-TileImage" content="faviconbg.png">
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="prism-tomorrow.css">
 	<title>Scripts</title>
 </head>
 
@@ -239,28 +240,554 @@
 					at the end. My weekly and monthly backup scripts use the same logic. These scripts are called in
 					background using cron, no intervention is necessary.</p>
 			</div>
-			<div class="my-8 shadow-lg">
-				<p>
-					<script src="https://gist.github.com/akyag/e4d939505b7a24b8dd021b512753585d.js"></script>
-				</p>
+			<!-- code snippet start -->
+			<div class="my-10 md:mx-20">
+				<p class="p-3 font-semibold text-white bg-gray-700 rounded rounded-b-none">Python Script</p>
+				<div class="pl-4 overflow-y-scroll font-mono text-sm bg-gray-800 rounded rounded-t-none "
+					style="max-height: 50vh;">
+					<pre>
+						<code class="language-python">
+#! /usr/bin/python
+
+import os
+import tarfile
+import shutil
+import subprocess
+import logging
+import logging.handlers
+from pathlib import Path
+import arrow
+
+
+logger = logging.getLogger(&quot;mybackup&quot;)
+logger.setLevel(logging.DEBUG)
+hdlr = logging.handlers.RotatingFileHandler(
+		&quot;&lt;path&gt;/backup.log&quot;, maxBytes=200000, backupCount=5
+)
+
+formatter = logging.Formatter(
+		&quot;%(asctime)s - %(levelname)s - Daily - %(message)s&quot;,
+		datefmt=&quot;%m/%d/%Y - %I:%M:%S %p&quot;,
+)
+hdlr.setFormatter(formatter)
+logger.addHandler(hdlr)
+
+stmp = arrow.now().format(&quot;YYYYMMDD&quot;)
+
+###########################################################
+# Functions
+###########################################################
+
+
+def exclude_function(tarinfo):
+		filename = tarinfo.name
+		return (
+				None
+				if filename in exclude_files or os.path.splitext(filename)[1] in exclude_files
+				else tarinfo
+		)
+
+
+def compress():
+		if os.path.isfile(myfile + &quot;.zst&quot; + &quot;.gpg&quot;):
+				logger.info(
+						&quot;Encrypted backup already exists, skipping - %s&quot; % str(myfile + &quot;.zst&quot; + &quot;.gpg&quot;)
+				)
+		else:
+				with tarfile.open(myfile, &quot;a:&quot;) as tar:
+						for name in L:
+								tar.add(name, filter=exclude_function)
+						logger.info(&quot;Creating archive: %s completed&quot; % myfile)
+						subprocess.call([
+								&quot;zstd&quot;,
+								myfile,
+						])
+
+
+def encrypt():
+		if os.path.isfile(myfile + &quot;.zst&quot; + &quot;.gpg&quot;):
+				logger.info(
+						&quot;Encrypted backup already exists, skipping - %s&quot; % str(myfile + &quot;.zst&quot; + &quot;.gpg&quot;)
+				)
+		else:
+				subprocess.call([&quot;gpg2&quot;, &quot;-es&quot;, &quot;-r&quot;, &quot;&lt;user&gt;&quot;, myfile + &quot;.zst&quot;])
+				logger.info(&quot;Encrypting backup: %s completed&quot; % str(myfile + &quot;.zst&quot; + &quot;.gpg&quot;))
+
+
+def cleanup(myfile):
+		if os.path.isfile(myfile):
+				os.remove(myfile)
+				logger.info(&quot;Deleting: %s Done!&quot; % myfile)
+		if os.path.isfile(myfile + &quot;.zst&quot;):
+				os.remove(myfile + &quot;.zst&quot;)
+				logger.info(&quot;Deleting: %s Done!&quot; % str(myfile + &quot;.zst&quot;))
+
+
+###########################################################
+# Backup Daily
+###########################################################
+
+path1 = &quot;&lt;path&gt;&quot;
+path2 = &quot;&lt;path&gt;&quot;
+path3 = &quot;&lt;path&gt;&quot;
+backup_path = &quot;&lt;backup_path&gt;&quot;
+backup_name = &quot;--daily&quot;
+
+L = [path1, path2, path3]
+exclude_files = [&quot;.tmp&quot;, &quot;.temp&quot;, &quot;.log&quot;, &quot;.dmp&quot;]
+myfile = str(backup_path + stmp + backup_name + &quot;.tar&quot;)
+
+source = &quot;&lt;source&gt;&quot;
+
+
+def files(path):
+		for file in os.listdir(path):
+				if os.path.isfile(os.path.join(path, file)):
+						yield file
+
+
+for file in files(source):
+		I = source + file
+		L.append(I)
+
+try:
+		compress()
+except Exception:
+		logger.exception(&quot;Fatal error in compression process&quot;)
+
+try:
+		encrypt()
+except Exception:
+		logger.exception(&quot;Fatal error in encryption process&quot;)
+
+try:
+		cleanup(myfile)
+except Exception:
+		logger.exception(&quot;Fatal error in removal process&quot;)
+
+
+#############################
+# KeePass
+#############################
+
+new_keepass = stmp + &quot;--&lt;db&gt;&quot; + &quot;.kdbx&quot;
+shutil.copy2(
+		&quot;&lt;db_path&gt;&quot;,
+		&quot;&lt;sync_path&gt;&quot; % new_keepass,
+)
+kee_path = &quot;&lt;path&gt;&quot;
+
+myfile = kee_path + new_keepass
+
+try:
+		subprocess.call([&quot;gpg2&quot;, &quot;-es&quot;, &quot;-r&quot;, &quot;&lt;user&gt;&quot;, myfile])
+		logger.info(&quot;Encrypting backup: %s completed&quot; % str(myfile + &quot;.gpg&quot;))
+		os.remove(myfile)
+except Exception:
+		logger.exception(&quot;Fatal error in encryption process&quot;)
+
+
+criticalTime = arrow.now().shift(days=-30).format(&quot;YYYYMMDD&quot;)
+myfile = kee_path + criticalTime + &quot;--&lt;db&gt;&quot; + &quot;.kdbx&quot; + &quot;.gpg&quot;
+
+try:
+		cleanup(myfile)
+		logger.info(&quot;Deleting - %s&quot; % myfile)
+except Exception:
+		logger.exception(&quot;Error deleting file.&quot;)
+
+subprocess.call(
+		[
+				&quot;notify-send&quot;,
+				&quot;Backup&quot;,
+				&quot;Finished backing up keepass database and textfiles&quot;,
+				&quot;--icon= &lt;path&gt;/backup.png&quot;,
+		]
+)
+
+###########################################################
+# Backup Firefox
+###########################################################
+
+path1 = &quot;&lt;path&gt;&quot;
+backup_name = &quot;--firefox-profile&quot;
+
+L = [path1]
+exclude_files = [
+		&quot;.tmp&quot;,
+		&quot;.temp&quot;,
+		&quot;.log&quot;,
+		&quot;.dmp&quot;,
+		&quot;&lt;path&gt;&quot;,
+]
+myfile = str(backup_path + stmp + backup_name + &quot;.tar&quot;)
+
+try:
+		compress()
+except Exception:
+		logger.exception(&quot;Fatal error in compression process&quot;)
+
+try:
+		encrypt()
+except Exception:
+		logger.exception(&quot;Fatal error in encryption process&quot;)
+
+try:
+		cleanup(myfile)
+except Exception:
+		logger.exception(&quot;Fatal error in removal process&quot;)
+subprocess.call(
+		[
+				&quot;notify-send&quot;,
+				&quot;Backup&quot;,
+				&quot;Finished backing up firefox profile&quot;,
+				&quot;--icon= &lt;path&gt;/backup.png&quot;,
+		]
+)
+
+###########################################################
+# Backup Important Data
+###########################################################
+
+path1 = &quot;&lt;path&gt;&quot;
+backup_name = &quot;--important&quot;
+
+L = [path1]
+exclude_files = [
+		&quot;.tmp&quot;,
+		&quot;.temp&quot;,
+		&quot;.log&quot;,
+		&quot;.dmp&quot;,
+]
+myfile = str(backup_path + stmp + backup_name + &quot;.tar&quot;)
+
+shutil.rmtree(&quot;&lt;path&gt;&quot;)
+shutil.rmtree(&quot;&lt;path&gt;&quot;)
+shutil.copytree(&quot;&lt;path&gt;&quot;, &quot;&lt;path&gt;&quot;)
+shutil.copytree(&quot;&lt;path&gt;&quot;, &quot;&lt;path&gt;&quot;)
+shutil.copytree(&quot;&lt;path&gt;&quot;, &quot;&lt;path&gt;&quot;)
+shutil.copy2(&quot;&lt;path&gt;&quot;, &quot;&lt;path&gt;&quot;)
+shutil.copy2(&quot;&lt;path&gt;&quot;, &quot;&lt;path&gt;&quot;)
+shutil.copy2(&quot;&lt;path&gt;&quot;, &quot;&lt;path&gt;&quot;)
+
+try:
+		compress()
+except Exception:
+		logger.exception(&quot;Fatal error in compression process&quot;)
+
+try:
+		encrypt()
+except Exception:
+		logger.exception(&quot;Fatal error in encryption process&quot;)
+
+try:
+		cleanup(myfile)
+except Exception:
+		logger.exception(&quot;Fatal error in removal process&quot;)
+subprocess.call(
+		[
+				&quot;notify-send&quot;,
+				&quot;Backup&quot;,
+				&quot;Finished backing up important stuff from Data&quot;,
+				&quot;--icon= &lt;path&gt;/backup.png&quot;,
+		]
+)
+
+#############################
+# Mega files
+#############################
+
+my_dir = &quot;&lt;path&gt;&quot;
+for item in Path(my_dir).glob(&quot;*.gpg&quot;):
+		if item.is_file():
+				d = str(item.absolute())
+				os.remove(d)
+				logger.info(&quot;Deleting old backups in Mega: %s Done!&quot; % d)
+
+my_dir2 = &quot;&lt;path&gt;&quot;
+os.chdir(my_dir2)
+files = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)
+
+oldest = files[0]
+new1 = files[-1]
+new2 = files[-2]
+new3 = files[-3]
+shutil.copy2((new1), my_dir)
+shutil.copy2((new2), my_dir)
+shutil.copy2((new3), my_dir)
+logger.info(&quot;Copied new files to Mega: %s, %s and %s Done!&quot; % (new1, new2, new3))
+
+
+#############################
+# Cleanup of old backup
+#############################
+
+criticalTime = arrow.now().shift(hours=+5).shift(days=-7)
+
+for item in Path(backup_path).glob(&quot;*&quot;):
+		if item.is_file():
+				itemTime = arrow.get(item.stat().st_mtime)
+				if itemTime &lt; criticalTime:
+						# remove it
+						d = str(item.absolute())
+						os.remove(d)
+						logger.info(&quot;Deleting: %s Done!&quot; % d)
+subprocess.call(
+		[
+				&quot;notify-send&quot;,
+				&quot;Cleanup&quot;,
+				&quot;Finished removing backups older than 7 days&quot;,
+				&quot;--icon= &lt;path&gt;/cleanup.png&quot;,
+		]
+)
+						</code>
+					</pre>
+				</div>
 			</div>
+			<!-- code snippet end -->
 			<p class="my-4">
 				Currently I am using a shell script instead of python. Generally works better.
 			</p>
-			<div class="my-8 shadow-lg">
-				<p>
-					<script src="https://gist.github.com/akyag/1342cd70ef06fa5334d139eeabb2bbc5.js"></script>
-				</p>
+			<!-- code snippet start -->
+			<div class="my-10 md:mx-20">
+				<p class="p-3 font-semibold text-white bg-gray-700 rounded rounded-b-none">Shell Script</p>
+				<div class="pl-4 overflow-y-scroll font-mono text-sm bg-gray-800 rounded rounded-t-none "
+					style="max-height: 50vh;">
+
+					<pre>
+						<code class="language-bash">
+#!/bin/zsh
+SHELL=/bin/zsh
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+
+set -ex
+
+# Replacing daily python script with this one since the tarfile cant use zst correctly yet. 
+
+echo &quot;Execution time:&quot; $(date +%Y%m%d/%H:%M:%S)
+echo &quot;-----------------------------&quot;
+
+date=$(date +&quot;%Y%m%d&quot;)  
+
+########################################
+########       Daily stuff      ########
+########################################
+
+src=&quot;&lt;path&gt;&quot;
+dest=&quot;&lt;path&gt;&quot;
+myfile=&quot;$date--daily&quot;
+
+function compress-daily(){
+		if [ -e $dest/&quot;$myfile&quot;.tar.zst.gpg ];
+		then 
+				echo &quot;&quot;$myfile&quot;.gpg already exists.&quot;
+				echo &quot;-----------------------------&quot;        
+		else
+				tar -cp -X $src/daily-exclude -T $src/daily-source &gt; $dest/&quot;$myfile&quot;.tar
+				echo &quot;Tar file ready - &quot;$myfile&quot;.tar&quot;
+				zstd -c -T0 -15 $dest/&quot;$myfile&quot;.tar -o $dest/&quot;$myfile&quot;.tar.zst &amp;&amp; mv $dest/&quot;$myfile&quot;.tar /var/tmp
+				echo &quot;Zstandard compression applied, tar file removed.&quot;
+				gpg2 -es -r akshay $dest/&quot;$myfile&quot;.tar.zst &amp;&amp; mv $dest/&quot;$myfile&quot;.tar.zst /var/tmp
+				echo &quot;Archive encrypted, daily backup done.&quot;
+				echo &quot;-----------------------------&quot;        
+		fi
+}
+compress-daily
+
+
+########################################
+########        Firefox       ##########
+########################################
+
+src=&quot;&lt;path&gt;&quot;
+dest=&quot;&lt;path&gt;&quot;
+myfile=&quot;$date--firefox-profile&quot;
+
+function compress-firefox(){
+		if [ -e $dest/&quot;$myfile&quot;.tar.zst.gpg ];
+		then 
+				echo &quot;&quot;$myfile&quot;.gpg already exists.&quot;
+				echo &quot;-----------------------------&quot;        
+		else
+				cp -r -p &lt;path&gt; &lt;path&gt;
+				tar -cp -X $src/firefox-exclude /home/akya/mozilla &gt; $dest/&quot;$myfile&quot;.tar
+				rm -r /home/akya/mozilla
+				echo &quot;Tar file ready - &quot;$myfile&quot;.tar&quot;
+				zstd -c -T0 --ultra -20 $dest/&quot;$myfile&quot;.tar -o $dest/&quot;$myfile&quot;.tar.zst &amp;&amp; mv $dest/&quot;$myfile&quot;.tar /var/tmp
+				echo &quot;Zstandard compression applied, tar file removed.&quot;
+				gpg2 -es -r akshay $dest/&quot;$myfile&quot;.tar.zst &amp;&amp; mv $dest/&quot;$myfile&quot;.tar.zst /var/tmp
+				echo &quot;Archive encrypted, firefox profile backed up.&quot;
+				echo &quot;-----------------------------&quot;        
+		fi
+}
+compress-firefox
+
+########################################
+#########      Keepass DB      #########
+########################################
+
+src=&quot;&lt;path&gt;&quot;
+dest=&quot;&lt;path&gt;&quot;
+myfile=&quot;$date--root.kdbx&quot;
+
+function keepass-database(){
+		if [ -e $dest/&quot;$myfile&quot;.gpg ];
+		then
+				echo &quot;&quot;$myfile&quot;.gpg already exists.&quot;
+				echo &quot;-----------------------------&quot;        
+		else
+				gpg2 -es -r akshay -o $dest/&quot;$myfile&quot;.gpg $src/root.kdbx 
+				echo &quot;root.kdbx backed up in mega.&quot;
+				echo &quot;-----------------------------&quot;        
+		fi
+}
+keepass-database
+
+########################################
+#########    Keepass Cleanup     #######
+########################################
+
+# Keep latest 30 files in Mega keepass sync folder
+cd &lt;path&gt;
+ls -tp | grep -v &#39;/$&#39; | tail -n +31 | xargs -d &#39;\n&#39; -r rm --
+echo &quot;Older keepass backups removed.&quot;
+echo &quot;-----------------------------&quot;
+
+########################################
+##########    Important stuff   ########
+########################################
+
+cd &lt;path&gt;
+src=&quot;&lt;path&gt;&quot;
+dest=&quot;&lt;path&gt;&quot;
+myfile=&quot;$date--important&quot;
+
+
+function important-stuff(){
+		if [ -d ./code ] &amp;&amp; [ -d ./notes ];
+		then   
+				echo &quot;Directories exist, they will be removed.&quot; 
+				rm -r &lt;path&gt; &lt;path&gt; &lt;path&gt; &lt;path&gt; 
+				echo &quot;-----------------------------&quot;
+		else
+				echo &quot;Directories do not exist. They will be created.&quot;
+				echo &quot;-----------------------------&quot;        
+		fi
+}
+important-stuff
+
+cp -r -p &lt;path&gt; &lt;path&gt;
+cp -r -p &lt;path&gt; &lt;path&gt;
+cp -r -p &lt;path&gt; &lt;path&gt;
+cp -r -p &lt;path&gt; &lt;path&gt;
+cp -p &lt;path&gt; &lt;path&gt;
+cp -p &lt;path&gt; &lt;path&gt;
+cp -p &lt;path&gt; &lt;path&gt;
+
+function compress-important(){
+		if [ -e $dest/&quot;$myfile&quot;.tar.zst.gpg ];
+		then 
+				echo &quot;&quot;$myfile&quot;.gpg already exists.&quot;
+				echo &quot;-----------------------------&quot;
+		else
+				tar -cp &lt;path&gt; &gt; $dest/&quot;$myfile&quot;.tar
+				echo &quot;Tar file ready - &quot;$myfile&quot;.tar&quot;
+				zstd -c -T0 -15 $dest/&quot;$myfile&quot;.tar -o $dest/&quot;$myfile&quot;.tar.zst &amp;&amp; mv $dest/&quot;$myfile&quot;.tar /var/tmp
+				echo &quot;Zstandard compression applied, tar file removed.&quot;
+				gpg2 -es -r akshay $dest/&quot;$myfile&quot;.tar.zst &amp;&amp; mv $dest/&quot;$myfile&quot;.tar.zst /var/tmp
+				echo &quot;Archive encrypted, important stuff backed up.&quot;
+				echo &quot;-----------------------------&quot;        
+		fi
+}
+compress-important
+
+
+
+########################################
+########       Mega backup        ######
+########################################
+src=&quot;&lt;path&gt;&quot;
+dest=&quot;&lt;path&gt;&quot;
+
+# Removing older backups from Mega sync folder
+
+cd $dest
+ls -tp | grep -v &#39;/$&#39; | xargs -d &#39;\n&#39; -r rm --
+echo &quot;Removed old backups from Mega sync folder&quot;
+echo &quot;-----------------------------&quot;
+
+cd $src
+# Removing older backups from backup-daily on External HDD
+ls -tp | grep -v &#39;/$&#39; | tail -n +22 | xargs -d &#39;\n&#39; -r rm --
+echo &quot;Removed old backups from backup-daily on External HDD, Kept latest 21 (3 each for 1 week)&quot;
+echo &quot;-----------------------------&quot;
+
+# Copying latest backups to Mega sync folder
+ls -tpr | grep -v &#39;/$&#39; | tail -n -3 | xargs -d &#39;\n&#39; -r cp -t &quot;$dest&quot;
+echo &quot;Copied all latest backups (3 for current day) to mega sync.&quot;
+echo &quot;-----------------------------&quot;
+												</code>
+					</pre>
+				</div>
 			</div>
+			<!-- code snippet end -->
 			<div class="my-4 text-2xl font-semibold"><span class="border-b-4 border-pink-600 ">Using rsync to
 					copy
 					data to external media</span></div>
-			<div class="my-8 shadow-lg">
-				<p>
-					<script src="https://gist.github.com/akyag/794f953e3695e595d180d3334f6281cb.js"></script>
-				</p>
+			<!-- code snippet start -->
+			<div class="my-10 md:mx-20">
+				<p class="p-3 font-semibold text-white bg-gray-700 rounded rounded-b-none">Shell Script</p>
+				<div class="pl-4 overflow-y-scroll font-mono text-sm bg-gray-800 rounded rounded-t-none "
+					style="max-height: 50vh;">
+
+					<pre>
+						<code class="language-bash">
+#!/bin/zsh
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+
+set -ex
+
+########################################
+########         audio          ########
+########################################
+
+echo "1] Syncing: audio"
+echo "-----------------------------"
+# rsync -ahv --delete --progress --log-file=/home/akya/.anacron/logs/rsync-ext.log /media/entmt/audio/ /run/media/akya/dump/audio/
+rsync -ahv --stats --delete --progress /media/entmt/audio/ /run/media/akya/dump/audio/ | sed '0,/^$/d' &gt;&gt; /home/akya/.anacron/logs/rsync-ext.log
+
+########################################
+########       software       ##########
+########################################
+
+echo "2] Syncing: software"
+echo "-----------------------------"
+rsync -ahv --stats --delete --progress /media/data/software/ /run/media/akya/backup/data/software/ | sed '0,/^$/d' &gt;&gt; /home/akya/.anacron/logs/rsync-ext.log
+
+########################################
+#########       concerts       #########
+########################################
+
+echo "3] Syncing: concerts"
+echo "-----------------------------"
+rsync -ahv --stats --delete --progress /media/entmt/video/concerts/ /run/media/akya/backup/concerts/ | sed '0,/^$/d' &gt;&gt; /home/akya/.anacron/logs/rsync-ext.log
+
+########################################
+#########         comedy      ##########
+########################################
+
+echo "4] Syncing: comedy"
+echo "-----------------------------"
+rsync -ahv --stats --delete --progress /media/entmt/video/comedy/ /run/media/akya/dump/video/comedy/ | sed '0,/^$/d' &gt;&gt; /home/akya/.anacron/logs/rsync-ext.log
+						</code>
+
+				</pre>
+
+				</div>
 			</div>
-			<!-- Disqus comment box -->
+			<!-- code snippet end -->
+
+			<!-- Disqus comment box start -->
 			<div class="mt-40 mb-20">
 				<div id="disqus_thread"></div>
 				<script>
@@ -275,27 +802,27 @@
 				<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments
 						powered by Disqus.</a></noscript>
 			</div>
-
+			<!-- Disqus comment box end -->
 		</div>
 	</main>
 	<!-- content end -->
-  <!-- Footer wave start -->
-  <section>
-    <svg class="mt-20" version="1.1" viewbox="0 0 1920 251.44" xmlns="http://www.w3.org/2000/svg">
-      <g transform="translate(768.02)">
-        <path class="fill-current text-secondary "
-          d="m1152 250h-1920v-250s126.71 78.536 349.98 80.05c177.85 1.203 362.81-63.874 553.8-63.874 290.52 0 383.46 57.712 603.99 61.408 220.53 3.696 278.06-61.408 412.23-17.239"
-          fill="#ff7d66" />
-        <path class="fill-current text-secondary-lighter"
-          d="m1152 144s-467.92 116.86-1027.2-17.294c-522.77-125.38-892.76-81.128-892.76-81.128v204.42h1920z"
-          fill="#ff9b8a" />
-        <path class="text-gray-100 fill-current"
-          d="m-768.02 196.99s208.55-75.581 701.33-20.768c376.71 41.908 520.83-67.962 722.54-67.962 222.93 0 311.6 87.808 496.18 90.679v52.498h-1920z"
-          fill="#f7fafc" />
-      </g>
-    </svg>
-  </section>
-  <!-- Footer wave end -->
+	<!-- Footer wave start -->
+	<section>
+		<svg class="mt-20" version="1.1" viewbox="0 0 1920 251.44" xmlns="http://www.w3.org/2000/svg">
+			<g transform="translate(768.02)">
+				<path class="fill-current text-secondary "
+					d="m1152 250h-1920v-250s126.71 78.536 349.98 80.05c177.85 1.203 362.81-63.874 553.8-63.874 290.52 0 383.46 57.712 603.99 61.408 220.53 3.696 278.06-61.408 412.23-17.239"
+					fill="#ff7d66" />
+				<path class="fill-current text-secondary-lighter"
+					d="m1152 144s-467.92 116.86-1027.2-17.294c-522.77-125.38-892.76-81.128-892.76-81.128v204.42h1920z"
+					fill="#ff9b8a" />
+				<path class="text-gray-100 fill-current"
+					d="m-768.02 196.99s208.55-75.581 701.33-20.768c376.71 41.908 520.83-67.962 722.54-67.962 222.93 0 311.6 87.808 496.18 90.679v52.498h-1920z"
+					fill="#f7fafc" />
+			</g>
+		</svg>
+	</section>
+	<!-- Footer wave end -->
 	<!-- footer start -->
 	<footer class="h-auto min-h-full py-10 overflow-hidden bg-gray-100 ">
 		<div
@@ -424,6 +951,8 @@
 	<!-- scroll to top end -->
 	<!-- scripts -->
 	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.2/dist/alpine.min.js" defer></script>
+	<script src="https://cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-core.min.js" defer></script>
+	<script src="https://cdn.jsdelivr.net/npm/prismjs@1.22.0/plugins/autoloader/prism-autoloader.min.js" defer></script>
 	<script src="js/vanillatop.js" defer></script>
 
 </body>
