@@ -533,6 +533,11 @@
         // generate a five digit number for the contact_number variable
         this.contact_number.value = Math.random() * 100000 | 0;
         // these IDs from the previous steps
+        var $recaptcha = document.querySelector('#g-recaptcha-response');
+
+        if($recaptcha) {
+        $recaptcha.setAttribute("required", "required");
+        }
         emailjs.sendForm('contact_service', 'contact_form', this);
         setTimeout(function () {
           window.location.replace("https://weboreviews.com/thanks.html");
