@@ -14,7 +14,6 @@
   <meta name="msapplication-TileImage" content="faviconbg.png">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="style.css">
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <style>
     #g-recaptcha-response {
       display: block !important;
@@ -26,6 +25,34 @@
       opacity: 0;
     }
   </style>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("user_38uCHnepwCDdUyppSP9hn");
+    })();
+  </script>
+
+  <script type="text/javascript">
+    window.onload = function () {
+      var $recaptcha = document.querySelector('#g-recaptcha-response');
+
+      if ($recaptcha) {
+        $recaptcha.setAttribute("required", "required");
+      }
+
+      document.getElementById('contact-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+        // generate a five digit number for the contact_number variable
+        this.contact_number.value = Math.random() * 100000 | 0;
+        // these IDs from the previous steps
+        emailjs.sendForm('contact_service', 'contact_form', this);
+        setTimeout(function () {
+          window.location.replace("https://weboreviews.com/thanks.html");
+        }, 3000);
+      });
+    }
+  </script>
   <title>Contact Me</title>
 </head>
 
@@ -530,33 +557,7 @@
   <!-- scripts -->
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.2/dist/alpine.min.js" defer></script>
   <script src="js/vanillatop.js" defer></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js" defer></script>
-  <script type="text/javascript">
-    (function () {
-      emailjs.init("user_38uCHnepwCDdUyppSP9hn");
-    })();
-  </script>
 
-  <script type="text/javascript">
-    window.onload = function () {
-      var $recaptcha = document.querySelector('#g-recaptcha-response');
-
-      if ($recaptcha) {
-        $recaptcha.setAttribute("required", "required");
-      }
-
-      document.getElementById('contact-form').addEventListener('submit', function (event) {
-        event.preventDefault();
-        // generate a five digit number for the contact_number variable
-        this.contact_number.value = Math.random() * 100000 | 0;
-        // these IDs from the previous steps
-        emailjs.sendForm('contact_service', 'contact_form', this);
-        setTimeout(function () {
-          window.location.replace("https://weboreviews.com/thanks.html");
-        }, 3000);
-      });
-    }
-  </script>
 
 </body>
 
