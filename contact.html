@@ -15,6 +15,17 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="style.css">
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <style>
+    #g-recaptcha-response {
+      display: block !important;
+      position: absolute;
+      margin: -78px 0 0 0 !important;
+      width: 302px !important;
+      height: 76px !important;
+      z-index: -999999;
+      opacity: 0;
+    }
+  </style>
   <title>Contact Me</title>
 </head>
 
@@ -528,16 +539,18 @@
 
   <script type="text/javascript">
     window.onload = function () {
+      var $recaptcha = document.querySelector('#g-recaptcha-response');
+
+      if ($recaptcha) {
+        $recaptcha.setAttribute("required", "required");
+      }
+
       document.getElementById('contact-form').addEventListener('submit', function (event) {
         event.preventDefault();
         // generate a five digit number for the contact_number variable
         this.contact_number.value = Math.random() * 100000 | 0;
         // these IDs from the previous steps
-        var $recaptcha = document.querySelector('#g-recaptcha-response');
 
-        if($recaptcha) {
-        $recaptcha.setAttribute("required", "required");
-        }
         emailjs.sendForm('contact_service', 'contact_form', this);
         setTimeout(function () {
           window.location.replace("https://weboreviews.com/thanks.html");
