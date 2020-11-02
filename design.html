@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="antialiased text-gray-900">
+<html lang="en">
 <!-- meta tags -->
 
 <head>
@@ -17,33 +17,76 @@
   <title>Design</title>
 </head>
 
-<body class="text-lg antialiased text-gray-700 bg-gray-100 font-body">
+<body class="text-lg antialiased text-gray-700 bg-gray-100 dark:text-gray-100 dark:bg-gray-800 font-body">
   <!-- header start -->
   <header>
     <!-- navigation large screen start -->
-    <nav class="fixed z-20 invisible w-full bg-gray-100 border-b-2 shadow-md md:visible">
+    <nav
+      class="fixed z-20 invisible w-full bg-gray-100 border-b-2 shadow-md dark:text-gray-100 dark:bg-gray-800 dark:border-gray-800 md:visible">
       <div class="max-w-6xl px-4 mx-auto sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-24">
           <div class="flex items-center">
             <div class="flex-shrink-0">
               <div class="pr-4">
-                <a href="index.html"><img src="img/logo-transparent.svg" width="230" alt="Web-o-Reviews"></a>
+                <a href="index.html" aria-label="Web-o-Reviews"><svg class="w-64" version="1.1" viewbox="0 0 250 49.522"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g transform="matrix(.17886 0 0 .17886 -10.278 -4.1256)">
+                      <g transform="translate(-202.45 -162.85)">
+                        <g transform="matrix(.69704 0 0 .69704 205.83 88.284)" fill-rule="evenodd">
+                          <path d="m157.8 223.38 91.6-1.6963 117.89 234.09h-94.992z" fill="#00989b" />
+                          <path d="m263 222.58 91.6-1.6963c40.355 79.234 133.88 152.84 117.89 234.09h-94.992z"
+                            fill="#00989b" />
+                          <path
+                            d="m476.9 399.08 79.158-178.8h-192.51c23.764 50.348 51.597 73.547 83.8 121.99 10.519 15.823 18.494 34.186 29.552 56.817z"
+                            fill="#006565" />
+                        </g>
+                      </g>
+                      <g transform="translate(-202.45 -162.85)">
+                        <g transform="translate(1556.1 -868.35)" class="text-gray-700 fill-current dark:text-gray-100">
+                          <path
+                            d="m-908.3 1187.9c0-24.281-15.347-29.778-30.465-29.778-32.985 0-43.751 38.483-43.751 64.138 0 39.17 20.387 52.914 41.461 52.914 23.364 0 45.126-19.928 52.914-42.377h-7.33c-8.0172 17.867-21.761 24.968-36.192 24.968-13.057 0-24.052-5.4975-26.342-29.778 30.924-3.4359 49.707-18.783 49.707-40.086zm-49.936 31.153c0-22.448 7.7882-49.707 23.823-49.707 7.33 0 11.453 4.8103 11.453 16.264 0 17.18-13.744 30.007-35.276 33.443z" />
+                          <path
+                            d="m-895.89 1232.8c0 31.84 13.973 42.377 32.985 42.377 33.443 0 50.165-32.069 50.165-66.887 0-39.628-21.99-49.478-38.254-49.478-9.8497 0-16.722 3.665-21.761 8.9335v-54.288l-22.906 3.2069-0.22906 116.14zm62.763-19.241c0 23.823-8.7044 45.813-26.113 45.813-9.3916 0-13.515-6.6428-13.515-20.616v-60.244c4.1232-4.5813 9.3916-7.7882 15.576-7.7882 15.347 0 24.052 19.241 24.052 42.835z" />
+                          <path d="m-751.35 1204.9h-45.813v16.034h45.813z" />
+                          <path
+                            d="m-685.3 1158.1c-34.36 0-44.667 36.879-44.667 63.68 0 39.399 22.448 53.372 42.835 53.372 24.739 0 39.17-22.677 39.17-60.244 0-3.665 0-7.101-0.45813-10.766 10.079-5.0394 15.347-17.18 17.867-27.259h-6.6428c-1.6034 4.5813-4.3522 11.453-13.057 11.453-3.8941-17.409-13.515-30.236-35.047-30.236zm2.2906 99.643c-10.308 0-22.219-7.101-22.219-36.879 0-22.448 6.8719-50.165 25.884-50.165 6.4138 0 12.14 3.2069 15.805 12.14-5.0394 0.6872-8.4754 4.1231-8.4754 10.308 0 8.7045 3.8941 13.744 12.369 13.744 0 1.6034 0.22906 3.2068 0.22906 4.8103 0 29.091-7.5591 46.042-23.594 46.042z" />
+                          <path d="m-571.95 1204.9h-45.813v16.034h45.813z" />
+                          <path
+                            d="m-547.82 1159.3v114.53h22.906v-84.296c5.2685-5.4975 11.911-11.453 18.783-11.453 6.6428 0 7.5591 5.7266 12.828 5.7266 3.665 0 10.537-2.7487 10.537-11.911 0-7.5591-4.8103-13.744-15.118-13.744-13.057 0-19.929 9.6207-27.03 20.387v-19.241h-22.906z" />
+                          <path
+                            d="m-399.17 1187.9c0-24.281-15.347-29.778-30.465-29.778-32.985 0-43.751 38.483-43.751 64.138 0 39.17 20.387 52.914 41.461 52.914 23.364 0 45.126-19.928 52.914-42.377h-7.33c-8.0172 17.867-21.761 24.968-36.192 24.968-13.057 0-24.052-5.4975-26.342-29.778 30.924-3.4359 49.707-18.783 49.707-40.086zm-49.936 31.153c0-22.448 7.7882-49.707 23.823-49.707 7.33 0 11.453 4.8103 11.453 16.264 0 17.18-13.744 30.007-35.276 33.443z" />
+                          <path
+                            d="m-313 1196.6c0-30.924-8.7044-42.148-19.241-42.148-7.5591 0-11.682 5.7266-11.682 11.682 0 5.7266 3.665 12.14 10.995 12.14 1.3744 0 4.5813-0.2291 5.9556-1.8325 1.3744 6.6428 2.0616 15.576 2.0616 24.052 0 27.03-6.8719 57.266-25.655 57.266-11.224 0-13.286-10.537-13.286-20.616v-77.882h-22.906v84.524c0 20.387 15.576 31.382 31.382 31.382 31.611 0 42.377-43.98 42.377-78.569z" />
+                          <path
+                            d="m-295.26 1159.3v82.692c0 14.889 5.2685 33.214 26.342 33.214 10.079 0 24.968-4.1231 31.84-42.377h-8.4754c-3.436 16.492-9.1626 24.968-16.493 24.968-9.8497 0-10.308-14.66-10.308-20.616v-77.882h-22.906zm-4.1232-32.985c0 8.4754 6.6428 15.118 15.118 15.118 8.2463 0 15.347-6.6428 15.347-15.118 0-8.2463-7.101-15.347-15.347-15.347-8.4754 0-15.118 7.1009-15.118 15.347z" />
+                          <path
+                            d="m-174.13 1187.9c0-24.281-15.347-29.778-30.465-29.778-32.985 0-43.751 38.483-43.751 64.138 0 39.17 20.387 52.914 41.461 52.914 23.364 0 45.126-19.928 52.914-42.377h-7.33c-8.0172 17.867-21.761 24.968-36.192 24.968-13.057 0-24.052-5.4975-26.342-29.778 30.924-3.4359 49.707-18.783 49.707-40.086zm-49.936 31.153c0-22.448 7.7882-49.707 23.823-49.707 7.33 0 11.453 4.8103 11.453 16.264 0 17.18-13.744 30.007-35.276 33.443z" />
+                          <path
+                            d="m-161.72 1159.3v80.401c0 26.113 14.431 35.505 32.298 35.505 9.3916 0 18.783-5.4975 24.739-17.867 5.2685 11.682 16.951 17.867 28.862 17.867 31.611 0 42.377-43.98 42.377-78.569 0-30.924-8.7044-42.148-19.241-42.148-7.5591 0-11.682 5.7266-11.682 11.682 0 5.7266 3.665 12.14 10.995 12.14 1.3744 0 4.5813-0.2291 5.9557-1.8325 1.3744 6.6428 2.0616 15.576 2.0616 24.052 0 27.03-6.8719 57.266-25.655 57.266-11.224 0-13.286-10.537-13.286-20.616v-77.882h-22.906v73.53c0 15.805-9.1626 24.968-17.867 24.968-8.0172 0-13.744-5.7266-13.744-20.616v-77.882h-22.906z" />
+                          <path
+                            d="m3.4476 1156.8c-2.2906 22.448-11.224 45.126-19.241 67.803-4.5813 2.5197-8.2463 8.7044-8.2463 16.722 0 14.889 7.33 33.901 34.13 33.901 13.057 0 35.505-8.0172 35.505-30.694 0-24.052-4.3522-33.443-19.012-92.313l-23.135 4.5813zm17.867 85.212c0 11.224-6.4138 16.034-16.034 16.034-10.079 0-16.264-6.1848-18.554-16.951 1.8325 2.2907 3.8941 3.2069 6.1847 3.2069 3.665 0 7.33-3.2069 7.33-8.9334 0-5.0395-2.2906-8.2463-5.0394-10.079 4.5813-16.492 11.453-31.611 13.286-48.562 8.4754 39.857 12.828 46.5 12.828 65.283z" />
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </a>
               </div>
             </div>
-            <a class="block px-3 py-2 mx-1 text-base font-medium transition duration-150 ease-in-out rounded-md hover:bg-gray-200 focus:outline-none"
+            <a class="block px-3 py-2 mx-1 text-base font-medium transition duration-150 ease-in-out rounded-md dark:hover:bg-gray-700 hover:bg-gray-200 focus:outline-none"
               href="index.html">Home</a>
             <a class="block px-3 py-2 mx-1 text-base font-medium text-white transition duration-150 ease-in-out bg-gray-700 rounded-md hover:bg-primary focus:outline-none"
               href="design.html">Design</a>
-            <a class="block px-3 py-2 mx-1 text-base font-medium transition duration-150 ease-in-out rounded-md hover:bg-gray-200 focus:outline-none"
+            <a class="block px-3 py-2 mx-1 text-base font-medium transition duration-150 ease-in-out rounded-md dark:hover:bg-gray-700 hover:bg-gray-200 focus:outline-none"
               href="work.html">Work</a>
-            <a class="block px-3 py-2 mx-1 text-base font-medium transition duration-150 ease-in-out rounded-md hover:bg-gray-200 focus:outline-none"
+            <a class="block px-3 py-2 mx-1 text-base font-medium transition duration-150 ease-in-out rounded-md dark:hover:bg-gray-700 hover:bg-gray-200 focus:outline-none"
               href="about.html">About</a>
             <div class="flex justify-center">
               <div x-data="{ dropdownOpen: false }" class="relative ">
                 <button @click="dropdownOpen = !dropdownOpen"
-                  class="relative z-10 flex items-center px-3 py-2 transition duration-200 ease-in bg-gray-100 rounded-md hover:bg-gray-200 hover:text-gray-100 focus:outline-none">
-                  <span class="text-base font-medium text-gray-700 ">More</span> <svg class="w-5 h-5 text-gray-800"
-                    xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor">
+                  class="relative z-10 flex items-center px-3 py-2 transition duration-200 ease-in rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none">
+                  <span class="text-base font-medium text-gray-700 dark:text-gray-100 ">More</span> <svg
+                    class="w-5 h-5 text-gray-700 dark:text-gray-100" xmlns="http://www.w3.org/2000/svg"
+                    viewbox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd"
                       d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                       clip-rule="evenodd" />
@@ -52,17 +95,18 @@
 
                 <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 z-10 w-full h-full"></div>
 
-                <div x-show="dropdownOpen" class="absolute right-0 z-20 w-32 py-2 mt-2 bg-white rounded-md shadow-xl">
+                <div x-show="dropdownOpen"
+                  class="absolute right-0 z-20 w-32 py-2 mt-2 bg-white rounded-md shadow-xl dark:bg-gray-900">
                   <a href="scripts.html"
-                    class="block py-2 pl-6 text-base text-gray-700 capitalize hover:bg-teal-500 hover:text-white">
+                    class="block py-2 pl-6 text-base text-gray-700 capitalize dark:text-gray-200 hover:bg-teal-500 hover:text-white">
                     Scripts
                   </a>
                   <a href="archive.html"
-                    class="block py-2 pl-6 text-base text-gray-700 capitalize hover:bg-teal-500 hover:text-white">
+                    class="block py-2 pl-6 text-base text-gray-700 capitalize dark:text-gray-200 hover:bg-teal-500 hover:text-white">
                     Archive
                   </a>
                   <a href="license.html"
-                    class="block py-2 pl-6 text-base text-gray-700 capitalize hover:bg-teal-500 hover:text-white">
+                    class="block py-2 pl-6 text-base text-gray-700 capitalize dark:text-gray-200 hover:bg-teal-500 hover:text-white">
                     License
                   </a>
                 </div>
@@ -70,13 +114,6 @@
             </div>
           </div>
           <div class="flex content-end">
-            <!-- contact button large screen -->
-            <a class="inline-flex items-center px-4 py-3 text-base font-semibold leading-tight text-white rounded shadow-md bg-primary-dark md:invisible lg:visible hover:bg-primary"
-              href="contact.html"><svg class="w-5 h-5 mr-2 text-white" xmlns="http://www.w3.org/2000/svg"
-                viewbox="0 0 20 20" fill="currentColor">
-                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-              </svg><span>Contact</span></a>
             <!-- contact button medium screen -->
             <a class="flex items-center px-4 py-3 text-base font-semibold leading-tight text-white rounded shadow-md bg-primary-dark md:visible lg:invisible hover:bg-primary"
               href="contact.html"><svg class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20"
@@ -84,39 +121,88 @@
                 <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                 <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
               </svg></a>
+            <!-- contact button large screen -->
+            <a class="inline-flex items-center px-4 py-3 text-base font-semibold leading-tight text-white rounded shadow-md bg-primary-dark md:invisible lg:visible hover:bg-primary"
+              href="contact.html"><svg class="w-5 h-5 mr-2 text-white" xmlns="http://www.w3.org/2000/svg"
+                viewbox="0 0 20 20" fill="currentColor">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+              </svg><span>Contact</span></a>
           </div>
         </div>
       </div>
     </nav>
     <!-- navigation large screen end -->
     <!-- mobile navigation -->
-    <nav class="fixed z-20 visible w-full bg-gray-100 border-b-2 shadow-md md:invisible">
+    <nav
+      class="fixed z-20 visible w-full bg-gray-100 border-b-2 shadow-md dark:text-gray-100 dark:bg-gray-800 dark:border-gray-800 md:invisible">
       <div class="max-w-6xl px-4 mx-auto sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-24">
           <div class="flex items-center">
             <div class="flex-shrink-0">
               <div class="pr-4">
-                <a href="index.html"><img src="img/logo-transparent.svg" width="230" alt="Web-o-Reviews"></a>
+                <a href="index.html" aria-label="Web-o-Reviews"><svg class="w-64" version="1.1" viewbox="0 0 250 49.522"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g transform="matrix(.17886 0 0 .17886 -10.278 -4.1256)">
+                      <g transform="translate(-202.45 -162.85)">
+                        <g transform="matrix(.69704 0 0 .69704 205.83 88.284)" fill-rule="evenodd">
+                          <path d="m157.8 223.38 91.6-1.6963 117.89 234.09h-94.992z" fill="#00989b" />
+                          <path d="m263 222.58 91.6-1.6963c40.355 79.234 133.88 152.84 117.89 234.09h-94.992z"
+                            fill="#00989b" />
+                          <path
+                            d="m476.9 399.08 79.158-178.8h-192.51c23.764 50.348 51.597 73.547 83.8 121.99 10.519 15.823 18.494 34.186 29.552 56.817z"
+                            fill="#006565" />
+                        </g>
+                      </g>
+                      <g transform="translate(-202.45 -162.85)">
+                        <g transform="translate(1556.1 -868.35)" class="text-gray-700 fill-current dark:text-gray-100">
+                          <path
+                            d="m-908.3 1187.9c0-24.281-15.347-29.778-30.465-29.778-32.985 0-43.751 38.483-43.751 64.138 0 39.17 20.387 52.914 41.461 52.914 23.364 0 45.126-19.928 52.914-42.377h-7.33c-8.0172 17.867-21.761 24.968-36.192 24.968-13.057 0-24.052-5.4975-26.342-29.778 30.924-3.4359 49.707-18.783 49.707-40.086zm-49.936 31.153c0-22.448 7.7882-49.707 23.823-49.707 7.33 0 11.453 4.8103 11.453 16.264 0 17.18-13.744 30.007-35.276 33.443z" />
+                          <path
+                            d="m-895.89 1232.8c0 31.84 13.973 42.377 32.985 42.377 33.443 0 50.165-32.069 50.165-66.887 0-39.628-21.99-49.478-38.254-49.478-9.8497 0-16.722 3.665-21.761 8.9335v-54.288l-22.906 3.2069-0.22906 116.14zm62.763-19.241c0 23.823-8.7044 45.813-26.113 45.813-9.3916 0-13.515-6.6428-13.515-20.616v-60.244c4.1232-4.5813 9.3916-7.7882 15.576-7.7882 15.347 0 24.052 19.241 24.052 42.835z" />
+                          <path d="m-751.35 1204.9h-45.813v16.034h45.813z" />
+                          <path
+                            d="m-685.3 1158.1c-34.36 0-44.667 36.879-44.667 63.68 0 39.399 22.448 53.372 42.835 53.372 24.739 0 39.17-22.677 39.17-60.244 0-3.665 0-7.101-0.45813-10.766 10.079-5.0394 15.347-17.18 17.867-27.259h-6.6428c-1.6034 4.5813-4.3522 11.453-13.057 11.453-3.8941-17.409-13.515-30.236-35.047-30.236zm2.2906 99.643c-10.308 0-22.219-7.101-22.219-36.879 0-22.448 6.8719-50.165 25.884-50.165 6.4138 0 12.14 3.2069 15.805 12.14-5.0394 0.6872-8.4754 4.1231-8.4754 10.308 0 8.7045 3.8941 13.744 12.369 13.744 0 1.6034 0.22906 3.2068 0.22906 4.8103 0 29.091-7.5591 46.042-23.594 46.042z" />
+                          <path d="m-571.95 1204.9h-45.813v16.034h45.813z" />
+                          <path
+                            d="m-547.82 1159.3v114.53h22.906v-84.296c5.2685-5.4975 11.911-11.453 18.783-11.453 6.6428 0 7.5591 5.7266 12.828 5.7266 3.665 0 10.537-2.7487 10.537-11.911 0-7.5591-4.8103-13.744-15.118-13.744-13.057 0-19.929 9.6207-27.03 20.387v-19.241h-22.906z" />
+                          <path
+                            d="m-399.17 1187.9c0-24.281-15.347-29.778-30.465-29.778-32.985 0-43.751 38.483-43.751 64.138 0 39.17 20.387 52.914 41.461 52.914 23.364 0 45.126-19.928 52.914-42.377h-7.33c-8.0172 17.867-21.761 24.968-36.192 24.968-13.057 0-24.052-5.4975-26.342-29.778 30.924-3.4359 49.707-18.783 49.707-40.086zm-49.936 31.153c0-22.448 7.7882-49.707 23.823-49.707 7.33 0 11.453 4.8103 11.453 16.264 0 17.18-13.744 30.007-35.276 33.443z" />
+                          <path
+                            d="m-313 1196.6c0-30.924-8.7044-42.148-19.241-42.148-7.5591 0-11.682 5.7266-11.682 11.682 0 5.7266 3.665 12.14 10.995 12.14 1.3744 0 4.5813-0.2291 5.9556-1.8325 1.3744 6.6428 2.0616 15.576 2.0616 24.052 0 27.03-6.8719 57.266-25.655 57.266-11.224 0-13.286-10.537-13.286-20.616v-77.882h-22.906v84.524c0 20.387 15.576 31.382 31.382 31.382 31.611 0 42.377-43.98 42.377-78.569z" />
+                          <path
+                            d="m-295.26 1159.3v82.692c0 14.889 5.2685 33.214 26.342 33.214 10.079 0 24.968-4.1231 31.84-42.377h-8.4754c-3.436 16.492-9.1626 24.968-16.493 24.968-9.8497 0-10.308-14.66-10.308-20.616v-77.882h-22.906zm-4.1232-32.985c0 8.4754 6.6428 15.118 15.118 15.118 8.2463 0 15.347-6.6428 15.347-15.118 0-8.2463-7.101-15.347-15.347-15.347-8.4754 0-15.118 7.1009-15.118 15.347z" />
+                          <path
+                            d="m-174.13 1187.9c0-24.281-15.347-29.778-30.465-29.778-32.985 0-43.751 38.483-43.751 64.138 0 39.17 20.387 52.914 41.461 52.914 23.364 0 45.126-19.928 52.914-42.377h-7.33c-8.0172 17.867-21.761 24.968-36.192 24.968-13.057 0-24.052-5.4975-26.342-29.778 30.924-3.4359 49.707-18.783 49.707-40.086zm-49.936 31.153c0-22.448 7.7882-49.707 23.823-49.707 7.33 0 11.453 4.8103 11.453 16.264 0 17.18-13.744 30.007-35.276 33.443z" />
+                          <path
+                            d="m-161.72 1159.3v80.401c0 26.113 14.431 35.505 32.298 35.505 9.3916 0 18.783-5.4975 24.739-17.867 5.2685 11.682 16.951 17.867 28.862 17.867 31.611 0 42.377-43.98 42.377-78.569 0-30.924-8.7044-42.148-19.241-42.148-7.5591 0-11.682 5.7266-11.682 11.682 0 5.7266 3.665 12.14 10.995 12.14 1.3744 0 4.5813-0.2291 5.9557-1.8325 1.3744 6.6428 2.0616 15.576 2.0616 24.052 0 27.03-6.8719 57.266-25.655 57.266-11.224 0-13.286-10.537-13.286-20.616v-77.882h-22.906v73.53c0 15.805-9.1626 24.968-17.867 24.968-8.0172 0-13.744-5.7266-13.744-20.616v-77.882h-22.906z" />
+                          <path
+                            d="m3.4476 1156.8c-2.2906 22.448-11.224 45.126-19.241 67.803-4.5813 2.5197-8.2463 8.7044-8.2463 16.722 0 14.889 7.33 33.901 34.13 33.901 13.057 0 35.505-8.0172 35.505-30.694 0-24.052-4.3522-33.443-19.012-92.313l-23.135 4.5813zm17.867 85.212c0 11.224-6.4138 16.034-16.034 16.034-10.079 0-16.264-6.1848-18.554-16.951 1.8325 2.2907 3.8941 3.2069 6.1847 3.2069 3.665 0 7.33-3.2069 7.33-8.9334 0-5.0395-2.2906-8.2463-5.0394-10.079 4.5813-16.492 11.453-31.611 13.286-48.562 8.4754 39.857 12.828 46.5 12.828 65.283z" />
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
-
           <div class="flex content-end">
             <div x-data="{ dropdownOpen: false }" class="relative ">
               <button @click="dropdownOpen = !dropdownOpen"
-                class="relative z-10 block p-2 transition duration-200 ease-in bg-gray-300 rounded-md hover:bg-gray-200 hover:text-gray-100 focus:outline-none"
+                class="relative z-10 block p-2 transition duration-200 ease-in bg-gray-300 rounded-md dark:bg-gray-900 dark:hover:bg-gray-700 hover:bg-gray-200 hover:text-gray-100 focus:outline-none"
                 aria-label="Menu">
-                <svg class="w-5 h-5 text-gray-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24"
-                  stroke="currentColor">
+                <svg class="w-5 h-5 text-gray-700 dark:text-gray-100" xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewbox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
               </button>
 
               <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 z-10 w-full h-full"></div>
 
-              <div x-show="dropdownOpen" class="absolute right-0 z-20 w-48 py-2 mt-2 bg-white rounded-md shadow-xl">
+              <div x-show="dropdownOpen"
+                class="absolute right-0 z-20 w-48 py-2 mt-2 bg-white rounded-md shadow-xl dark:bg-gray-900">
                 <a href="index.html"
-                  class="block py-2 pl-6 text-lg text-gray-700 capitalize hover:bg-teal-500 hover:text-white"><svg
+                  class="block py-2 pl-6 text-lg text-gray-700 capitalize dark:text-gray-200 hover:bg-teal-500 hover:text-white"><svg
                     class="inline-block w-5 h-5 mb-2 mr-2 " xmlns="http://www.w3.org/2000/svg" fill="none"
                     viewbox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -134,7 +220,7 @@
                   Design
                 </a>
                 <a href="work.html"
-                  class="block py-2 pl-6 text-lg text-gray-700 capitalize hover:bg-teal-500 hover:text-white"><svg
+                  class="block py-2 pl-6 text-lg text-gray-700 capitalize dark:text-gray-200 hover:bg-teal-500 hover:text-white"><svg
                     class="inline-block w-5 h-5 mb-1 mr-2 " xmlns="http://www.w3.org/2000/svg" fill="none"
                     viewbox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -143,7 +229,7 @@
                   Work
                 </a>
                 <a href="about.html"
-                  class="block py-2 pl-6 text-lg text-gray-700 capitalize hover:bg-teal-500 hover:text-white"><svg
+                  class="block py-2 pl-6 text-lg text-gray-700 capitalize dark:text-gray-200 hover:bg-teal-500 hover:text-white"><svg
                     class="inline-block w-5 h-5 mb-2 mr-2 " xmlns="http://www.w3.org/2000/svg" fill="none"
                     viewbox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -152,7 +238,7 @@
                   About
                 </a>
                 <a href="scripts.html"
-                  class="block py-2 pl-6 text-lg text-gray-700 capitalize hover:bg-teal-500 hover:text-white"><svg
+                  class="block py-2 pl-6 text-lg text-gray-700 capitalize dark:text-gray-200 hover:bg-teal-500 hover:text-white"><svg
                     class="inline-block w-5 h-5 mb-1 mr-2 " xmlns="http://www.w3.org/2000/svg" fill="none"
                     viewbox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -161,7 +247,7 @@
                   Scripts
                 </a>
                 <a href="archive.html"
-                  class="block py-2 pl-6 text-lg text-gray-700 capitalize hover:bg-teal-500 hover:text-white"><svg
+                  class="block py-2 pl-6 text-lg text-gray-700 capitalize dark:text-gray-200 hover:bg-teal-500 hover:text-white"><svg
                     class="inline-block w-5 h-5 mb-1 mr-2 " xmlns="http://www.w3.org/2000/svg" fill="none"
                     viewbox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -170,7 +256,7 @@
                   Archive
                 </a>
                 <a href="license.html"
-                  class="block py-2 pl-6 text-lg text-gray-700 capitalize border-b-2 border-gray-300 shadow-sm hover:bg-teal-500 hover:text-white"><svg
+                  class="block py-2 pl-6 text-lg text-gray-700 capitalize border-b-2 border-gray-300 shadow-sm dark:border-gray-800 dark:text-gray-200 hover:bg-teal-500 hover:text-white"><svg
                     class="inline-block w-5 h-5 mb-2 mr-2 " xmlns="http://www.w3.org/2000/svg" fill="none"
                     viewbox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -179,7 +265,7 @@
                   License
                 </a>
                 <a href="contact.html"
-                  class="block py-2 pl-6 text-lg text-gray-700 capitalize hover:bg-teal-500 hover:text-white"><svg
+                  class="block py-2 pl-6 text-lg text-gray-700 capitalize dark:text-gray-200 hover:bg-teal-500 hover:text-white"><svg
                     class="inline-block w-5 h-5 mb-1 mr-2 " xmlns="http://www.w3.org/2000/svg" fill="none"
                     viewbox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -194,6 +280,22 @@
       </div>
     </nav>
     <!-- mobile navigation end -->
+    <div class="fixed left-0 z-40 mt-24">
+      <button type="button" aria-label="theme-toggle"
+        class="bg-gray-100 border border-transparent rounded-t-none rounded-l-none shadow-md rounded-xl theme-toggle dark:bg-gray-800 focus:outline-none">
+        <svg width="40" height="40" viewbox="-5 -5 40 40" stroke-width="0"
+          class="text-gray-700 fill-current place-items-center dark:text-gray-100">
+          <g class="dark:opacity-0">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M9.353 2.939a1 1 0 01.22 1.08 8 8 0 0010.408 10.408 1 1 0 011.301 1.3A10.003 10.003 0 0112 22C6.477 22 2 17.523 2 12c0-4.207 2.598-7.805 6.273-9.282a1 1 0 011.08.22z">
+            </path>
+          </g>
+          <g class="opacity-0 dark:opacity-100">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M12 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zM4.929 4.929a1 1 0 011.414 0l.707.707A1 1 0 115.636 7.05l-.707-.707a1 1 0 010-1.414zm14.142 0a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM7 12a5 5 0 1110 0 5 5 0 01-10 0zm-5 0a1 1 0 011-1h1a1 1 0 110 2H3a1 1 0 01-1-1zm17 0a1 1 0 011-1h1a1 1 0 110 2h-1a1 1 0 01-1-1zm-2.05 4.95a1 1 0 011.414 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zm-11.314 0a1 1 0 011.414 1.414l-.707.707a1 1 0 01-1.414-1.414l.707-.707zM12 19a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1z">
+            </path>
+          </g>
+        </svg></button></div>
   </header>
   <!-- header end -->
   <!-- hero start -->
@@ -232,7 +334,7 @@
       <h3 class="mx-3 mt-3 mb-8 text-4xl font-bold text-center ">Design</h3>
       <div class="grid grid-flow-row grid-cols-1 gap-4 md:grid-cols-2">
         <!-- card start -->
-        <div class="px-6 py-6 space-y-4 bg-white rounded-md shadow-lg xl:px-10 xl:py-10">
+        <div class="px-6 py-6 space-y-4 bg-white rounded-md shadow-lg dark:bg-gray-900 xl:px-10 xl:py-10">
           <div class="flex flex-row content-center">
             <svg class="flex items-center flex-shrink-0 w-12 h-12 mx-2 my-2 text-primary"
               xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
@@ -272,7 +374,7 @@
         </div>
         <!-- card end -->
         <!-- card start -->
-        <div class="px-6 py-6 bg-white rounded-md shadow-lg xl:px-10 xl:py-10">
+        <div class="px-6 py-6 bg-white rounded-md shadow-lg dark:bg-gray-900 xl:px-10 xl:py-10">
           <div class="flex flex-row content-center">
             <svg class="flex items-center flex-shrink-0 w-12 h-12 mx-2 my-2 text-primary"
               xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
@@ -287,7 +389,7 @@
         </div>
         <!-- card end -->
         <!-- card start -->
-        <div class="px-6 py-6 bg-white rounded-md shadow-lg xl:px-10 xl:py-10">
+        <div class="px-6 py-6 bg-white rounded-md shadow-lg dark:bg-gray-900 xl:px-10 xl:py-10">
           <div class="flex flex-row content-center">
             <svg class="flex items-center flex-shrink-0 w-12 h-12 mx-2 my-2 text-primary"
               xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
@@ -306,8 +408,25 @@
 
         <!-- card pair start -->
         <div>
-          <div class="row-span-1 mb-2 ">
-            <div class="px-6 py-6 bg-white rounded-md shadow-lg xl:px-10 xl:py-10">
+          <div class="row-span-1 mb-4 ">
+            <div class="px-6 py-6 bg-white rounded-md shadow-lg dark:bg-gray-900 xl:px-10 xl:py-10">
+              <div class="flex flex-row content-center">
+                <svg class="flex items-center flex-shrink-0 w-12 h-12 mx-2 my-2 text-primary"
+                  xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                </svg>
+                <div class="flex items-center mx-2 my-2 text-2xl font-semibold">Dark mode</div>
+              </div>
+              <p class="mt-4">Dark mode is a color scheme that uses light-colored text, icons, and graphical user
+                interface elements on a dark background. It reduces strain on your eyes and is very popular among all
+                users. You can try seeing this website in dark mode if you haven't already. Use the button in the top
+                left corner.
+              </p>
+            </div>
+          </div>
+          <div class="row-span-1 mb-4 ">
+            <div class="px-6 py-6 bg-white rounded-md shadow-lg dark:bg-gray-900 xl:px-10 xl:py-10">
               <div class="flex flex-row content-center">
                 <svg class="flex items-center flex-shrink-0 w-12 h-12 mx-2 my-2 text-primary"
                   xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
@@ -322,7 +441,7 @@
               </p>
             </div>
           </div>
-          <div class="row-span-1 mb-2 ">
+          <div class="row-span-1 ">
             <div class="px-6 py-6 text-gray-100 rounded-md shadow-lg bg-primary-dark xl:px-10 xl:py-10">
               <div class="flex flex-row content-center">
                 <svg class="flex items-center flex-shrink-0 w-12 h-12 mx-2 my-2 text-current"
@@ -341,7 +460,7 @@
         <!-- card pair end -->
         <!-- card start -->
         <div
-          class="bg-white shadow-lg px-6 py-6 xl:px-10 xl:py-10 space-y-4 rounded-md bg-speed-card bg-50% bg-no-repeat bg-right-bottom">
+          class="bg-white dark:bg-gray-900 shadow-lg px-6 py-6 xl:px-10 xl:py-10 space-y-4 rounded-md bg-speed-card bg-50% bg-no-repeat bg-right-bottom">
           <div class="flex flex-row content-center">
             <svg class="flex items-center flex-shrink-0 w-12 h-12 mx-2 my-2 text-primary"
               xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
@@ -374,14 +493,17 @@
             You are probably more interested in the result right? I tested my code in a few tools. GTmetrix to test
             performance and an open source tool called Lighthouse from Google which has audits for performance,
             accessibility, progressive web apps, SEO and more. Following are the results.
-            <ul class="list-decimal list-inside ">
-              <li><a class="font-semibold transition duration-150 ease-in-out text-primary-dark hover:text-primary"
+            <ul class="mt-4 list-decimal list-inside">
+              <li><a
+                  class="font-semibold transition duration-150 ease-in-out text-primary-dark hover:text-primary dark:text-primary-lighter dark:hover:text-primary"
                   href="data/GTmetrix-report-weboreviews.com-20201023T051822-VUGVyBoy.pdf" target="_blank"
                   rel="noopener">GTmetrix Analysis</a></li>
-              <li><a class="font-semibold transition duration-150 ease-in-out text-primary-dark hover:text-primary"
+              <li><a
+                  class="font-semibold transition duration-150 ease-in-out text-primary-dark hover:text-primary dark:text-primary-lighter dark:hover:text-primary"
                   href="data/weboreviews.com-20201023T174237.html" target="_blank" rel="noopener">Lighthouse - desktop
                   device</a></li>
-              <li><a class="font-semibold transition duration-150 ease-in-out text-primary-dark hover:text-primary"
+              <li><a
+                  class="font-semibold transition duration-150 ease-in-out text-primary-dark hover:text-primary dark:text-primary-lighter dark:hover:text-primary"
                   href="data/weboreviews.com-20201023T174417-mobile.html" target="_blank" rel="noopener">Lighthouse -
                   mobile device</a></li>
             </ul>
@@ -393,7 +515,7 @@
       <div class="grid grid-flow-row grid-cols-1 gap-4 mt-4 md:grid-cols-2">
 
         <!-- card start -->
-        <div class="px-6 py-6 space-y-4 bg-white rounded-md shadow-lg xl:px-10 xl:py-10">
+        <div class="px-6 py-6 space-y-4 bg-white rounded-md shadow-lg dark:bg-gray-900 xl:px-10 xl:py-10">
           <div class="flex flex-row content-center">
             <svg class="flex items-center flex-shrink-0 w-12 h-12 mx-2 my-2 text-primary"
               xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
@@ -406,7 +528,7 @@
             and the individual pages will be charged based on how the content changes.</p>
           <p>
             For a quotation, <a
-              class="font-semibold transition duration-150 ease-in-out text-primary-dark hover:text-primary"
+              class="font-semibold transition duration-150 ease-in-out text-primary-dark hover:text-primary dark:text-primary-lighter dark:hover:text-primary"
               href="contact.html">Contact Me</a>
           </p>
         </div>
@@ -434,8 +556,7 @@
     </div>
   </main>
   <!-- content end -->
-  <!-- Footer wave start -->
-  <section>
+  <section id="footer-wave">
     <svg class="mt-20" version="1.1" viewbox="0 0 1920 251.44" xmlns="http://www.w3.org/2000/svg">
       <g transform="translate(768.02)">
         <path class="fill-current text-secondary "
@@ -444,15 +565,14 @@
         <path class="fill-current text-secondary-lighter"
           d="m1152 144s-467.92 116.86-1027.2-17.294c-522.77-125.38-892.76-81.128-892.76-81.128v204.42h1920z"
           fill="#ff9b8a" />
-        <path class="text-gray-100 fill-current"
+        <path class="text-gray-100 fill-current dark:text-gray-800"
           d="m-768.02 196.99s208.55-75.581 701.33-20.768c376.71 41.908 520.83-67.962 722.54-67.962 222.93 0 311.6 87.808 496.18 90.679v52.498h-1920z"
           fill="#f7fafc" />
       </g>
     </svg>
   </section>
-  <!-- Footer wave end -->
   <!-- footer start -->
-  <footer class="h-auto min-h-full py-10 overflow-hidden bg-gray-100 ">
+  <footer class="h-auto min-h-full py-10 overflow-hidden bg-gray-100 dark:bg-gray-800 ">
     <div
       class="flex flex-col items-center justify-between max-w-6xl mx-auto my-12 sm:flex-row sm:items-end sm:px-6 lg:px-8 ">
       <div class="flex flex-row">
@@ -467,7 +587,7 @@
                   d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
               </svg></div>
             <div class="col-span-4 "><a
-                class="mx-4 text-teal-700 transition duration-150 ease-in-out hover:text-gray-900"
+                class="mx-4 text-teal-700 transition duration-150 ease-in-out dark:text-teal-300 hover:text-gray-700 dark:hover:text-gray-300"
                 href="license.html">License</a>
             </div>
           </div>
@@ -479,7 +599,7 @@
                   d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
               </svg></div>
             <div class="col-span-4"><a
-                class="mx-4 text-teal-700 transition duration-150 ease-in-out hover:text-gray-900"
+                class="mx-4 text-teal-700 transition duration-150 ease-in-out dark:text-teal-300 hover:text-gray-700 dark:hover:text-gray-300"
                 href="archive.html">Archive</a>
             </div>
           </div>
@@ -493,7 +613,7 @@
                   d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
               </svg></div>
             <div class="col-span-4"><a
-                class="mx-4 text-teal-700 transition duration-150 ease-in-out hover:text-gray-900"
+                class="mx-4 text-teal-700 transition duration-150 ease-in-out dark:text-teal-300 hover:text-gray-700 dark:hover:text-gray-300"
                 href="https://github.com/akyag" target="_blank" rel="noopener">Github</a>
             </div>
           </div>
@@ -514,7 +634,7 @@
                 <path d="M16 16v-3a2 2 0 0 0 -4 0" />
               </svg></div>
             <div class="col-span-4"><a
-                class="mx-4 text-teal-700 transition duration-150 ease-in-out hover:text-gray-900"
+                class="mx-4 text-teal-700 transition duration-150 ease-in-out dark:text-teal-300 hover:text-gray-700 dark:hover:text-gray-300"
                 href="https://www.linkedin.com/in/akshayghate/" target="_blank" rel="noopener">LinkedIn</a>
             </div>
           </div>
@@ -528,7 +648,7 @@
                   d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
               </svg></div>
             <div class="col-span-4"><a
-                class="mx-4 text-teal-700 transition duration-150 ease-in-out hover:text-gray-900"
+                class="mx-4 text-teal-700 transition duration-150 ease-in-out dark:text-teal-300 hover:text-gray-700 dark:hover:text-gray-300"
                 href="https://twitter.com/akshayg" target="_blank" rel="noopener">Twitter</a>
             </div>
           </div>
@@ -541,14 +661,55 @@
                 <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
               </svg></div>
             <div class="col-span-4"><a
-                class="mx-4 text-teal-700 transition duration-150 ease-in-out hover:text-gray-900"
+                class="mx-4 text-teal-700 transition duration-150 ease-in-out dark:text-teal-300 hover:text-gray-700 dark:hover:text-gray-300"
                 href="https://www.facebook.com/Web.o.Reviews" target="_blank" rel="noopener">Facebook</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="flex flex-col items-center mt-6 sm:m-0 md:mr-20">
-        <div><a href="index.html"><img src="img/logo-transparent.svg" width="230" alt="Web-o-Reviews"></a></div>
+      <div class="flex flex-col items-center mt-6 sm:m-0 md:mr-20 lg:mr-0">
+        <div> <a href="index.html" aria-label="Web-o-Reviews"><svg class="w-64" version="1.1" viewbox="0 0 250 49.522"
+              xmlns="http://www.w3.org/2000/svg">
+              <g transform="matrix(.17886 0 0 .17886 -10.278 -4.1256)">
+                <g transform="translate(-202.45 -162.85)">
+                  <g transform="matrix(.69704 0 0 .69704 205.83 88.284)" fill-rule="evenodd">
+                    <path d="m157.8 223.38 91.6-1.6963 117.89 234.09h-94.992z" fill="#00989b" />
+                    <path d="m263 222.58 91.6-1.6963c40.355 79.234 133.88 152.84 117.89 234.09h-94.992z"
+                      fill="#00989b" />
+                    <path
+                      d="m476.9 399.08 79.158-178.8h-192.51c23.764 50.348 51.597 73.547 83.8 121.99 10.519 15.823 18.494 34.186 29.552 56.817z"
+                      fill="#006565" />
+                  </g>
+                </g>
+                <g transform="translate(-202.45 -162.85)">
+                  <g transform="translate(1556.1 -868.35)" class="text-gray-700 fill-current dark:text-gray-100">
+                    <path
+                      d="m-908.3 1187.9c0-24.281-15.347-29.778-30.465-29.778-32.985 0-43.751 38.483-43.751 64.138 0 39.17 20.387 52.914 41.461 52.914 23.364 0 45.126-19.928 52.914-42.377h-7.33c-8.0172 17.867-21.761 24.968-36.192 24.968-13.057 0-24.052-5.4975-26.342-29.778 30.924-3.4359 49.707-18.783 49.707-40.086zm-49.936 31.153c0-22.448 7.7882-49.707 23.823-49.707 7.33 0 11.453 4.8103 11.453 16.264 0 17.18-13.744 30.007-35.276 33.443z" />
+                    <path
+                      d="m-895.89 1232.8c0 31.84 13.973 42.377 32.985 42.377 33.443 0 50.165-32.069 50.165-66.887 0-39.628-21.99-49.478-38.254-49.478-9.8497 0-16.722 3.665-21.761 8.9335v-54.288l-22.906 3.2069-0.22906 116.14zm62.763-19.241c0 23.823-8.7044 45.813-26.113 45.813-9.3916 0-13.515-6.6428-13.515-20.616v-60.244c4.1232-4.5813 9.3916-7.7882 15.576-7.7882 15.347 0 24.052 19.241 24.052 42.835z" />
+                    <path d="m-751.35 1204.9h-45.813v16.034h45.813z" />
+                    <path
+                      d="m-685.3 1158.1c-34.36 0-44.667 36.879-44.667 63.68 0 39.399 22.448 53.372 42.835 53.372 24.739 0 39.17-22.677 39.17-60.244 0-3.665 0-7.101-0.45813-10.766 10.079-5.0394 15.347-17.18 17.867-27.259h-6.6428c-1.6034 4.5813-4.3522 11.453-13.057 11.453-3.8941-17.409-13.515-30.236-35.047-30.236zm2.2906 99.643c-10.308 0-22.219-7.101-22.219-36.879 0-22.448 6.8719-50.165 25.884-50.165 6.4138 0 12.14 3.2069 15.805 12.14-5.0394 0.6872-8.4754 4.1231-8.4754 10.308 0 8.7045 3.8941 13.744 12.369 13.744 0 1.6034 0.22906 3.2068 0.22906 4.8103 0 29.091-7.5591 46.042-23.594 46.042z" />
+                    <path d="m-571.95 1204.9h-45.813v16.034h45.813z" />
+                    <path
+                      d="m-547.82 1159.3v114.53h22.906v-84.296c5.2685-5.4975 11.911-11.453 18.783-11.453 6.6428 0 7.5591 5.7266 12.828 5.7266 3.665 0 10.537-2.7487 10.537-11.911 0-7.5591-4.8103-13.744-15.118-13.744-13.057 0-19.929 9.6207-27.03 20.387v-19.241h-22.906z" />
+                    <path
+                      d="m-399.17 1187.9c0-24.281-15.347-29.778-30.465-29.778-32.985 0-43.751 38.483-43.751 64.138 0 39.17 20.387 52.914 41.461 52.914 23.364 0 45.126-19.928 52.914-42.377h-7.33c-8.0172 17.867-21.761 24.968-36.192 24.968-13.057 0-24.052-5.4975-26.342-29.778 30.924-3.4359 49.707-18.783 49.707-40.086zm-49.936 31.153c0-22.448 7.7882-49.707 23.823-49.707 7.33 0 11.453 4.8103 11.453 16.264 0 17.18-13.744 30.007-35.276 33.443z" />
+                    <path
+                      d="m-313 1196.6c0-30.924-8.7044-42.148-19.241-42.148-7.5591 0-11.682 5.7266-11.682 11.682 0 5.7266 3.665 12.14 10.995 12.14 1.3744 0 4.5813-0.2291 5.9556-1.8325 1.3744 6.6428 2.0616 15.576 2.0616 24.052 0 27.03-6.8719 57.266-25.655 57.266-11.224 0-13.286-10.537-13.286-20.616v-77.882h-22.906v84.524c0 20.387 15.576 31.382 31.382 31.382 31.611 0 42.377-43.98 42.377-78.569z" />
+                    <path
+                      d="m-295.26 1159.3v82.692c0 14.889 5.2685 33.214 26.342 33.214 10.079 0 24.968-4.1231 31.84-42.377h-8.4754c-3.436 16.492-9.1626 24.968-16.493 24.968-9.8497 0-10.308-14.66-10.308-20.616v-77.882h-22.906zm-4.1232-32.985c0 8.4754 6.6428 15.118 15.118 15.118 8.2463 0 15.347-6.6428 15.347-15.118 0-8.2463-7.101-15.347-15.347-15.347-8.4754 0-15.118 7.1009-15.118 15.347z" />
+                    <path
+                      d="m-174.13 1187.9c0-24.281-15.347-29.778-30.465-29.778-32.985 0-43.751 38.483-43.751 64.138 0 39.17 20.387 52.914 41.461 52.914 23.364 0 45.126-19.928 52.914-42.377h-7.33c-8.0172 17.867-21.761 24.968-36.192 24.968-13.057 0-24.052-5.4975-26.342-29.778 30.924-3.4359 49.707-18.783 49.707-40.086zm-49.936 31.153c0-22.448 7.7882-49.707 23.823-49.707 7.33 0 11.453 4.8103 11.453 16.264 0 17.18-13.744 30.007-35.276 33.443z" />
+                    <path
+                      d="m-161.72 1159.3v80.401c0 26.113 14.431 35.505 32.298 35.505 9.3916 0 18.783-5.4975 24.739-17.867 5.2685 11.682 16.951 17.867 28.862 17.867 31.611 0 42.377-43.98 42.377-78.569 0-30.924-8.7044-42.148-19.241-42.148-7.5591 0-11.682 5.7266-11.682 11.682 0 5.7266 3.665 12.14 10.995 12.14 1.3744 0 4.5813-0.2291 5.9557-1.8325 1.3744 6.6428 2.0616 15.576 2.0616 24.052 0 27.03-6.8719 57.266-25.655 57.266-11.224 0-13.286-10.537-13.286-20.616v-77.882h-22.906v73.53c0 15.805-9.1626 24.968-17.867 24.968-8.0172 0-13.744-5.7266-13.744-20.616v-77.882h-22.906z" />
+                    <path
+                      d="m3.4476 1156.8c-2.2906 22.448-11.224 45.126-19.241 67.803-4.5813 2.5197-8.2463 8.7044-8.2463 16.722 0 14.889 7.33 33.901 34.13 33.901 13.057 0 35.505-8.0172 35.505-30.694 0-24.052-4.3522-33.443-19.012-92.313l-23.135 4.5813zm17.867 85.212c0 11.224-6.4138 16.034-16.034 16.034-10.079 0-16.264-6.1848-18.554-16.951 1.8325 2.2907 3.8941 3.2069 6.1847 3.2069 3.665 0 7.33-3.2069 7.33-8.9334 0-5.0395-2.2906-8.2463-5.0394-10.079 4.5813-16.492 11.453-31.611 13.286-48.562 8.4754 39.857 12.828 46.5 12.828 65.283z" />
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </a></div>
         <div class="grid grid-cols-1 divide-y-2 divide-gray-500 lg:grid-cols-2 lg:divide-y-0 lg:divide-x-2">
           <div><svg class="inline-block w-5 h-5 mx-1 mb-1 " xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"
               stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -580,6 +741,7 @@
   <!-- scripts -->
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.2/dist/alpine.min.js" defer></script>
   <script src="js/vanillatop.js" defer></script>
+  <script src="js/theme.js" defer></script>
 
 </body>
 
