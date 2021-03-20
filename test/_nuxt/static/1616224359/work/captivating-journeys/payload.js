@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/work/captivating-journeys", {data:[{},{}],fetch:{},mutations:void 0});

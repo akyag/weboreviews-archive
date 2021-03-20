@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/work/mangesh-thombare", {data:[{},{}],fetch:{},mutations:void 0});
