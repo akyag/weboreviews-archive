@@ -1,5 +1,3 @@
 User-agent: *
-
-Disallow: /temp/
-Disallow: /test/
-sitemap: https://weboreviews.com/sitemap.xml
+Allow: /
+Sitemap: https://weboreviews.com/sitemap-index.xml

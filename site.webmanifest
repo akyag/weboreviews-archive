@@ -1,6 +1,6 @@
 {
-    "name": "Web-o-Reviews",
-    "short_name": "Web-o-Reviews",
+    "name": "",
+    "short_name": "",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#008080",
-    "background_color": "#008080",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
     "display": "standalone"
 }

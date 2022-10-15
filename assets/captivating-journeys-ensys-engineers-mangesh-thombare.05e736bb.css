@@ -1,0 +1,1 @@
+.modal.show{display:grid;place-items:center;visibility:visible;height:auto;inset:0;z-index:10}.modal.show .modal__inner{opacity:1}.modal__inner{width:clamp(30ch,90%,65ch)}
